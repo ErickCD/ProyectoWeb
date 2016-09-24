@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=file:///C:/Users/manue/Google%20Drive/Semestre%202%20-%202016/Programaci%C3%B3n%20Web/Proyecto%20del%20Semestre/vistas/index.htmldevice-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>Crear contacto</title>
-        <!-- CSS  -->
+        <title>Empresa Turistica</title>
+
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -31,32 +36,58 @@
             <form class="" action="" method="post">
                 <div class="row">
 
-                    <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
-                    
+                    <div class="center">
+                    <h5>Registro de cliente / empresa  turistica</h5>
+                    </div>
                     <i class="material-icons prefix">today</i>
                     <input type="date" class="datepicker" value="Fecha">
 
                     <div class="row">
+                        <div class="col m6 s12">
+                            <label>Clasificación</label>
+                            <select class="browser-default">
+                                <option value="1">Emprendedor</option>
+                                <option value="2">Empresa formal</option>
+                                <option value="3">Empresa informal</option>
+                                <option value="3">Empresa gacela</option>
+                            </select>
+                        </div>
                         <div class="input-field col m6 s12">
                             <input id="first_name" type="text" class="validate">
-                            <label for="first_name">Nombres</label>
+                            <label for="first_name">Nombre (s)</label>
                         </div>
                         <div class="input-field col m6 s12">
                             <input id="last_name" type="text" class="validate">
                             <label for="last_name">Apellidos</label>
                         </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">NRO. C.C:</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Número de cédula</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Antigüedad en el cargo</label>
+                        </div>
+
+                        <div class="col m6 s12">
+                            <label>Lugar de nacimiento</label>
+                            <select class="browser-default">
+                                <option value="" disabled selected>Escoge una ciudad</option>
+                                <option value="1">Ciudad 1</option>
+                                <option value="2">Ciudad 2</option>
+                                <option value="3">Ciudad 3</option>
+                            </select>
+                        </div>
+
                     </div>
 
-                    <div class="col m6 s12">
-                        <label>Género</label>
-                        <select class="browser-default">
-                            <option value="1">Masculino</option>
-                            <option value="2">Femenino</option>
-                            <option value="3">LGBTI</option>
-                        </select>
-                    </div>
+                    <i class="material-icons prefix">today</i>
+                    <input type="date" class="datepicker" value="Fecha de nacimiento">
 
-                    <!-- Solo es temporal, pero pienso se ve mejos de esta forma
                     <div class="col m6 s12">
                         <label for="t1">Genero</label>
                         <p>
@@ -72,12 +103,7 @@
                             <label for="test3">LGBTI</label>
                         </p>
                     </div>
-                    -->
 
-                    <div class="input-field col m6 s12">
-                        <input id="nro_cc" type="number" class="validate">
-                        <label for="last_name">Nro CC.</label>
-                    </div>
                     <div class="col m6 s12">
                         <label for="t1">¿Desea resibir correo electronico maxivo?</label>
                         <p>
@@ -91,8 +117,7 @@
                     </div>
 
                     <div class="col m6 s12">
-                        <div class="input-field">
-                            <i class="material-icons prefix" >email</i>
+                        <div class="input-field col s12">
                             <input id="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
@@ -119,7 +144,7 @@
                         </div>
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">payment</i>
-                            <input id="cde" type="tel" class="validate">
+                            <input id="icon_telephone" type="tel" class="validate">
                             <label for="icon_telephone">CDE</label>
                         </div>
                     </div>
@@ -135,25 +160,6 @@
                         </div>
                     </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="departamento" type="text" class="validate">
-                        <label for="ciudad">Deparamento</label>
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input id="pais" type="text" class="validate">
-                        <label for="ciudad">País</label>
-                    </div>
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">note_add</i>
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Notas:</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </form>
         </div>
