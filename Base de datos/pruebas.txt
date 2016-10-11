@@ -1,0 +1,16 @@
+prueba 1, especificando las columnas
+
+inset into mascotas 
+(nombre, genero, tipo, edad, raza, talla, descr) values 
+("Blader", "Macho", "Perro", 1, "Beagle", "Pequeño", "Cafe con orejas grandes");
+
+
+Prueba 2 sin especificar columnas
+
+inset into mascotas values
+(1, "Blader", "Macho", "Perro", 1, "Beagle", "Pequeño", "Cafe, orejas grandes");
+
+Pensando en el char
+
+insert into mascotas (nombre, genero, tipo, edad, raza, talla, descr) values 
+('Jason', 'Macho','Perro', 5, 'Chihuahua', 'Mini', 'Cafe con orejas triangulares');
