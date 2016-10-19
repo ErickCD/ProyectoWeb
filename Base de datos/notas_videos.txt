@@ -1,0 +1,30 @@
+		Tipos de indices:
+Btree.- Árboles binarios.
+Hashed.- Parecido a los algotmos de los hash map.
+Fulltext.- Funciona con tokens, puede buscar por tokens, pero depende del idioma.
+Geoespaciales.- Funciona básicamente por busqueda de puntos en el espacio.
+Conpound.- Varios campos por índice. Optimiza las busquedas.
+Multi-key.- En la versión 2.6, usa varias llaves a la misma vez, nivel más complejo.
+
+		Replicación.
+Unico nodo (Journal).- Cada que un nuevo record es creado, primero lo creará en donde esta 		      escrito MongoDB
+Replica Set.- Tiene un sistema de elección de master, el puede elejir un nuevo master.
+Sharding.- Particionar los datos entre nodos, serán particionados de acuerdo a la llave, la            dificultad, es mantener el balance entre los datos de los nodos.
+
+Todas las bases de datos eligen entre tres fases (cap furing) solo pueden ser dos.
+Consistente, disponible o particionalidad.
+
+		Diseño de esquemas.
+Reflexible (pero necesario).
+Todas las operaciones son atómicas.
+¿Es mejor Referencar o embeber?
+
+		Diseño de esquemas.
+¿Cuáles respuestas tengo?
+	vs
+¿Cuáles preguntas tengo?
+
+Siempre se debe de ver desde el punto de vista del usuario.
+
+
+

@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : newjsp
+    Created on : 18-oct-2016, 10:41:27
+    Author     : Manuel FLorez
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    HttpSession sesion = request.getSession();
+    sesion.invalidate();
+%>
 <html lang="es">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -17,17 +26,17 @@
                     <img src="img/a.png" alt="logo" />
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="login.html">Ingresar</a></li>
-                    <li><a href="crearContacto.html">Contacto</a></li>
-                    <li><a href="crearEmpresaTuristica.html">Empresa turistica</a></li>
-                    <li><a href="crearEmpresa.html">Empresa</a></li>
+                    <li><a href="jsp/login.jsp">Ingresar</a></li>
+                    <li><a href="jsp/crearContacto.jsp">Contacto</a></li>
+                    <li><a href="jsp/crearEmpresaTuristica.jsp">Empresa turistica</a></li>
+                    <li><a href="jsp/crearEmpresa.jsp">Empresa</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="login.html">Ingresar</a></li>
-                    <li><a href="crearContacto.html">Contacto</a></li>
-                    <li><a href="crearEmpresaTuristica.html">Empresa turistica</a></li>
-                    <li><a href="crearEmpresa.html">Empresa</a></li>
+                    <li><a href="jsp/login.jsp">Ingresar</a></li>
+                    <li><a href="jsp/crearContacto.jsp">Contacto</a></li>
+                    <li><a href="jsp/crearEmpresaTuristica.jsp">Empresa turistica</a></li>
+                    <li><a href="jsp/crearEmpresa.jsp">Empresa</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>

@@ -1,9 +1,11 @@
+<%-- 
+    Document   : crearEmpresa
+    Created on : 19/10/2016, 12:29:06 AM
+    Author     : Clair
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="utf-8">
@@ -19,19 +21,19 @@ and open the template in the editor.
         <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    
 
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="index.html" class="brand-logo">
+                <a id="logo-container" href="index.jsp" class="brand-logo">
                     <img src="img/a.png" alt="logo" />
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Salir</a></li>
+                    <li><a href="index.jsp">Salir</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="index.html">Salir</a></li>
+                    <li><a href="index.jsp">Salir</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -39,7 +41,7 @@ and open the template in the editor.
 
         <div class="container">
             <form class="" action="" method="post">
-                <div class="row">
+                
                     <h5 class="center">Registro de Clientes</h5>
                     <i class="material-icons prefix">today</i>
                     <input type="date" class="datepicker" value="Fecha">
@@ -210,16 +212,16 @@ and open the template in the editor.
                         <input type="date" class="datepicker" value="Inicio de labores">
                     </div>
                     <!--Falta numero de empleados aquí -->
-                    
+
                     <div class="col m6 s12">
                         <div class="input-field">
                             <input id="email" type="text" class="validate">
                             <label for="email">Nombre del representante legal</label>
                         </div>
                     </div>
-                    
-                    
-                </div>
+
+
+                
             </form>
         </div>
 
@@ -228,6 +230,5 @@ and open the template in the editor.
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
-    </body>
+    
 </html>
-
