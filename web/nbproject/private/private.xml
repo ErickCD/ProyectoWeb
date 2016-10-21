@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/web/jsp/asesor.jsp</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/src/java/co/edu/ufps/dto/Contacto.java</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/web/html/Asesor/asesorValido.jsp</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/web/index.jsp</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/web/jsp/login.jsp</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/src/java/co/edu/ufps/business/Business.java</file>
-            <file>file:/C:/Users/manue/OneDrive/viejo/Documents/NetBeansProjects/web-18-10-2016/src/java/co/edu/ufps/dao/AsesorDAO.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dto/Asesor.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dao/ContactoDAO.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dto/Contacto.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dao/AsesorDAO.java</file>
         </group>
     </open-files>
 </project-private>

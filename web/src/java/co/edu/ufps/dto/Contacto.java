@@ -9,25 +9,26 @@ import java.util.Date;
 public class Contacto {
     
     private int id;
-    private String cto_nombres;
-    private String cto_apellidos;
-    private String cto_cc;
+    private String cto_nombres,
+    cto_apellidos,
+    cto_cc;
     private String cto_cargo;
     private int cto_antiguedad_cargo;
     private String cto_lugar_nacimiento;
     private Date cto_fecha_nacimiento;
-    private String cto_nivel_estudio;
-    private String cto_discapacidad;
-    private String cto_direccion;
-    private String cto_ciudad;
-    private String cto_pais;
-    private String cto_cecular;
+    private String cto_nivel_estudio,
+    cto_discapacidad,
+    cto_direccion,
+    cto_cde,
+    cto_ciudad,
+    cto_pais,
+    cto_cecular;
     private String cto_fijo;
     private String cto_email;
-    private int cto_email_masivo;
+    private String cto_email_masivo;
     private String cto_genero;
     private String cto_etnia;
-    private int cto_condicion_desplazado;
+    private String cto_condicion_desplazado;
     private String cto_departamento;
 
     public int getId() {
@@ -158,11 +159,11 @@ public class Contacto {
         this.cto_email = cto_email;
     }
 
-    public int getCto_email_masivo() {
+    public String getCto_email_masivo() {
         return cto_email_masivo;
     }
 
-    public void setCto_email_masivo(int cto_email_masivo) {
+    public void setCto_email_masivo(String cto_email_masivo) {
         this.cto_email_masivo = cto_email_masivo;
     }
 
@@ -182,11 +183,11 @@ public class Contacto {
         this.cto_etnia = cto_etnia;
     }
 
-    public int getCto_condicion_desplazado() {
+    public String getCto_condicion_desplazado() {
         return cto_condicion_desplazado;
     }
 
-    public void setCto_condicion_desplazado(int cto_condicion_desplazado) {
+    public void setCto_condicion_desplazado(String cto_condicion_desplazado) {
         this.cto_condicion_desplazado = cto_condicion_desplazado;
     }
 
