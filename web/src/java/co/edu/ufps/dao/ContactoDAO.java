@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *
- * @author Manuel FLorez
+ * @author Clair
  */
 public class ContactoDAO {
 
@@ -28,8 +28,8 @@ public class ContactoDAO {
             String cto_cargo, String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo,
             String cto_celular, String cto_email, String cto_email_masivo, String cto_genero,
             String cto_departamento) throws SQLException {
-
         boolean rs = false;
+
         rs = s.execute("INSERT INTO `empresarial`.` contacto` (`cto_id`, `cto_nombres`,"
                 + " `cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_direccion`, `cto_ciudad`, `cto_pais`,"
                 + " `cto_celular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,"
@@ -51,12 +51,17 @@ public class ContactoDAO {
     }
 
     //
-    public List mostrarEmpleados() {
-        return null;
+    public List mostrarContacto(int cto_id) throws SQLException {
+        List list = null;
+        list = (List) s.executeQuery("SELECT * FROM ` contacto` where cto_id = " + cto_id + ";");
+
+        return list;
     }
 
-    public Contacto consultar(String id) {
-        return null;
-    }
+    public List mostrarContactos() throws SQLException {
+        List list = null;
+        list = (List) s.executeQuery("select * from ` contacto`;");
 
+        return list;
+    }
 }

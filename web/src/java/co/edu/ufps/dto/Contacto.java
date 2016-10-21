@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *
- * @author Manuel FLorez
+ * @author Clair
  */
 public class Contacto {
 
