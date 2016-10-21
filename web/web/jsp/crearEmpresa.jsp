@@ -14,26 +14,26 @@
         <title>Registro de Empresa</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-        <link href="css/prism.css" rel="stylesheet">
-        <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+        <link href="../css/prism.css" rel="stylesheet">
+        <link href="../css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     </head>
     
 
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="index.jsp" class="brand-logo">
-                    <img src="img/a.png" alt="logo" />
+                <a id="logo-container" href="../index.jsp" class="brand-logo">
+                    <img src="../img/a.png" alt="logo" />
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.jsp">Salir</a></li>
+                    <li><a href="../index.jsp">Salir</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="index.jsp">Salir</a></li>
+                    <li><a href="../index.jsp">Salir</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -228,7 +228,7 @@
 
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/init.js"></script>
     
 </html>

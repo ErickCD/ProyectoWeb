@@ -10,7 +10,6 @@
 %>
 <html lang="es">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
         <title>Proyecto Nº1</title>
 
@@ -22,21 +21,21 @@
     <body>
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="index.html" class="brand-logo">
+                <a id="logo-container" href="../index.jsp" class="brand-logo">
                     <img src="img/a.png" alt="logo" />
                 </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="jsp/login.jsp">Ingresar</a></li>
-                    <li><a href="crearContacto.html">Contacto</a></li>
-                    <li><a href="crearEmpresaTuristica.html">Empresa turistica</a></li>
-                    <li><a href="crearEmpresa.html">Empresa</a></li>
+                    <li><a href="jsp/crearContacto.jsp">Contacto</a></li>
+                    <li><a href="jsp/crearEmpresaTuristica.jsp">Empresa turistica</a></li>
+                    <li><a href="jsp/crearEmpresa.jsp">Empresa</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="login.html">Ingresar</a></li>
-                    <li><a href="crearContacto.html">Contacto</a></li>
-                    <li><a href="crearEmpresaTuristica.html">Empresa turistica</a></li>
-                    <li><a href="crearEmpresa.html">Empresa</a></li>
+                    <li><a href="jsp/login.jsp">Ingresar</a></li>
+                    <li><a href="jsp/crearContacto.jsp">Contacto</a></li>
+                    <li><a href="jsp/crearEmpresaTuristica.jsp">Empresa turistica</a></li>
+                    <li><a href="jsp/crearEmpresa.jsp">Empresa</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -54,7 +53,7 @@
                     <div class="row">
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearContacto.html"><h2 class="center brown-text"><i class="material-icons">perm_identity</i></h2></a>
+                                <a href="jsp/crearContacto.jsp"><h2 class="center brown-text"><i class="material-icons">perm_identity</i></h2></a>
                                 <h5 class="center">Formato de creación de contacto</h5>
 
                                 <p class="light">Toma de información personal sencilla, para la cración de un contacto.</p>
@@ -63,7 +62,7 @@
 
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearEmpresa.html"><h2 class="center brown-text"><i class="material-icons">group</i></h2></a>
+                                <a href="jsp/crearEmpresa.jsp"><h2 class="center brown-text"><i class="material-icons">group</i></h2></a>
                                 <h5 class="center">Registro de clientes</h5>
 
                                 <p class="light">Se puede dar seguimiento a un cliente previamente registrado en la página.</p>
@@ -72,7 +71,7 @@
 
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearEmpresaTuristica"><h2 class="center brown-text"><i class="material-icons">settings</i></h2></a>
+                                <a href="jsp/crearEmpresaTuristica.jsp"><h2 class="center brown-text"><i class="material-icons">settings</i></h2></a>
                                 <h5 class="center">Seguimiento y consulta de los clientes de MiCitio</h5>
 
                                 <p class="light">Detalles con respecto a los clientes ya inscritos al MICITIO</p>
@@ -161,7 +160,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Realizado por <a class="brown-text text-lighten-3" href="http://materializecss.com">Manuel Florez y Erick Clair</a>
+                    Realizado por <a class="brown-text text-lighten-3" href="../http://materializecss.com">Manuel Florez y Erick Clair</a>
                 </div>
             </div>
         </footer>
