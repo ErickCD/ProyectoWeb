@@ -7,29 +7,63 @@ import java.util.Date;
  * @author Manuel FLorez
  */
 public class Contacto {
-    
+
     private int id;
     private String cto_nombres,
-    cto_apellidos,
-    cto_cc;
+            cto_apellidos,
+            cto_cc;
     private String cto_cargo;
     private int cto_antiguedad_cargo;
     private String cto_lugar_nacimiento;
     private Date cto_fecha_nacimiento;
     private String cto_nivel_estudio,
-    cto_discapacidad,
-    cto_direccion,
-    cto_cde,
-    cto_ciudad,
-    cto_pais,
-    cto_cecular;
-    private String cto_fijo;
-    private String cto_email;
-    private String cto_email_masivo;
-    private String cto_genero;
-    private String cto_etnia;
-    private String cto_condicion_desplazado;
-    private String cto_departamento;
+            cto_discapacidad,
+            cto_direccion,
+            cto_cde,
+            cto_ciudad,
+            cto_pais,
+            cto_celular,
+            cto_fijo,
+            cto_email,
+            cto_email_masivo,
+            cto_genero,
+            cto_etnia,
+            cto_condicion_desplazado,
+            cto_departamento;
+
+    //Datos de cualquier contacto
+    public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
+            String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo, String cto_celular, String cto_email,
+            String cto_email_masivo, String cto_genero, String cto_departamento) {
+        this.id = id;
+        this.cto_nombres = cto_nombres;
+        this.cto_apellidos = cto_apellidos;
+        this.cto_cc = cto_cc;
+        this.cto_cargo = cto_cargo;
+        this.cto_direccion = cto_direccion;
+        this.cto_ciudad = cto_ciudad;
+        this.cto_pais = cto_pais;
+        this.cto_fijo = cto_fijo;
+        this.cto_celular = cto_celular;
+        this.cto_email = cto_email;
+        this.cto_email_masivo = cto_email_masivo;
+        this.cto_genero = cto_genero;
+        this.cto_departamento = cto_departamento;
+    }
+
+    //Datos de cualquier empresa
+    public Contacto(int cto_id, int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento,
+            String cto_nivel_estudio, String cto_discapacidad, String cto_cde, String cto_etnia,
+            String cto_condicion_desplazado) {
+        this.cto_antiguedad_cargo = cto_antiguedad_cargo;
+        this.cto_lugar_nacimiento = cto_lugar_nacimiento;
+        this.cto_fecha_nacimiento = cto_fecha_nacimiento;
+        this.cto_nivel_estudio = cto_nivel_estudio;
+        this.cto_discapacidad = cto_discapacidad;
+        this.cto_cde = cto_cde;
+        this.cto_etnia = cto_etnia;
+        this.cto_condicion_desplazado = cto_condicion_desplazado;
+    }
 
     public int getId() {
         return id;
@@ -119,6 +153,14 @@ public class Contacto {
         this.cto_direccion = cto_direccion;
     }
 
+    public String getCto_cde() {
+        return cto_cde;
+    }
+
+    public void setCto_cde(String cto_cde) {
+        this.cto_cde = cto_cde;
+    }
+
     public String getCto_ciudad() {
         return cto_ciudad;
     }
@@ -135,12 +177,12 @@ public class Contacto {
         this.cto_pais = cto_pais;
     }
 
-    public String getCto_cecular() {
-        return cto_cecular;
+    public String getCto_celular() {
+        return cto_celular;
     }
 
-    public void setCto_cecular(String cto_cecular) {
-        this.cto_cecular = cto_cecular;
+    public void setCto_celular(String cto_celular) {
+        this.cto_celular = cto_celular;
     }
 
     public String getCto_fijo() {
@@ -198,5 +240,5 @@ public class Contacto {
     public void setCto_departamento(String cto_departamento) {
         this.cto_departamento = cto_departamento;
     }
-    
+
 }
