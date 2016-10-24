@@ -39,11 +39,18 @@
                 <th>APELLIDOS</th>
                 </thead>
                 <tbody>
+                    <%
+                        for (int i = 0; i < 4; i++) {
+                            int var = i + 1;
+                    %>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td> <%= var%> </td>
+                        <td>Erick</td>
+                        <td>Del Ángel</td>
                     </tr>
+                    <%
+                        }
+                    %>
                 </tbody>
             </table>
 
@@ -53,5 +60,4 @@
         <script src="../js/materialize.js"></script>
         <script src="../js/init.js"></script>
     </body>
-</html>y>
 </html>
