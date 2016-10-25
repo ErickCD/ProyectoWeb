@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="jsp/crearContacto.jsp"><h2 class="center brown-text"><i class="material-icons">contacts</i></h2></a>
+                                <a href="jsp/registrarContacto.jsp"><h2 class="center brown-text"><i class="material-icons">contacts</i></h2></a>
                                 <h5 class="center">Formato de creación de contacto</h5>
 
                                 <p class="light">Cree su contacto o asista directamente a las oficinas del MinCIT para que
