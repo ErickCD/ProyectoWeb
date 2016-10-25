@@ -1,64 +1,82 @@
 <%-- 
-    Document   : login
-    Created on : 20-oct-2016, 19:00:25
-    Author     : Manuel Florez
+    Document   : registrarEmpresaAdscrita
+    Created on : 23-oct-2016, 18:47:28
+    Author     : manue
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>Login</title>
-
+        
+        <title>Crear Contacto</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="/web/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-
     </head>
     <body>
+        
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="/web/index.jsp" class="breadcrumb">Home</a>
-                    <a href="/web/jsp/login.jsp" class="breadcrumb">Ingresar</a>
+                    <a href="/web/jsp/dashboard.jsp" class="breadcrumb">Dashboard</a>
+                    <a href="/web/jsp/registrarEmpresaAdscrita.jsp" class="breadcrumb">Registro de Empresa Adscrita</a>
                 </div>
             </div>
         </nav>
+        
         <div class="container">
-
-            <form class="form-signin" action="dashboard.jsp" method="POST">
+            <form class="" action="" method="post">
                 <div class="row">
-                    <div class="col s12 m7">
-                        <div class="card">
 
-                            <div class="card-content">
-                                <h2 class="form-signin-heading">Por favor ingrese...</h2>
-                                <div class="container">
-                                    <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
-                                    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
-                                    <label for="inputPassword" class="sr-only">Password</label>
-                                    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="remember-me"> Recuerdame
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-action">
-                                <!-- EL onClick es temporal -->
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
-                            </div>
+                    <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
+                    
+                    
+
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Nombre Empresa</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Nombre Gerente</label>
                         </div>
                     </div>
-                </div>
 
+
+                    <div class="col m6 s12">
+                        <div class="input-field">
+                            <i class="material-icons prefix" >email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">class</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Página web</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">Teléfono</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row center">
+                        <input class="btn green" type="submit" value="Registrar">
+                    </div>
+
+                </div>
             </form>
         </div>
+        
         <footer class="page-footer teal">
             <div class="container">
                 <div class="row">
@@ -89,7 +107,7 @@
                         </ul>
                         <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
-
+                    
                 </div>
             </div>
             <div class="footer-copyright">
@@ -98,6 +116,7 @@
                 </div>
             </div>
         </footer>
+        
         <!--  Scripts-->
         <script src="/web/js/jquery-2.1.1.min.js"></script>
         <script src="/web/js/materialize.min.js"></script>

@@ -12,7 +12,7 @@ public class Empresa {
     private int emp_nit;
     private String emp_nombreRepLegal, emp_constitucionLegal;
     private Date emp_fechaConstitucion;
-    private String emp_noEmpleado, emp_direccion, emp_ciudad, emp_telefono, emp_celular, emp_email, emp_urlWebsite, emp_tipo, emp_tipoVenta,
+    private String emp_noEmpleado, emp_direccion, emp_ciudad, emp_telefono, emp_celular, emp_emailEmpresa, emp_urlWebsite, emp_tipo, emp_tipoVenta,
             emp_regMercantil, emp_numRegistroMercantil;
     private Date emp_renovacion_mercantil;
     private String emp_codigoCIIU, emp_actividadInternacional, emp_paisesComercio, emp_negocioWeb, emp_productoServicio, emp_medioCDE,
@@ -20,7 +20,7 @@ public class Empresa {
 
     public Empresa(String emp_clasCliente, String emp_cc, String emp_nombre, int emp_nit, String emp_nombreRepLegal,
             String emp_constitucionLegal, Date emp_fechaConstitucion, String emp_noEmpleado, String emp_direccion, String emp_ciudad,
-            String emp_telefono, String emp_celular, String emp_email, String emp_urlWebsite, String emp_tipo, String emp_tipoVenta,
+            String emp_telefono, String emp_celular, String emp_emailEmpresa, String emp_urlWebsite, String emp_tipo, String emp_tipoVenta,
             String emp_regMercantil, String emp_numRegistroMercantil, Date emp_renovacion_mercantil, String emp_codigoCIIU,
             String emp_actividadInternacional, String emp_paisesComercio, String emp_negocioWeb, String emp_productoServicio,
             String emp_medioCDE, String emp_observaciones) {
@@ -36,7 +36,7 @@ public class Empresa {
         this.emp_ciudad = emp_ciudad;
         this.emp_telefono = emp_telefono;
         this.emp_celular = emp_celular;
-        this.emp_email = emp_email;
+        this.emp_emailEmpresa = emp_emailEmpresa;
         this.emp_urlWebsite = emp_urlWebsite;
         this.emp_tipo = emp_tipo;
         this.emp_tipoVenta = emp_tipoVenta;
@@ -149,11 +149,11 @@ public class Empresa {
     }
 
     public String getEmp_email() {
-        return emp_email;
+        return emp_emailEmpresa;
     }
 
     public void setEmp_email(String emp_email) {
-        this.emp_email = emp_email;
+        this.emp_emailEmpresa = emp_email;
     }
 
     public String getEmp_urlWebsite() {
