@@ -5,12 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador"></jsp:useBean>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        
+
         <title>Crear Contacto</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,51 +19,60 @@
         <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        
+
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
-                    <a href="/web/index.jsp" class="breadcrumb">Home</a>
-                    <a href="/web/jsp/dashboard.jsp" class="breadcrumb">Dashboard</a>
-                    <a href="/web/jsp/crearContacto.jsp" class="breadcrumb">Registro de Contacto</a>
+                    <a href="../index.jsp" class="breadcrumb">MinCIT</a>
+                    <a href="../jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
+                    <a href="../jsp/crearContacto.jsp" class="breadcrumb">Registro de Contacto</a>
                 </div>
             </div>
         </nav>
-        
+
         <div class="container">
             <form class="" action="" method="post">
                 <div class="row">
 
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
-                    
-                    <i class="material-icons prefix">today</i>
-                    <input type="date" class="datepicker" value="Fecha">
 
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">Nombres</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Apellidos</label>
-                        </div>
+                    <i class="material-icons prefix">today</i>
+                    <input id="fecha_registroContacto" type="date" class="datepicker" value="Fecha">
+
+                    <!--<div class="row">-->
+                    <div class="input-field col m6 s12">
+                        <input id="cto_nombres" type="text" class="validate">
+                        <label for="cto_nombres">Nombres</label>
+                    </div>
+                    <div class="input-field col m6 s12">
+                        <input id="cto_apellidos" type="text" class="validate">
+                        <label for="cto_apellidos" >Apellidos</label>
+                    </div>
+                    <!--</div>-->
+
+                    <div class="input-field col m6 s12">
+                        <input id="cto_cc" type="number" class="validate">
+                        <label for="cto_cc">Nro CC.</label>
                     </div>
 
                     <div class="col m6 s12">
                         <label>Género</label>
-                        <select class="browser-default">
+                        <select id="cto_genero" class="browser-default">
                             <option value="1">Masculino</option>
                             <option value="2">Femenino</option>
                             <option value="3">LGBTI</option>
                         </select>
                     </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="nro_cc" type="number" class="validate">
-                        <label for="last_name">Nro CC.</label>
-                    </div>
                     <div class="col m6 s12">
+                        <div class="input-field">
+                            <i class="material-icons prefix" >email</i>
+                            <input id="cto_email" type="email" class="validate">
+                            <label for="cto_email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="col m6 s12" id="cto_email_masivo">
                         <label for="t1">¿Desea resibir correo electronico maxivo?</label>
                         <p>
                             <input name="group2" type="radio" id="t1" />
@@ -74,58 +84,47 @@
                         </p>
                     </div>
 
-                    <div class="col m6 s12">
-                        <div class="input-field">
-                            <i class="material-icons prefix" >email</i>
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">class</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Cargo</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">phone</i>
-                            <input id="icon_telephone" type="tel" class="validate">
-                            <label for="icon_telephone">Teléfono</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">stay_current_portrait</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Celular</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">payment</i>
-                            <input id="cde" type="tel" class="validate">
-                            <label for="icon_telephone">CDE</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <input id="direc" type="text" class="validate">
-                            <label for="direc">Dirección</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <input id="ciudad" type="text" class="validate">
-                            <label for="ciudad">Ciudad</label>
-                        </div>
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">class</i>
+                        <input id="cto_cargo" type="text" class="validate">
+                        <label for="cto_cargo" >Cargo</label>
                     </div>
 
                     <div class="input-field col m6 s12">
-                        <input id="departamento" type="text" class="validate">
-                        <label for="ciudad">Deparamento</label>
+                        <i class="material-icons prefix">phone</i>
+                        <input id="cto_fijo" type="tel" class="validate">
+                        <label for="cto_fijo">Teléfono</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">stay_current_portrait</i>
+                        <input id="cto_cecular" type="text" class="validate">
+                        <label for="cto_cecular">Celular</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">payment</i>
+                        <input id="cto_cde" type="tel" class="validate">
+                        <label for="cto_cde">CDE</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <input id="cto_direccion" type="text" class="validate">
+                        <label for="cto_direccion">Dirección</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <input id="cto_ciudad" type="text" class="validate">
+                        <label for="cto_ciudad">Ciudad</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <input id="cto_departamento" type="text" class="validate">
+                        <label for="cto_departamento">Deparamento</label>
                     </div>
                     <div class="input-field col m6 s12">
-                        <input id="pais" type="text" class="validate">
-                        <label for="ciudad">País</label>
+                        <input id="cto_pais" type="text" class="validate">
+                        <label for="cto_pais">País</label>
                     </div>
                     <div class="row">
                         <form class="col s12">
@@ -138,10 +137,13 @@
                             </div>
                         </form>
                     </div>
+                    <div class="row">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar contacto</button>
+                    </div>
                 </div>
             </form>
         </div>
-        
+
         <footer class="page-footer teal">
             <div class="container">
                 <div class="row">
@@ -172,7 +174,7 @@
                         </ul>
                         <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer-copyright">
@@ -181,7 +183,7 @@
                 </div>
             </div>
         </footer>
-        
+
         <!--  Scripts-->
         <script src="/web/js/jquery-2.1.1.min.js"></script>
         <script src="/web/js/materialize.min.js"></script>

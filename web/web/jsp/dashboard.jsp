@@ -39,7 +39,7 @@
                         <div class="collapsible-body">
                             <p>Operaciones sobre el Contacto<br>
                                 <a href="../jsp/registrarContacto.jsp" class="btn green">Registrar Contacto</a>
-                                <a href="#RegistrarContacto" class="btn green">Buscar Contacto</a>
+                                <a href="../jsp/crearContacto.jsp" class="btn green">Buscar Contacto</a>
                             </p>
                         </div>
                     </li>
