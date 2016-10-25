@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>Home</title>
+        <title>MinCIT</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,25 +21,25 @@
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
                 <div class="hide-on-small-only">
-                    <a id="logo-container" href="/web/index.jsp" class="brand-logo">
-                        <img src="/web/img/a.png" alt="logo" />
+                    <a id="logo-container" href="../index.jsp" class="brand-logo">
+                        <img src="img/a.png" alt="logo" />
                     </a>
                 </div>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="/web/jsp/login.jsp">Ingresar</a></li>
+                    <li><a href="jsp/login.jsp">Ingresar</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="/web/jsp/login.jsp">Ingresar</a></li>
+                    <li><a href="jsp/login.jsp">Ingresar</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
 
         <div id="index-banner" class="parallax-container">
-            <div class="parallax"><img src="/web/img/background4.jpg" alt="Unsplashed background img 1"></div>
+            <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
         </div>
 
-        <div class="brown lighten-3">
+        <div class="white">
             <div class="container">
                 <div class="section">
 
@@ -47,28 +47,31 @@
                     <div class="row">
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearContacto.html"><h2 class="center brown-text"><i class="material-icons">perm_identity</i></h2></a>
+                                <a href="jsp/crearContacto.jsp"><h2 class="center brown-text"><i class="material-icons">contacts</i></h2></a>
                                 <h5 class="center">Formato de creación de contacto</h5>
 
-                                <p class="light">Toma de información personal sencilla, para la cración de un contacto.</p>
+                                <p class="light">Cree su contacto o asista directamente a las oficinas del MinCIT para que
+                                    posterior a su registro, pueda registrar a su empresa.
+                                </p>
                             </div>
                         </div>
 
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearEmpresa.html"><h2 class="center brown-text"><i class="material-icons">group</i></h2></a>
-                                <h5 class="center">Registro de clientes</h5>
+                                <a href="jsp/login.jsp"><h2 class="center brown-text"><i class="material-icons">group</i></h2></a>
+                                <h5 class="center">Registro de Empresas.</h5>
 
-                                <p class="light">Se puede dar seguimiento a un cliente previamente registrado en la página.</p>
+                                <p class="light">Si ya se registro como usuario, no dude en acudir a las oficinas del MinCIT para que pueda
+                                    registrarse como empresa y progresar.</p>
                             </div>
                         </div>
 
                         <div class="col s12 m4">
                             <div class="icon-block">
-                                <a href="crearEmpresaTuristica"><h2 class="center brown-text"><i class="material-icons">settings</i></h2></a>
-                                <h5 class="center">Seguimiento y consulta de los clientes de MiCitio</h5>
+                                <a href="jsp/login.jsp"><h2 class="center brown-text"><i class="material-icons">settings</i></h2></a>
+                                <h5 class="center">Entidades adscritas al MinCIT</h5>
 
-                                <p class="light">Detalles con respecto a los clientes ya inscritos al MICITIO</p>
+                                <p class="light">Detalles de las empresas adscritas así como sus respectivaspáginas.</p>
                             </div>
                         </div>
                     </div>
@@ -85,10 +88,10 @@
                     </div>
                 </div>
             </div>
-            <div class="parallax"><img src="img/colombia.jpg" alt="Unsplashed background img 2"></div>
+            <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
         </div>
 
-        <div class="grey">
+        <div class="white">
             <div class="container">
                 <div class="section">
 
@@ -116,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
+            <div class="parallax"><img src="img/background4.jpg" alt="Unsplashed background img 3"></div>
         </div>
 
         <footer class="page-footer teal">
@@ -126,7 +129,7 @@
                         <h5 class="white-text">MinCIT</h5>
                         <p class="grey-text text-lighten-4">MiCITio Cúcuta se encuentra operando desde el 07 de Octubre de 2015. 
                             Desde su apertura se ha atendido a 134 usuarios entre empresarios, emprendedores y ciudadanos.</p>
-                        <img src="/web/img/ufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="img/ufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
                     <div class="col m4 s12 center">
                         <h5 class="white-text">Entidades adcritas</h5>
@@ -147,14 +150,14 @@
                             <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
                             <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
                         </ul>
-                        <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Realizado por <a class="brown-text text-lighten-3" href="http://materializecss.com">Manuel Florez y Erick Clair</a>
+                    Realizado por <a class="brown-text text-lighten-3">Manuel Florez y Erick Clair</a>
                 </div>
             </div>
         </footer>

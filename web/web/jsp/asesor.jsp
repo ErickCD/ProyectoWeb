@@ -16,7 +16,7 @@
     if (login == null) {
 
 %>
-<jsp:include page="../html/Asesor/asesorValido.jsp"></jsp:include>
+<jsp:include page="../jsp/dashboard.jsp"></jsp:include>
 <%    } else {
         session.setAttribute("error", login);
         response.sendRedirect("login.jsp");

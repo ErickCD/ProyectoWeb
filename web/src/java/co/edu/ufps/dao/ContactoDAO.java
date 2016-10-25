@@ -2,6 +2,7 @@ package co.edu.ufps.dao;
 
 import co.edu.ufps.connection.conexion;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,16 +45,16 @@ public class ContactoDAO {
 
         int rs = s.executeUpdate("UPDATE ` contacto` SET `cto_antiguedad_cargo`=\'" + cto_antiguedad_cargo + "\',"
                 + " `cto_lugar_nacimiento`=\'" + cto_fecha_nacimiento + "\', `cto_fecha_nacimiento`=\'" + cto_fecha_nacimiento + "\',"
-                + " `cto_nivel_estudio`=\'" + cto_nivel_estudio + "\', `cto_discapacidad`=\'" + cto_discapacidad + "\', `cto_cde`=\'" +
-                cto_cde + "\', `cto_etnia`=\'" + cto_etnia + "\', `cto_condicion_desplazado`=\'" + cto_condicion_desplazado +
-                "\' WHERE `cto_id`=\'" + cto_id + "\';");
+                + " `cto_nivel_estudio`=\'" + cto_nivel_estudio + "\', `cto_discapacidad`=\'" + cto_discapacidad + "\', `cto_cde`=\'"
+                + cto_cde + "\', `cto_etnia`=\'" + cto_etnia + "\', `cto_condicion_desplazado`=\'" + cto_condicion_desplazado
+                + "\' WHERE `cto_id`=\'" + cto_id + "\';");
     }
 
     //
     public List mostrarContacto(int cto_cc) throws SQLException {
         List list = null;
         ResultSet rs = s.executeQuery("SELECT `cto_nombres`, `cto_apellidos`, `cto_cargo`, `cto_cc`,  `cto_direccion`, `cto_ciudad`,"
-                + " `cto_departamento`, `cto_fijo`, `cto_cecular`, `cto_email`, `cto_genero` FROM `contacto` WHERE `cto_cc` = \"620403\";" 
+                + " `cto_departamento`, `cto_fijo`, `cto_cecular`, `cto_email`, `cto_genero` FROM `contacto` WHERE `cto_cc` = \"620403\";"
                 + cto_cc + ";");
 
         while (rs.next()) {
@@ -73,8 +74,8 @@ public class ContactoDAO {
         return list;
     }
 
-    public List mostrarContactos() throws SQLException {
-        List list = null;
+    public ArrayList mostrarContactos() throws SQLException {
+        ArrayList list = new ArrayList();
         ResultSet rs = s.executeQuery("SELECT `cto_nombres`,`cto_apellidos`,`cto_cc`,`cto_cargo`,`cto_direccion`,`cto_ciudad`, `cto_pais`,"
                 + " `cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,`cto_departamento` FROM `contacto`;");
 
@@ -98,11 +99,26 @@ public class ContactoDAO {
 
         return list;
     }
-    
-    public boolean borrarContacto(String cto_cc) throws SQLException{
+
+    public ArrayList mostrarFiltroContactos() throws SQLException {
+        ArrayList lista = new ArrayList();
+
+        ResultSet rs = s.executeQuery("SELECT * FROM `contacto`;");
+        Object temp[] = new Object[3];
+        while (rs.next()) {
+            temp[0] = String.valueOf(rs.getInt("cto_id"));
+            temp[1] = rs.getString("cto_nombres");
+            temp[2] = rs.getString("cto_apellidos");
+            lista.add(temp);
+        }
+
+        return lista;
+    }
+
+    public boolean borrarContacto(String cto_cc) throws SQLException {
         boolean respuesta = false;
-         respuesta = s.execute("DELETE FROM `contacto` WHERE `cto_cc` = \""+cto_cc+"\";");
-         
+        respuesta = s.execute("DELETE FROM `contacto` WHERE `cto_cc` = \"" + cto_cc + "\";");
+
         return respuesta;
     }
 }

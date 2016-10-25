@@ -14,8 +14,8 @@
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="/web/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href=".../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href=".../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 
     </head>
@@ -23,41 +23,50 @@
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
-                    <a href="/web/index.jsp" class="breadcrumb">Home</a>
+                    <a href="/web/index.jsp" class="breadcrumb">MinCIT</a>
                     <a href="/web/jsp/login.jsp" class="breadcrumb">Ingresar</a>
                 </div>
             </div>
         </nav>
         <div class="container">
 
-            <form class="form-signin" action="dashboard.jsp" method="POST">
-                <div class="row">
-                    <div class="col s12 m7">
-                        <div class="card">
 
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="card">
+
+                        <form class="form-signin" action="../jsp/asesor.jsp" method="POST">
+                            <%
+                                String error = (String) session.getAttribute("error");
+                                if (error != null) {
+                            %>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>:(</strong> <%= error%>
+                            </div>
+                            <%
+                                }
+                            %>
                             <div class="card-content">
                                 <h2 class="form-signin-heading">Por favor ingrese...</h2>
                                 <div class="container">
                                     <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
-                                    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
+                                    <input name="user" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
                                     <label for="inputPassword" class="sr-only">Password</label>
                                     <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="remember-me"> Recuerdame
-                                        </label>
-                                    </div>
                                 </div>
                             </div>
+
                             <div class="card-action">
                                 <!-- EL onClick es temporal -->
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                             </div>
-                        </div>
+                        </form>
+
                     </div>
                 </div>
 
-            </form>
+            </div>
+
         </div>
         <footer class="page-footer teal">
             <div class="container">

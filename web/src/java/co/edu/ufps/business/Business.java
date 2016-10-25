@@ -1,7 +1,10 @@
 package co.edu.ufps.business;
 
 import co.edu.ufps.dao.AsesorDAO;
+import co.edu.ufps.dao.ContactoDAO;
 import co.edu.ufps.dto.Asesor;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +18,8 @@ public class Business {
         return myAsesorDAO.validarAsesor(new Asesor(0 ,user, password));
     }
     
-    
-    
+    public ArrayList mostrarFiltroContactos() throws SQLException{
+        ContactoDAO contactoDAO = new ContactoDAO();
+        return contactoDAO.mostrarFiltroContactos();
+    }
 }

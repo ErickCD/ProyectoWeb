@@ -14,21 +14,21 @@
         <title>Empresa Turistica</title>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="../index.jsp" class="brand-logo">
-                    <img src="../img/a.png" alt="logo" />
+                <a id="logo-container" href="index.html" class="brand-logo">
+                    <img src="img/a.png" alt="logo" />
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="../index.jsp">Salir</a></li>
+                    <li><a href="index.html">Salir</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="../index.jsp">Salir</a></li>
+                    <li><a href="index.html">Salir</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -396,55 +396,9 @@
         </div>
 
 
-        <footer class="page-footer teal">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">MinCIT</h5>
-                        <p class="grey-text text-lighten-4">MiCITio Cúcuta se encuentra operando desde el 07 de Octubre de 2015. 
-                            Desde su apertura se ha atendido a 134 usuarios entre empresarios, emprendedores y ciudadanos.</p>
-
-
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Entidades adcritas</h5>
-                        <ul>
-                            <li><a class="white-text" href="https://www.fiducoldex.com.co/">Fiducoldex</a></li>
-                            <li><a class="white-text" href="http://www.fng.gov.co/ES">FNG</a></li>
-                            <li><a class="white-text" href="http://www.sic.gov.co/drupal/acuerdodepaz/">SIC</a></li>
-                            <li><a class="white-text" href="http://www.artesaniasdecolombia.com.co/PortalAC/General/template_index.jsf">Artesanias de colombia</a></li>
-                            <li><a class="white-text" href="http://www.proexport.com.co/">Procolombia</a></li>
-                            <li><a class="white-text" href="http://www.supersociedades.gov.co/Paginas/default.aspx">Superintendecia de sociedades</a></li>
-                            <li><a class="white-text" href="http://www.inm.gov.co/">Instituto Nacional de Metrología de Colombia</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Desarrolladores</h5>
-                        <ul>
-                            <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
-                            <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    Realizado por <a class="brown-text text-lighten-3" href="../http://materializecss.com">Manuel Florez y Erick Clair</a>
-                </div>
-            </div>
-        </footer>
-
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="../js/materialize.js"></script>
-        <script src="../js/init.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
     </body>
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../js/materialize.js"></script>
-    <script src="../js/init.js"></script>
-</body>
 </html>
