@@ -25,7 +25,7 @@
                 <div class="col s12">
                     <a href="../index.jsp" class="breadcrumb">MinCIT</a>
                     <a href="../jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
-                    <a href="../jsp/crearContacto.jsp" class="breadcrumb">Registro de Contacto</a>
+                    <a href="../jsp/registrarContacto.jsp" class="breadcrumb">Registro de Contacto</a>
                 </div>
             </div>
         </nav>

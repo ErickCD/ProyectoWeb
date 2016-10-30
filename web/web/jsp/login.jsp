@@ -46,7 +46,8 @@
                             <%
                                 }
                             %>
-                            <div class="card-content">
+
+                            <div class="card-content m6 s12">
                                 <h2 class="form-signin-heading">Por favor ingrese...</h2>
                                 <div class="container">
                                     <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
@@ -55,6 +56,8 @@
                                     <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                                 </div>
                             </div>
+
+
 
                             <div class="card-action">
                                 <!-- EL onClick es temporal -->

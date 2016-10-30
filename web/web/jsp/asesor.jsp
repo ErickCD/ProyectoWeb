@@ -19,7 +19,7 @@
 <jsp:include page="../jsp/dashboard.jsp"></jsp:include>
 <%    } else {
         session.setAttribute("error", login);
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("../jsp/login.jsp");
     }
 %>
 

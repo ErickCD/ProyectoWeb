@@ -39,7 +39,7 @@
                         <div class="collapsible-body">
                             <p>Operaciones sobre el Contacto<br>
                                 <a href="../jsp/registrarContacto.jsp" class="btn green">Registrar Contacto</a>
-                                <a href="../jsp/crearContacto.jsp" class="btn green">Buscar Contacto</a>
+                                <a href="#crearContacto.jsp" class="btn green">Buscar Contacto</a>
                             </p>
                         </div>
                     </li>
@@ -48,7 +48,10 @@
                         <div class="collapsible-body">
                             <p>Operaciones sobre el Cliente<br>
                                 <a href="#ConsultarEmpresa" class="btn green">Consultar Empresa</a>
-                                <a href="/web/jsp/registrarClienteEmpresaTuristica.jsp" class="btn green">Consultar Empresa Turistica</a>
+                                <a href="#" class="btn green">Consultar Empresa Turistica</a>
+                                <br><br>
+                                <a href="../jsp/crearEmpresa.jsp" class="btn green">Crear Empresa</a>
+                                <a href="../jsp/crearEmpresaTuristica.jsp" class="btn green">Crear Empresa Turistica</a>
                             </p>
                         </div>
                     </li>
@@ -88,17 +91,17 @@
                 <tbody>
                     <%
                         ArrayList lista = controlador.mostrarFiltroContactos();
-                        for (Object lista1: lista) {
+                        for (Object lista1 : lista) {
                             Object[] filas = (Object[]) lista1;
                     %>
                     <tr>
-                        <td><%=filas[0].toString() %></td>
-                        <td><%=filas[1].toString() %></td>
-                        <td><%=filas[2].toString() %></td>
+                        <td><%=filas[0].toString()%></td>
+                        <td><%=filas[1].toString()%></td>
+                        <td><%=filas[2].toString()%></td>
                         <td>
-                            <a href=".../jsp/registrarClienteEmpresaTuristica.jsp" class="btn #26a69a teal lighten-1">Registrar Empresa turistica</a>
+                            <a href=".../jsp/crearEmpresaTuristica.jsp " class="btn #26a69a teal lighten-1">Registrar Empresa turistica</a>
                             <a href=".../jsp/registrarContacto.jsp" class="btn #e57373 red lighten-2">Editar</a><hr>
-                            <a href=".../jsp/registrarCliente.jsp" class="btn #2196f3 blue">Registrar Empresa</a>
+                            <a href=".../jsp/crearEmpresa.jsp" class="btn #2196f3 blue">Registrar Empresa</a>
                         </td>
                     </tr>
                     <%
@@ -112,10 +115,6 @@
                     <ul class="pagination">
                         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                         <li class="active"><a href="#!">1</a></li>
-                        <li class="waves-effect"><a href="#!">2</a></li>
-                        <li class="waves-effect"><a href="#!">3</a></li>
-                        <li class="waves-effect"><a href="#!">4</a></li>
-                        <li class="waves-effect"><a href="#!">5</a></li>
                         <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                     </ul>
                 </div>
@@ -159,7 +158,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Realizado por <a class="brown-text text-lighten-3" href="http://materializecss.com">Manuel Florez y Erick Clair</a>
+                    Realizado por <a class="brown-text text-lighten-3" href="#">Manuel Florez y Erick Clair</a>
                 </div>
             </div>
         </footer>

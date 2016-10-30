@@ -9,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        
+
         <title>Crear Contacto</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,58 +17,51 @@
         <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        
+
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
-                    <a href="/web/index.jsp" class="breadcrumb">Home</a>
-                    <a href="/web/jsp/dashboard.jsp" class="breadcrumb">Dashboard</a>
+                    <a href="/web/index.jsp" class="breadcrumb">MinCIT</a>
+                    <a href="/web/jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
                     <a href="/web/jsp/registrarEmpresaAdscrita.jsp" class="breadcrumb">Registro de Empresa Adscrita</a>
                 </div>
             </div>
         </nav>
-        
+
         <div class="container">
             <form class="" action="" method="post">
                 <div class="row">
 
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
-                    
-                    
 
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">Nombre Empresa</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Nombre Gerente</label>
-                        </div>
+                    <div class="input-field col m6 s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Nombre Empresa</label>
                     </div>
 
-
-                    <div class="col m6 s12">
-                        <div class="input-field">
-                            <i class="material-icons prefix" >email</i>
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
+                    <div class="input-field col m6 s12">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Nombre Gerente</label>
                     </div>
 
-                    <div class="row">
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">class</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Página web</label>
-                        </div>
-                        <div class="input-field col m6 s12">
-                            <i class="material-icons prefix">phone</i>
-                            <input id="icon_telephone" type="tel" class="validate">
-                            <label for="icon_telephone">Teléfono</label>
-                        </div>
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix" >email</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
                     </div>
-                    
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">class</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Página web</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone">Teléfono</label>
+                    </div>
+
                     <div class="row center">
                         <input class="btn green" type="submit" value="Registrar">
                     </div>
@@ -76,7 +69,7 @@
                 </div>
             </form>
         </div>
-        
+
         <footer class="page-footer teal">
             <div class="container">
                 <div class="row">
@@ -107,7 +100,7 @@
                         </ul>
                         <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer-copyright">
@@ -116,7 +109,7 @@
                 </div>
             </div>
         </footer>
-        
+
         <!--  Scripts-->
         <script src="/web/js/jquery-2.1.1.min.js"></script>
         <script src="/web/js/materialize.min.js"></script>

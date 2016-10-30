@@ -21,7 +21,7 @@
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
                 <div class="hide-on-small-only">
-                    <a id="logo-container" href="../index.jsp" class="brand-logo">
+                    <a id="logo-container" href="../web/index.jsp" class="brand-logo">
                         <img src="img/a.png" alt="logo" />
                     </a>
                 </div>
