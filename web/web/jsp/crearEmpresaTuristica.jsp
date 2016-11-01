@@ -73,11 +73,6 @@
                         </div>
 
                         <div class="input-field col m6 s12">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="nro_cc">NRO. C.C:</label>
-                        </div>
-
-                        <div class="input-field col m6 s12">
                             <i class="material-icons prefix">class</i>
                             <input id="last_name" type="text" class="validate">
                             <label for="cargo">Cargo</label>

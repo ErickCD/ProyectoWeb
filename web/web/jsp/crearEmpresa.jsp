@@ -36,11 +36,17 @@
     <div class="container">
         <form class="" action="" method="post">
 
-            <h5 class="center">Registro de empresas</h5>
-            <i class="material-icons prefix">today</i>
-            <input type="date" class="datepicker" value="Fecha">
+            <!-- Titulo del formulario -->
+            <div class="control-label">
+                <h5 class="center">Registro de empresas</h5>
+            </div>
 
             <div class="row">
+
+                <div class="input-field col m6 s12 ">
+                    <i class="material-icons prefix">today</i>
+                    <input type="date" class="datepicker" value="Fecha">
+                </div>
                 <div class="col m6 s12">
                     <label>Clasificación</label>
                     <select class="browser-default">
@@ -93,8 +99,6 @@
                         <option value="3">Doctorado</option>
                     </select>
                 </div>
-
-
                 <div class="input-field col m6 s12">
                     <input id="nro_cc" type="text" class="validate">
                     <label for="last_name">Dirección</label>

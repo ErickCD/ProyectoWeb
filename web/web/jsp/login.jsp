@@ -35,7 +35,7 @@
                 <div class="col s12 m7">
                     <div class="card">
 
-                        <form class="form-signin" action="../jsp/asesor.jsp" method="POST">
+                        <form class="form-signin" action="../jsp/usuario.jsp" method="POST">
                             <%
                                 String error = (String) session.getAttribute("error");
                                 if (error != null) {

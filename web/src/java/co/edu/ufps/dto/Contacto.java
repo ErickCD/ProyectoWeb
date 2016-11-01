@@ -52,17 +52,42 @@ public class Contacto {
     }
 
     //Datos de cualquier empresa
-    public Contacto(int cto_id, int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento,
-            String cto_nivel_estudio, String cto_discapacidad, String cto_cde, String cto_etnia,
-            String cto_condicion_desplazado) {
+    public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo, int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento, String cto_nivel_estudio, String cto_discapacidad, String cto_direccion, String cto_ciudad, String cto_celular, String cto_fijo, String cto_email, String cto_genero, String cto_etnia, String cto_condicion_desplazado, String cto_departamento) {
+        this.id = id;
+        this.cto_nombres = cto_nombres;
+        this.cto_apellidos = cto_apellidos;
+        this.cto_cc = cto_cc;
+        this.cto_cargo = cto_cargo;
         this.cto_antiguedad_cargo = cto_antiguedad_cargo;
         this.cto_lugar_nacimiento = cto_lugar_nacimiento;
         this.cto_fecha_nacimiento = cto_fecha_nacimiento;
         this.cto_nivel_estudio = cto_nivel_estudio;
         this.cto_discapacidad = cto_discapacidad;
-        this.cto_cde = cto_cde;
+        this.cto_direccion = cto_direccion;
+        this.cto_ciudad = cto_ciudad;
+        this.cto_celular = cto_celular;
+        this.cto_fijo = cto_fijo;
+        this.cto_email = cto_email;
+        this.cto_genero = cto_genero;
         this.cto_etnia = cto_etnia;
         this.cto_condicion_desplazado = cto_condicion_desplazado;
+        this.cto_departamento = cto_departamento;
+    }
+
+    public Contacto(String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo, String cto_direccion, String cto_ciudad, String cto_pais, String cto_celular, String cto_fijo, String cto_email, String cto_email_masivo, String cto_genero, String cto_departamento) {
+        this.cto_nombres = cto_nombres;
+        this.cto_apellidos = cto_apellidos;
+        this.cto_cc = cto_cc;
+        this.cto_cargo = cto_cargo;
+        this.cto_direccion = cto_direccion;
+        this.cto_ciudad = cto_ciudad;
+        this.cto_pais = cto_pais;
+        this.cto_celular = cto_celular;
+        this.cto_fijo = cto_fijo;
+        this.cto_email = cto_email;
+        this.cto_email_masivo = cto_email_masivo;
+        this.cto_genero = cto_genero;
+        this.cto_departamento = cto_departamento;
     }
 
     public int getId() {

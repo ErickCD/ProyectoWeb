@@ -13,8 +13,8 @@ public class Controlador {
     private final Business myBusiness = new Business();
     
     // devuelve null si es valido
-    public String validarAsesor(String user, String password){
-        return myBusiness.validarAsesor(user, password);
+    public String validarUsuario(String user, String password){
+        return myBusiness.validarUsuario(user, password);
     }
     
     public ArrayList mostrarFiltroContactos() throws SQLException{
