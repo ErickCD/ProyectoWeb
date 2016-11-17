@@ -14,8 +14,8 @@
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href=".../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href=".../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 
     </head>
@@ -23,8 +23,8 @@
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
-                    <a href="/web/index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="/web/jsp/login.jsp" class="breadcrumb">Ingresar</a>
+                    <a href="../index.jsp" class="breadcrumb">MinCIT</a>
+                    <a href="../jsp/login.jsp" class="breadcrumb">Ingresar</a>
                 </div>
             </div>
         </nav>
@@ -32,7 +32,8 @@
 
 
             <div class="row">
-                <div class="col s12 m7">
+
+                <div class="col s12 m12">
                     <div class="card">
 
                         <form class="form-signin" action="../jsp/usuario.jsp" method="POST">
@@ -47,16 +48,22 @@
                                 }
                             %>
 
-                            <div class="card-content m6 s12">
-                                <h2 class="form-signin-heading">Por favor ingrese...</h2>
-                                <div class="container">
-                                    <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
-                                    <input name="user" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
-                                    <label for="inputPassword" class="sr-only">Password</label>
-                                    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                            <div class="row">
+
+                                <div class="card-content m6 s12 ">
+                                    <h2 class="form-signin-heading">Por favor ingrese...</h2>
+                                    <div class="container">
+                                        <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
+                                        <input name="user" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
+                                        <label for="inputPassword" class="sr-only">Password</label>
+                                        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                                    </div>
+                                </div>
+                                <div class="card-content m4 s12 center">
+                                    <div class="container">
+                                    </div>
                                 </div>
                             </div>
-
 
 
                             <div class="card-action">
@@ -78,7 +85,7 @@
                         <h5 class="white-text">MinCIT</h5>
                         <p class="grey-text text-lighten-4">MiCITio Cúcuta se encuentra operando desde el 07 de Octubre de 2015. 
                             Desde su apertura se ha atendido a 134 usuarios entre empresarios, emprendedores y ciudadanos.</p>
-                        <img src="/web/img/ufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/ufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
                     <div class="col m4 s12 center">
                         <h5 class="white-text">Entidades adcritas</h5>
@@ -99,7 +106,7 @@
                             <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
                             <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
                         </ul>
-                        <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
 
                 </div>
@@ -111,8 +118,8 @@
             </div>
         </footer>
         <!--  Scripts-->
-        <script src="/web/js/jquery-2.1.1.min.js"></script>
-        <script src="/web/js/materialize.min.js"></script>
-        <script src="/web/js/init.js"></script>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.min.js"></script>
+        <script src="../js/init.js"></script>
     </body>
 </html>

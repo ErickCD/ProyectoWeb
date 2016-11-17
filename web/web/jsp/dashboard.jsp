@@ -17,8 +17,8 @@
 
             <!-- CSS  -->
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link href="/web/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-            <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+            <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+            <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
         </head>
         <body>
@@ -59,7 +59,7 @@
                         <div class="collapsible-header"><i class="material-icons">whatshot</i>Empresa Adscrita</div>
                         <div class="collapsible-body">
                             <p>Operaciones sobre la empresa adscrita<br>
-                                <a href="/web/jsp/registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
+                                <a href="../jsp/registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
                                 <a href="#ConsultarEmpresaTuristica" class="btn green">Consultar Empresas Adscritas</a>
                             </p>
                         </div>
@@ -99,9 +99,9 @@
                         <td><%=filas[1].toString()%></td>
                         <td><%=filas[2].toString()%></td>
                         <td>
-                            <a href=".../jsp/crearEmpresaTuristica.jsp " class="btn #26a69a teal lighten-1">Registrar Empresa turistica</a>
-                            <a href=".../jsp/registrarContacto.jsp" class="btn #e57373 red lighten-2">Editar</a><hr>
-                            <a href=".../jsp/crearEmpresa.jsp" class="btn #2196f3 blue">Registrar Empresa</a>
+                            <a href="../jsp/crearEmpresaTuristica.jsp " class="btn #26a69a teal lighten-1">Registrar Empresa turistica</a>
+                            <a href="../jsp/registrarContacto.jsp" class="btn #e57373 red lighten-2">Editar</a><hr>
+                            <a href="../jsp/crearEmpresa.jsp" class="btn #2196f3 blue">Registrar Empresa</a>
                         </td>
                     </tr>
                     <%
@@ -151,7 +151,7 @@
                             <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
                             <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
                         </ul>
-                        <img src=".../img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
 
                 </div>
@@ -163,8 +163,8 @@
             </div>
         </footer>
         <!--  Scripts-->
-        <script src="/web/js/jquery-2.1.1.min.js"></script>
-        <script src="/web/js/materialize.min.js"></script>
-        <script src="/web/js/init.js"></script>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.min.js"></script>
+        <script src="../js/init.js"></script>
     </body>
 </html>

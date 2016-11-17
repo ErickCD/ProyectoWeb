@@ -13,17 +13,17 @@
         <title>Crear Contacto</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="/web/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
 
         <nav>
             <div class="nav-wrapper container">
                 <div class="col s12">
-                    <a href="/web/index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="/web/jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
-                    <a href="/web/jsp/registrarEmpresaAdscrita.jsp" class="breadcrumb">Registro de Empresa Adscrita</a>
+                    <a href="../index.jsp" class="breadcrumb">MinCIT</a>
+                    <a href="../jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
+                    <a href="../jsp/registrarEmpresaAdscrita.jsp" class="breadcrumb">Registro de Empresa Adscrita</a>
                 </div>
             </div>
         </nav>
@@ -77,7 +77,7 @@
                         <h5 class="white-text">MinCIT</h5>
                         <p class="grey-text text-lighten-4">MiCITio Cúcuta se encuentra operando desde el 07 de Octubre de 2015. 
                             Desde su apertura se ha atendido a 134 usuarios entre empresarios, emprendedores y ciudadanos.</p>
-                        <img src="/web/img/ufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/ufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
                     <div class="col m4 s12 center">
                         <h5 class="white-text">Entidades adcritas</h5>
@@ -98,7 +98,7 @@
                             <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
                             <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
                         </ul>
-                        <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
 
                 </div>
@@ -111,8 +111,8 @@
         </footer>
 
         <!--  Scripts-->
-        <script src="/web/js/jquery-2.1.1.min.js"></script>
-        <script src="/web/js/materialize.min.js"></script>
-        <script src="/web/js/init.js"></script>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.min.js"></script>
+        <script src="../js/init.js"></script>
     </body>
 </html>

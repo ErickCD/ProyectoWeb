@@ -15,8 +15,8 @@
         <title>Crear Contacto</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="/web/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="/web/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
 
@@ -172,7 +172,7 @@
                             <li><a href="mailto:acheron_1405@hotmail.com" class="white-text">acheron_1405@hotmail.com</a></li>
                             <li><a href="mailto:manuelflorezw@outlook.com" class="white-text">manuelflorezw@outlook.com</a></li>
                         </ul>
-                        <img src="/web/img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
+                        <img src="../img/sistemasufps.png" width="150px" height="150px" alt="UFPS" />
                     </div>
 
                 </div>
@@ -185,8 +185,8 @@
         </footer>
 
         <!--  Scripts-->
-        <script src="/web/js/jquery-2.1.1.min.js"></script>
-        <script src="/web/js/materialize.min.js"></script>
-        <script src="/web/js/init.js"></script>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../js/materialize.min.js"></script>
+        <script src="../js/init.js"></script>
     </body>
 </html>
