@@ -67,7 +67,7 @@
 
 
                             <div class="card-action">
-                                <!-- EL onClick es temporal -->
+                                
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                             </div>
                         </form>
