@@ -9,7 +9,9 @@ import java.util.Date;
 public class Contacto {
 
     private int id;
-    private String cto_nombres,
+    private String consecutivo;
+    private Date fecha;
+    private String asesor, cto_nombres,
             cto_apellidos,
             cto_cc;
     private String cto_cargo;
@@ -96,6 +98,30 @@ public class Contacto {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getConsecutivo() {
+        return consecutivo;
+    }
+
+    public void setConsecutivo(String consecutivo) {
+        this.consecutivo = consecutivo;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getAsesor() {
+        return asesor;
+    }
+
+    public void setAsesor(String asesor) {
+        this.asesor = asesor;
     }
 
     public String getCto_nombres() {
