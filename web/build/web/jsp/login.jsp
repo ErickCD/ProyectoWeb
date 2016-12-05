@@ -54,7 +54,7 @@
                                     <h2 class="form-signin-heading">Por favor ingrese...</h2>
                                     <div class="container">
                                         <label for="inputEmail" class="sr-only">Dirección de e-mail</label>
-                                        <input name="user" type="email" id="inputEmail" class="form-control" placeholder="Dirección de e-mail" required autofocus>
+                                        <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Nombre de usuario" required autofocus>
                                         <label for="inputPassword" class="sr-only">Password</label>
                                         <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                                     </div>
@@ -67,7 +67,7 @@
 
 
                             <div class="card-action">
-                                
+
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                             </div>
                         </form>

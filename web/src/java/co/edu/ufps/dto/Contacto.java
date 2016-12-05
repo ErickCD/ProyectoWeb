@@ -31,13 +31,16 @@ public class Contacto {
             cto_genero,
             cto_etnia,
             cto_condicion_desplazado,
-            cto_departamento;
+            cto_departamento,
+            cto_notas;
 
     //Datos de cualquier contacto
-    public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
+    public Contacto(String consecutivo, String fecha, String asesor, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
             String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo, String cto_celular, String cto_email,
-            String cto_email_masivo, String cto_genero, String cto_departamento) {
-        this.id = id;
+            String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas) {
+        this.consecutivo = consecutivo;
+        this.fecha = this.fecha;
+        this.asesor = asesor;
         this.cto_nombres = cto_nombres;
         this.cto_apellidos = cto_apellidos;
         this.cto_cc = cto_cc;
@@ -51,6 +54,7 @@ public class Contacto {
         this.cto_email_masivo = cto_email_masivo;
         this.cto_genero = cto_genero;
         this.cto_departamento = cto_departamento;
+        this.cto_notas = cto_notas;
     }
 
     //Datos de cualquier empresa
@@ -292,4 +296,11 @@ public class Contacto {
         this.cto_departamento = cto_departamento;
     }
 
+    public String getCto_notas() {
+        return cto_notas;
+    }
+
+    public void setCto_notas(String cto_notas) {
+        this.cto_notas = cto_notas;
+    }
 }

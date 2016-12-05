@@ -19,14 +19,14 @@ public class UsuarioDAO {
             conexion con = new conexion();
             // Preparamos la consulta
             Statement s = con.getConnection().createStatement();
-            ResultSet rs = s.executeQuery("SELECT * FROM usuario WHERE user=\'" + usuario.getUser() + "\'");
+            ResultSet rs = s.executeQuery("SELECT * FROM usuario WHERE nombre=\'" + usuario.getNombre() + "\';");
 
             Usuario aux = null;
 
             while (rs.next()) {
                 aux = new Usuario(
                         rs.getInt("id"),
-                        rs.getString("user"),
+                        rs.getString("nombre"),
                         rs.getString("password")
                 );
             }
@@ -40,7 +40,7 @@ public class UsuarioDAO {
             con.cerrarConnection();
             return respuesta;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("El error es: " + e.getMessage());
             return " Lo sentiomos en estos momentos no podemos aceder a la base de datos,"
                     + "comunicate con tu administrador ...." + e.getMessage();
         }

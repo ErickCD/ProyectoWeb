@@ -25,19 +25,21 @@ public class ContactoDAO {
         }
     }
 
-    public void registrarContacto(String cto_nombres, String cto_apellidos, String cto_cc,
-            String cto_cargo, String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo,
-            String cto_celular, String cto_email, String cto_email_masivo, String cto_genero,
-            String cto_departamento) throws SQLException {
+    public boolean registrarContacto(String consecutivo, String fecha, String asesor, String cto_nombres,
+            String cto_apellidos, String cto_cc, String cto_cargo, String cto_cde, String cto_direccion,
+            String cto_ciudad, String cto_pais, String cto_cecular, String cto_fijo, String cto_email,
+            String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas) throws SQLException {
         boolean rs = false;
 
-        rs = s.execute("INSERT INTO ` contacto` (`cto_id`, `cto_nombres`,"
-                + " `cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_direccion`, `cto_ciudad`, `cto_pais`,"
-                + " `cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,"
-                + " `cto_departamento`) VALUES ('', \'" + cto_nombres + "\', \'" + cto_apellidos + "\',"
-                + " \'" + cto_cc + "\', \'" + cto_cargo + "\', \'" + cto_direccion + "\', \'" + cto_ciudad + "\',"
-                + " \'" + cto_pais + "\', \'" + cto_celular + "\', \'" + cto_fijo + "\', \'" + cto_email + "\', \'"
-                + cto_email_masivo + "\', \'" + cto_genero + "\', \'" + cto_departamento + "\'); ");
+        rs = s.execute("INSERT INTO `contacto`(`consecutivo`, `fecha`, `asesor`, `cto_nombres`, "
+                + "`cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_cde`, `cto_direccion`, `cto_ciudad`, `cto_pais`, "
+                + "`cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`, `cto_departamento`, "
+                + "`cto_notas`) VALUES (\'" + consecutivo + "\', \'" + fecha + "\', \'" + asesor + "\', \'"
+                + cto_nombres + "\', \'" + cto_apellidos + "\'," + " \'" + cto_cc + "\', \'" + cto_cargo + "\', \'"
+                + cto_cde + "\', \'" + cto_direccion + "\', \'" + cto_ciudad + "\',"
+                + " \'" + cto_pais + "\', \'" + cto_cecular + "\', \'" + cto_fijo + "\', \'" + cto_email + "\', \'"
+                + cto_email_masivo + "\', \'" + cto_genero + "\', \'" + cto_departamento + "\', \'" + cto_notas + "\'); ");
+        return rs;
     }
 
     public void datosContactoEmpresa(int cto_id, int cto_antiguedad_cargo, String cto_lugar_nacimiento, java.util.Date cto_fecha_nacimiento,
@@ -112,7 +114,14 @@ public class ContactoDAO {
 
         ResultSet rs = s.executeQuery("SELECT * FROM `contacto`;");
         Object temp[] = new Object[3];
+
+        Contacto contacto = null;
         while (rs.next()) {
+            contacto = new Contacto(rs.getString("consecutivo"), rs.getString("fecha"), rs.getString("asesor"), rs.getString("cto_nombres"),
+                    rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
+                    rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_celular"),
+                    rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
+                    rs.getString("cto_notas"));
             temp[0] = String.valueOf(rs.getInt("cto_id"));
             temp[1] = rs.getString("cto_nombres");
             temp[2] = rs.getString("cto_apellidos");

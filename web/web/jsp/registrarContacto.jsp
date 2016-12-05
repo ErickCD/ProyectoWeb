@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador"></jsp:useBean>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,115 +30,130 @@
         </nav>
 
         <div class="container">
-            <form class="" action="" method="post">
+            <form class="" action="control_Contacto.jsp" method="POST">
                 <div class="row">
 
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
 
-                    <i class="material-icons prefix">today</i>
-                    <input id="fecha_registroContacto" type="date" class="datepicker" value="Fecha">
+                    <div class="col S12">
+                        <div class="col m4 input-field">
+                            <label for="cto_consecutivo">Número consecutivo</label>
+                            <input id="cto_consecutivo" name="cto_consecutivo" type="number" class="validate">
+                        </div>
 
-                    <!--<div class="row">-->
-                    <div class="input-field col m6 s12">
-                        <input id="cto_nombres" type="text" class="validate">
-                        <label for="cto_nombres">Nombres</label>
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input id="cto_apellidos" type="text" class="validate">
-                        <label for="cto_apellidos" >Apellidos</label>
-                    </div>
-                    <!--</div>-->
+                        <div class="col m4 input-field">
+                            <i class="material-icons prefix">today</i>
+                            <input name="fecha_registroContacto" id="fecha_registroContacto" type="date" step="7" value="Fecha">
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="cto_cc" type="number" class="validate">
-                        <label for="cto_cc">Nro CC.</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <label for="cto_asesor">Asesor</label>
+                            <input id="cto_asesor" name="cto_asesor" type="text" class="validate">
+                        </div>
 
-                    <div class="col m6 s12">
-                        <label>Género</label>
-                        <select id="cto_genero" class="browser-default">
-                            <option value="1">Masculino</option>
-                            <option value="2">Femenino</option>
-                            <option value="3">LGBTI</option>
-                        </select>
-                    </div>
+                        <div class="col m4 input-field">
+                            <label for="cto_nombres">Nombres</label>
+                            <input id="cto_nombres" name="cto_nombres" type="text" class="validate">
+                        </div>
 
-                    <div class="col m6 s12">
-                        <div class="input-field">
+                        <div class="col m4 input-field">
+                            <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate">
+                            <label for="cto_apellidos" >Apellidos</label>
+                        </div>
+
+                        <div class="col m4 input-field">
+                            <input id="cto_cc" name="cto_cc" type="number" class="validate">
+                            <label for="cto_cc">Nro CC.</label>
+                        </div>
+
+                        <div class="col m4">
+                            <label>Género</label>
+                            <select id="cto_genero" name="cto_genero" class="browser-default">
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">LGBTI</option>
+                            </select>
+                        </div>
+
+                        <div class="col m4 input-field">
                             <i class="material-icons prefix" >email</i>
-                            <input id="cto_email" type="email" class="validate">
+                            <input id="cto_email" name="cto_email" type="email" class="validate">
                             <label for="cto_email">Email</label>
                         </div>
-                    </div>
 
-                    <div class="col m6 s12" id="cto_email_masivo">
-                        <label for="t1">¿Desea resibir correo electronico maxivo?</label>
-                        <p>
-                            <input name="group2" type="radio" id="t1" />
-                            <label for="t1">Si</label>
-                        </p>
-                        <p>
-                            <input name="group2" type="radio" id="t2" />
-                            <label for="t2">No</label>
-                        </p>
-                    </div>
+                        <div class="col m4 input-field">
+                            <div id="cto_email_masivo">
+                                <label for="cto_email_masivo_t1">¿Desea resibir correo electronico maxivo?</label>
+                                <p>
+                                    <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t1" />
+                                    <label for="cto_email_masivo_t1">Si</label>
+                                </p>
+                                <p>
+                                    <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t2" />
+                                    <label for="cto_email_masivo_t2">No</label>
+                                </p>
+                            </div>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">class</i>
-                        <input id="cto_cargo" type="text" class="validate">
-                        <label for="cto_cargo" >Cargo</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <i class="material-icons prefix">class</i>
+                            <input id="cto_cargo" name="cto_cargo" type="text" class="validate">
+                            <label for="cto_cargo" >Cargo</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">phone</i>
-                        <input id="cto_fijo" type="tel" class="validate">
-                        <label for="cto_fijo">Teléfono</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="cto_fijo" name="cto_fijo" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" class="validate">
+                            <label for="cto_fijo">999-999-9999</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">stay_current_portrait</i>
-                        <input id="cto_cecular" type="text" class="validate">
-                        <label for="cto_cecular">Celular</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <i class="material-icons prefix">stay_current_portrait</i>
+                            <input id="cto_cecular" name="cto_cecular" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" class="validate">
+                            <label for="cto_cecular">Celular</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">payment</i>
-                        <input id="cto_cde" type="tel" class="validate">
-                        <label for="cto_cde">CDE</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <i class="material-icons prefix">payment</i>
+                            <input id="cto_cde" name="cto_cde" type="tel" class="validate">
+                            <label for="cto_cde">CDE</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="cto_direccion" type="text" class="validate">
-                        <label for="cto_direccion">Dirección</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <input id="cto_direccion" name="cto_direccion" type="text" class="validate">
+                            <label for="cto_direccion">Dirección</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="cto_ciudad" type="text" class="validate">
-                        <label for="cto_ciudad">Ciudad</label>
-                    </div>
+                        <div class="col m4 input-field">
+                            <input id="cto_ciudad" name="cto_ciudad" type="text" class="validate">
+                            <label for="cto_ciudad">Ciudad</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="cto_departamento" type="text" class="validate">
-                        <label for="cto_departamento">Deparamento</label>
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input id="cto_pais" type="text" class="validate">
-                        <label for="cto_pais">País</label>
-                    </div>
-                    <div class="row">
-                        <form class="col s12">
+                        <div class="col m4 input-field">
+                            <input id="cto_departamento" name="cto_departamento" type="text" class="validate">
+                            <label for="cto_departamento">Deparamento</label>
+                        </div>
+
+                        <div class="col m4 input-field">
+                            <input id="cto_pais" name="cto_pais" type="text" class="validate">
+                            <label for="cto_pais">País</label>
+                        </div>
+
+                        <div class="col m8 input-field">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">note_add</i>
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <textarea id="textarea1" name="textarea1" class="materialize-textarea" maxlength="150"></textarea>
                                     <label for="textarea1">Notas:</label>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                    <div class="row">
+
+                    <div class="row center">
                         <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar contacto</button>
                     </div>
+
                 </div>
             </form>
         </div>

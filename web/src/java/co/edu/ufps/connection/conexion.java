@@ -19,18 +19,19 @@ public class conexion {
         }
         return this.con;
     }
-    
-    public void cerrarConnection() throws SQLException{
-        if (this.con!=null) {
+
+    public void cerrarConnection() throws SQLException {
+        if (this.con != null) {
             this.con.close();
         }
     }
 
-    public conexion(){}
-    
-    private String url = "jdbc:mysql://sandbox2.ufps.edu.co/ufps_60";
-    private String user = "ufps_60";
-    private String password = "ufps_g6";
+    public conexion() {
+    }
+
+    private final String url = "jdbc:mysql://sandbox2.ufps.edu.co/ufps_60";
+    private final String user = "ufps_60";
+    private final String password = "ufps_g6";
     private Connection con = null;
-    
+
 }
