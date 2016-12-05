@@ -60,9 +60,12 @@ public class ContactoDAO {
                 + " `cto_departamento`, `cto_fijo`, `cto_cecular`, `cto_email`, `cto_genero` FROM `contacto` WHERE `cto_cc` = \"620403\";"
                 + cto_cc + ";");
 
+        Contacto contacto = null;
         while (rs.next()) {
-            Contacto con = new Contacto(
-                    rs.getInt("cto_id"),
+            contacto = new Contacto(
+                    rs.getString("consecutivo"),
+                    rs.getString("fecha"),
+                    rs.getString("asesor"),
                     rs.getString("cto_nombres"),
                     rs.getString("cto_apellidos"),
                     rs.getString("cto_cc"),
@@ -75,7 +78,9 @@ public class ContactoDAO {
                     rs.getString("cto_email"),
                     rs.getString("cto_email_masivo"),
                     rs.getString("cto_genero"),
-                    rs.getString("cto_departamento"));
+                    rs.getString("cto_departamento"),
+                    rs.getString("cto_notas"));
+            list.add(contacto);
         }
 
         return list;
