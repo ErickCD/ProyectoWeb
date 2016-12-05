@@ -113,23 +113,22 @@ public class ContactoDAO {
         return list;
     }
 
-    public List<Contacto> mostrarFiltroContactos(int cantidad) throws SQLException {
-        int limite = cantidad + 10;
-        ResultSet rs = s.executeQuery("SELECT * FROM `contacto`order by cto_nombres asc limit " + cantidad + "," + limite + ";");
-        //Object temp[] = new Object[3];
-
+    public List<Contacto> mostrarFiltroContactos(int cantidad) {
         ArrayList lista = new ArrayList();
-        Contacto contacto = null;
-        while (rs.next()) {
-            contacto = new Contacto(rs.getString("consecutivo"), rs.getString("fecha"), rs.getString("asesor"), rs.getString("cto_nombres"),
-                    rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
-                    rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
-                    rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
-                    rs.getString("cto_notas"));
-//            temp[0] = String.valueOf(rs.getInt("cto_id"));
-//            temp[1] = rs.getString("cto_nombres");
-//            temp[2] = rs.getString("cto_apellidos");
-            lista.add(contacto);
+        try {
+            int limite = cantidad + 10;
+            ResultSet rs = s.executeQuery("SELECT * FROM `contacto`order by cto_nombres asc limit " + cantidad + "," + limite + ";");
+
+            Contacto contacto = null;
+            while (rs.next()) {
+                contacto = new Contacto(rs.getString("consecutivo"), rs.getString("fecha"), rs.getString("asesor"), rs.getString("cto_nombres"),
+                        rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
+                        rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
+                        rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
+                        rs.getString("cto_notas"));
+                lista.add(contacto);
+            }
+        } catch (Exception e) {
         }
 
         return lista;
