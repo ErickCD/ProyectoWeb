@@ -54,11 +54,11 @@ public class ContactoDAO {
     }
 
     //
-    public List<Contacto> mostrarContacto(int cto_cc) throws SQLException {
+    public List<Contacto> mostrarContacto(int cantidad) throws SQLException {
+        int limite = cantidad + 10;
+
         List<Contacto> list = new ArrayList<>();
-        ResultSet rs = s.executeQuery("SELECT `cto_nombres`, `cto_apellidos`, `cto_cargo`, `cto_cc`,  `cto_direccion`, `cto_ciudad`,"
-                + " `cto_departamento`, `cto_fijo`, `cto_cecular`, `cto_email`, `cto_genero` FROM `contacto` WHERE `cto_cc` = \"620403\";"
-                + cto_cc + ";");
+        ResultSet rs = s.executeQuery("SELECT * FROM `contacto` limit " + cantidad + "," + limite + ";");
 
         Contacto contacto = null;
         while (rs.next()) {
