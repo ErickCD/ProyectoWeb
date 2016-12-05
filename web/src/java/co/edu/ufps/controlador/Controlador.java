@@ -3,6 +3,7 @@ package co.edu.ufps.controlador;
 import co.edu.ufps.business.Business;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -17,8 +18,8 @@ public class Controlador {
         return myBusiness.validarUsuario(user, password);
     }
 
-    public ArrayList mostrarFiltroContactos() throws SQLException {
-        return myBusiness.mostrarFiltroContactos();
+    public List mostrarFiltroContactos(int valor) throws SQLException {
+        return myBusiness.mostrarFiltroContactos(valor);
     }
 
     public boolean guardarContacto(String consecutivo, String fecha, String asesor, String cto_nombres,

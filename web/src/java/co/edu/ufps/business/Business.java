@@ -5,6 +5,7 @@ import co.edu.ufps.dao.ContactoDAO;
 import co.edu.ufps.dto.Usuario;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -18,9 +19,9 @@ public class Business {
         return myusuarioDAO.validarUsuario(new Usuario(0, nombre, password));
     }
 
-    public ArrayList mostrarFiltroContactos() throws SQLException {
+    public List mostrarFiltroContactos(int valor) throws SQLException {
         ContactoDAO contactoDAO = new ContactoDAO();
-        return contactoDAO.mostrarFiltroContactos();
+        return contactoDAO.mostrarFiltroContactos(valor);
     }
 
     public boolean guardarContacto(String consecutivo, String fecha, String asesor, String cto_nombres,

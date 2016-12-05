@@ -4,6 +4,8 @@
     Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.Contacto"%>
+<%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -90,7 +92,7 @@
                 </thead>
                 <tbody>
                     <%
-                        ArrayList lista = controlador.mostrarFiltroContactos();
+                        List<Contacto> lista = controlador.mostrarFiltroContactos(0);
                         for (Object lista1 : lista) {
                             Object[] filas = (Object[]) lista1;
                     %>
