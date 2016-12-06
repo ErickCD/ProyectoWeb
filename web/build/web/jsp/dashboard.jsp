@@ -154,6 +154,7 @@
                     <tr>
                         <th data-field="name">Nombre</th>
                         <th data-field="price">E-mail</th>
+                        <th data-field="price">Editar Contacto</th>
                         <th data-field="price">Crear empresa</th>
                     </tr>
                 </thead>
@@ -164,6 +165,7 @@
                     <tr>
                         <td><%=c.getCto_nombres()%></td>
                         <td><%=c.getCto_email()%></td>
+                        <td><a href="#" class="btn red">Editar</a></td>
                         <td><a href="crearEmpresa.jsp" class="btn">Crear</a></td>
                     </tr>
                     <% }
