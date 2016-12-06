@@ -24,7 +24,7 @@
         <tr>
             <td><%=c.getCto_nombres()%></td>
             <td><%=c.getCto_email()%></td>
-            <td><a href="#" class="btn">Registrar</a></td>
+            <td><a href="crearEmpresa.jsp" class="btn">Crear</a></td>
         </tr>
     </tbody>
 </table>

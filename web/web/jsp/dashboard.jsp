@@ -21,7 +21,6 @@
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="home.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="login.jsp" class="breadcrumb">Ingresar</a>
                     <a href="dashboard.jsp" class="breadcrumb">Dashboard</a>
                 </div>
             </div>
@@ -44,6 +43,8 @@
                                 }
                                 function ocultarPanelDeBusqueda() {
                                     $("#opc").addClass("hide");
+                                    $("#respuesta").addClass("hide");
+                                    
                                 }
                                 function buscar() {
 
@@ -69,7 +70,7 @@
                                         // son pasados como argumentos a la función
                                         // el objeto de la petición en crudo y código de estatus de la petición
                                         error: function (xhr, status) {
-                                            alert('Disculpe, existió un problema');
+                                            alert('Disculpe, No coincide esta consulta en la base de datos');
                                         },
 
                                         // código a ejecutar sin importar si la petición falló o no
@@ -163,7 +164,7 @@
                     <tr>
                         <td><%=c.getCto_nombres()%></td>
                         <td><%=c.getCto_email()%></td>
-                        <td><a href="#" class="btn">Registrar</a></td>
+                        <td><a href="crearEmpresa.jsp" class="btn">Crear</a></td>
                     </tr>
                     <% }
                     %>
