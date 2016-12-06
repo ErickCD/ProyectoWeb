@@ -37,4 +37,9 @@ public class Business {
         return myDAO.registrarContacto(contacto);
     }
 
+    public Contacto buscarContacto(String tipoBusqueda, String valorBuscado) {
+        ContactoDAO myDAO = new ContactoDAO();
+        return myDAO.buscarContacto(tipoBusqueda, valorBuscado);
+    }
+
 }

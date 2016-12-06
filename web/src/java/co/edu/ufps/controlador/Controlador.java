@@ -13,6 +13,11 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    //buscar un contacto en la base de datos
+    public Contacto buscarContacto(String tipoBusqueda,String valorBuscado){
+        return myBusiness.buscarContacto(tipoBusqueda,valorBuscado);
+    }
+    
     // devuelve null si es valido
     public String validarUsuario(Usuario u){
         return myBusiness.validarUsuario(u);

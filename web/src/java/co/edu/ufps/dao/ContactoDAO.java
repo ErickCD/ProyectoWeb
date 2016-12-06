@@ -151,7 +151,7 @@ public class ContactoDAO {
     }
 
     //Inicio de busquedas.
-    public Contacto busquedaCC(String tipoBusqueda, String valorBuscado) {
+    public Contacto buscarContacto(String tipoBusqueda, String valorBuscado) {
         Contacto aux;
         aux = null;
         try {
@@ -168,6 +168,7 @@ public class ContactoDAO {
                     rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
                     rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
                     rs.getString("cto_notas"));
+            return aux;
         } catch (SQLException ex) {
             Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
