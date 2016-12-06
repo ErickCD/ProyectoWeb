@@ -8,7 +8,7 @@
 <jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
     <html>
         <head>
-            <title>Login ppp</title>
+            <title>Login</title>
         <%@include file="plantilla/style.jsp" %>
     </head>
     <body>
