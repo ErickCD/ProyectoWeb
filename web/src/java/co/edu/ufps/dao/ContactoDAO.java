@@ -3,6 +3,7 @@ package co.edu.ufps.dao;
 import co.edu.ufps.connection.conexion;
 import co.edu.ufps.dto.Contacto;
 import java.sql.*;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -29,12 +30,14 @@ public class ContactoDAO {
 
     public boolean registrarContacto(Contacto contacto) {
         boolean rs = false;
+        Date date = new Date();
+        String fecha = date.getYear() + 1900 + "-" + (date.getMonth() + 1) + "-" + date.toGMTString().substring(0, 1);
 
         try {
             rs = s.execute("INSERT INTO `contacto`(`consecutivo`, `fecha`, `asesor`, `cto_nombres`, "
                     + "`cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_cde`, `cto_direccion`, `cto_ciudad`, `cto_pais`, "
                     + "`cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`, `cto_departamento`, "
-                    + "`cto_notas`) VALUES (\'" + contacto.getConsecutivo() + "\', \'" + "2016-12-01" + "\', \'" + contacto.getAsesor()
+                    + "`cto_notas`) VALUES (\'" + contacto.getConsecutivo() + "\', \'" + fecha + "\', \'" + contacto.getAsesor()
                     + "\', \'" + contacto.getCto_nombres() + "\', \'" + contacto.getCto_apellidos() + "\'," + " \'" + contacto.getCto_cc()
                     + "\', \'" + contacto.getCto_cargo() + "\', \'" + contacto.getCto_cde() + "\', \'" + contacto.getCto_direccion() + "\', \'"
                     + contacto.getCto_ciudad() + "\'," + " \'" + contacto.getCto_pais() + "\', \'" + contacto.getCto_celular() + "\', \'"
