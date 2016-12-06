@@ -9,12 +9,13 @@ import java.util.Date;
 public class Contacto {
 
     private int id;
-    private String consecutivo;
-    private Date fecha;
-    private String asesor, cto_nombres,
+    private String consecutivo,
+            fecha,
+            asesor,
+            cto_nombres,
             cto_apellidos,
-            cto_cc;
-    private String cto_cargo;
+            cto_cc,
+            cto_cargo;
     private int cto_antiguedad_cargo;
     private String cto_lugar_nacimiento;
     private Date cto_fecha_nacimiento;
@@ -39,7 +40,7 @@ public class Contacto {
             String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo, String cto_celular, String cto_email,
             String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas) {
         this.consecutivo = consecutivo;
-        this.fecha = this.fecha;
+        this.fecha = fecha;
         this.asesor = asesor;
         this.cto_nombres = cto_nombres;
         this.cto_apellidos = cto_apellidos;
@@ -58,7 +59,11 @@ public class Contacto {
     }
 
     //Datos de cualquier empresa
-    public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo, int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento, String cto_nivel_estudio, String cto_discapacidad, String cto_direccion, String cto_ciudad, String cto_celular, String cto_fijo, String cto_email, String cto_genero, String cto_etnia, String cto_condicion_desplazado, String cto_departamento) {
+    public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
+            int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento,
+            String cto_nivel_estudio, String cto_discapacidad, String cto_direccion, String cto_ciudad,
+            String cto_celular, String cto_fijo, String cto_email, String cto_genero, String cto_etnia,
+            String cto_condicion_desplazado, String cto_departamento) {
         this.id = id;
         this.cto_nombres = cto_nombres;
         this.cto_apellidos = cto_apellidos;
@@ -80,7 +85,10 @@ public class Contacto {
         this.cto_departamento = cto_departamento;
     }
 
-    public Contacto(String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo, String cto_direccion, String cto_ciudad, String cto_pais, String cto_celular, String cto_fijo, String cto_email, String cto_email_masivo, String cto_genero, String cto_departamento) {
+    //No se porque se hizo esto...
+    public Contacto(String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo, String cto_direccion,
+            String cto_ciudad, String cto_pais, String cto_celular, String cto_fijo, String cto_email,
+            String cto_email_masivo, String cto_genero, String cto_departamento) {
         this.cto_nombres = cto_nombres;
         this.cto_apellidos = cto_apellidos;
         this.cto_cc = cto_cc;
@@ -94,6 +102,9 @@ public class Contacto {
         this.cto_email_masivo = cto_email_masivo;
         this.cto_genero = cto_genero;
         this.cto_departamento = cto_departamento;
+    }
+
+    public Contacto() {
     }
 
     public int getId() {
@@ -112,11 +123,11 @@ public class Contacto {
         this.consecutivo = consecutivo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

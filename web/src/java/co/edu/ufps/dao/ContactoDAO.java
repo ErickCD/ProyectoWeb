@@ -5,6 +5,8 @@ import co.edu.ufps.dto.Contacto;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -25,20 +27,23 @@ public class ContactoDAO {
         }
     }
 
-    public boolean registrarContacto(String consecutivo, String fecha, String asesor, String cto_nombres,
-            String cto_apellidos, String cto_cc, String cto_cargo, String cto_cde, String cto_direccion,
-            String cto_ciudad, String cto_pais, String cto_cecular, String cto_fijo, String cto_email,
-            String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas) throws SQLException {
+    public boolean registrarContacto(Contacto contacto) {
         boolean rs = false;
 
-        rs = s.execute("INSERT INTO `contacto`(`consecutivo`, `fecha`, `asesor`, `cto_nombres`, "
-                + "`cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_cde`, `cto_direccion`, `cto_ciudad`, `cto_pais`, "
-                + "`cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`, `cto_departamento`, "
-                + "`cto_notas`) VALUES (\'" + consecutivo + "\', \'" + fecha + "\', \'" + asesor + "\', \'"
-                + cto_nombres + "\', \'" + cto_apellidos + "\'," + " \'" + cto_cc + "\', \'" + cto_cargo + "\', \'"
-                + cto_cde + "\', \'" + cto_direccion + "\', \'" + cto_ciudad + "\',"
-                + " \'" + cto_pais + "\', \'" + cto_cecular + "\', \'" + cto_fijo + "\', \'" + cto_email + "\', \'"
-                + cto_email_masivo + "\', \'" + cto_genero + "\', \'" + cto_departamento + "\', \'" + cto_notas + "\'); ");
+        try {
+            rs = s.execute("INSERT INTO `contacto`(`consecutivo`, `fecha`, `asesor`, `cto_nombres`, "
+                    + "`cto_apellidos`, `cto_cc`, `cto_cargo`, `cto_cde`, `cto_direccion`, `cto_ciudad`, `cto_pais`, "
+                    + "`cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`, `cto_departamento`, "
+                    + "`cto_notas`) VALUES (\'" + contacto.getConsecutivo() + "\', \'" + "2016-12-01" + "\', \'" + contacto.getAsesor()
+                    + "\', \'" + contacto.getCto_nombres() + "\', \'" + contacto.getCto_apellidos() + "\'," + " \'" + contacto.getCto_cc()
+                    + "\', \'" + contacto.getCto_cargo() + "\', \'" + contacto.getCto_cde() + "\', \'" + contacto.getCto_direccion() + "\', \'"
+                    + contacto.getCto_ciudad() + "\'," + " \'" + contacto.getCto_pais() + "\', \'" + contacto.getCto_celular() + "\', \'"
+                    + contacto.getCto_fijo() + "\', \'" + contacto.getCto_email() + "\', \'" + contacto.getCto_email_masivo() + "\', \'"
+                    + contacto.getCto_genero() + "\', \'" + contacto.getCto_departamento() + "\', \'" + contacto.getCto_notas() + "\'); ");
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
         return rs;
     }
 
@@ -86,6 +91,7 @@ public class ContactoDAO {
         return list;
     }
 
+    //No tengo idea para que se creo esto...
     public List<Contacto> mostrarContactos() throws SQLException {
         List<Contacto> list = new ArrayList<>();
         ResultSet rs = s.executeQuery("SELECT `cto_nombres`,`cto_apellidos`,`cto_cc`,`cto_cargo`,`cto_direccion`,`cto_ciudad`, `cto_pais`,"
@@ -140,4 +146,35 @@ public class ContactoDAO {
 
         return respuesta;
     }
+
+    //Inicio de busquedas.
+    public Contacto busquedaCC(Contacto contact) {
+        Contacto aux = null;
+        try {
+            ResultSet rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_cc` = \'" + contact.getCto_cc() + "\';");
+            rs.next();
+            aux = new Contacto(rs.getString("consecutivo"), rs.getString("fecha"), rs.getString("asesor"), rs.getString("cto_nombres"),
+                    rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
+                    rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
+                    rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
+                    rs.getString("cto_notas"));
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+    //Fin de busquedas.
+
+    public int numeroConsecutivoContacto() {
+        try {
+            ResultSet rs = s.executeQuery("SELECT  MAX(`cto_id`) AS `cto_id` FROM `contacto` ;");
+            rs.next();
+            return rs.getInt("cto_id");
+        } catch (SQLException e) {
+
+        }
+        return 0;
+    }
+
 }

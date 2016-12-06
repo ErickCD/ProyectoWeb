@@ -19,28 +19,33 @@ public class UsuarioDAO {
             conexion con = new conexion();
             // Preparamos la consulta
             Statement s = con.getConnection().createStatement();
-            ResultSet rs = s.executeQuery("SELECT * FROM usuario WHERE nombre=\'" + usuario.getNombre() + "\';");
+            ResultSet rs = s.executeQuery("SELECT * FROM usuario WHERE password=\'"+usuario.getPassword()+"\' and nombre=\'" + usuario.getNombre()+ "\'");
 
             Usuario aux = null;
 
             while (rs.next()) {
                 aux = new Usuario(
-                        rs.getInt("id"),
                         rs.getString("nombre"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("user")
                 );
             }
 
-            if (aux != null && !aux.iquals(usuario)) {
+            if ( aux == null ) {
                 respuesta = " No se encontro una coincidencia con este Asesor en la base de datos ";
+            }else{
+                usuario.setNombre(aux.getNombre());
+                usuario.setPassword(aux.getPassword());
+                usuario.setUser(aux.getUser());
             }
-
+            
+            
             s.close();
             rs.close();
             con.cerrarConnection();
             return respuesta;
-        } catch (Exception e) {
-            System.out.println("El error es: " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
             return " Lo sentiomos en estos momentos no podemos aceder a la base de datos,"
                     + "comunicate con tu administrador ...." + e.getMessage();
         }
