@@ -151,10 +151,17 @@ public class ContactoDAO {
     }
 
     //Inicio de busquedas.
-    public Contacto busquedaCC(Contacto contact) {
-        Contacto aux = null;
+    public Contacto busquedaCC(String tipoBusqueda, String valorBuscado) {
+        Contacto aux;
+        aux = null;
         try {
-            ResultSet rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_cc` = \'" + contact.getCto_cc() + "\';");
+            ResultSet rs = null;
+            if (tipoBusqueda.equals("cedula")) {
+                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_cc` = \'" + valorBuscado + "\';");
+            } else {
+                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_email` = \'" + valorBuscado + "\';");
+            }
+
             rs.next();
             aux = new Contacto(rs.getString("consecutivo"), rs.getString("fecha"), rs.getString("asesor"), rs.getString("cto_nombres"),
                     rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
