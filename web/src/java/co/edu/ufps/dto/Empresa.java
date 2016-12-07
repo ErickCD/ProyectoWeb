@@ -31,7 +31,7 @@ public class Empresa {
             emp_numRegistroMercantil,
             emp_ultimoAnioRenovacion, //fecha de renovación.
             emp_codigoCIIU,
-            emp_actividadInternacional,
+            emp_actividadInternacional, //Con un combo
             emp_paisesComercio, //Quiza un multi combochoise
             emp_negocioWeb, //si o no 
             emp_productoServicio, //Multichoise
