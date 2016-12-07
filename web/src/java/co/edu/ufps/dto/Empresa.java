@@ -8,24 +8,43 @@ import java.util.Date;
  */
 public class Empresa {
 
-    private String emp_clasCliente, emp_cc, emp_nombre;
+    private String emp_consecutivo,
+            emp_fecha,
+            emp_asesor,
+            emp_clasCliente,
+            emp_nombre;
     private int emp_nit;
-    private String emp_nombreRepLegal, emp_constitucionLegal;
-    private Date emp_fechaConstitucion;
-    private String emp_noEmpleado, emp_direccion, emp_ciudad, emp_telefono, emp_celular, emp_emailEmpresa, emp_urlWebsite, emp_tipo, emp_tipoVenta,
-            emp_regMercantil, emp_numRegistroMercantil;
-    private Date emp_renovacion_mercantil;
-    private String emp_codigoCIIU, emp_actividadInternacional, emp_paisesComercio, emp_negocioWeb, emp_productoServicio, emp_medioCDE,
+    private String emp_nombreRepLegal,
+            emp_constitucionLegal,
+            emp_fechaConstitucion,
+            emp_noEmpleado, //Faltan los distintos tipos de empleados 
+            emp_direccion,
+            emp_ciudad,
+            emp_telefono,
+            emp_celular,
+            emp_emailEmpresa,
+            emp_urlWebsite,
+            emp_tipo, //Solo indsutria y comercio
+            emp_tipoVenta, //Con relacion a "emp_tipo" ya que dice el tipo de venta de comercio, debe de ir en un combo
+            emp_regMercantil, //si o no
+            emp_numRegistroMercantil,
+            emp_renovacion_mercantil, //fecha de renovación.
+            emp_codigoCIIU,
+            emp_actividadInternacional,
+            emp_paisesComercio, //Quiza un multi combochoise
+            emp_negocioWeb, //si o no 
+            emp_productoServicio, //Multichoise
+            emp_medioCDE, //Multichoise
             emp_observaciones;
 
-    public Empresa(String emp_clasCliente, String emp_cc, String emp_nombre, int emp_nit, String emp_nombreRepLegal,
-            String emp_constitucionLegal, Date emp_fechaConstitucion, String emp_noEmpleado, String emp_direccion, String emp_ciudad,
-            String emp_telefono, String emp_celular, String emp_emailEmpresa, String emp_urlWebsite, String emp_tipo, String emp_tipoVenta,
-            String emp_regMercantil, String emp_numRegistroMercantil, Date emp_renovacion_mercantil, String emp_codigoCIIU,
-            String emp_actividadInternacional, String emp_paisesComercio, String emp_negocioWeb, String emp_productoServicio,
-            String emp_medioCDE, String emp_observaciones) {
+    public Empresa() {
+    }
+
+    public Empresa(String emp_consecutivo, String emp_fecha, String emp_asesor, String emp_clasCliente, String emp_nombre, int emp_nit, String emp_nombreRepLegal, String emp_constitucionLegal, String emp_fechaConstitucion, String emp_noEmpleado, String emp_direccion, String emp_ciudad, String emp_telefono, String emp_celular, String emp_emailEmpresa, String emp_urlWebsite, String emp_tipo, String emp_tipoVenta, String emp_regMercantil, String emp_numRegistroMercantil, String emp_renovacion_mercantil, String emp_codigoCIIU, String emp_actividadInternacional, String emp_paisesComercio, String emp_negocioWeb, String emp_productoServicio, String emp_medioCDE, String emp_observaciones) {
+        this.emp_consecutivo = emp_consecutivo;
+        this.emp_fecha = emp_fecha;
+        this.emp_asesor = emp_asesor;
         this.emp_clasCliente = emp_clasCliente;
-        this.emp_cc = emp_cc;
         this.emp_nombre = emp_nombre;
         this.emp_nit = emp_nit;
         this.emp_nombreRepLegal = emp_nombreRepLegal;
@@ -52,20 +71,36 @@ public class Empresa {
         this.emp_observaciones = emp_observaciones;
     }
 
+    public String getEmp_consecutivo() {
+        return emp_consecutivo;
+    }
+
+    public void setEmp_consecutivo(String emp_consecutivo) {
+        this.emp_consecutivo = emp_consecutivo;
+    }
+
+    public String getEmp_fecha() {
+        return emp_fecha;
+    }
+
+    public void setEmp_fecha(String emp_fecha) {
+        this.emp_fecha = emp_fecha;
+    }
+
+    public String getEmp_asesor() {
+        return emp_asesor;
+    }
+
+    public void setEmp_asesor(String emp_asesor) {
+        this.emp_asesor = emp_asesor;
+    }
+
     public String getEmp_clasCliente() {
         return emp_clasCliente;
     }
 
     public void setEmp_clasCliente(String emp_clasCliente) {
         this.emp_clasCliente = emp_clasCliente;
-    }
-
-    public String getEmp_cc() {
-        return emp_cc;
-    }
-
-    public void setEmp_cc(String emp_cc) {
-        this.emp_cc = emp_cc;
     }
 
     public String getEmp_nombre() {
@@ -100,11 +135,11 @@ public class Empresa {
         this.emp_constitucionLegal = emp_constitucionLegal;
     }
 
-    public Date getEmp_fechaConstitucion() {
+    public String getEmp_fechaConstitucion() {
         return emp_fechaConstitucion;
     }
 
-    public void setEmp_fechaConstitucion(Date emp_fechaConstitucion) {
+    public void setEmp_fechaConstitucion(String emp_fechaConstitucion) {
         this.emp_fechaConstitucion = emp_fechaConstitucion;
     }
 
@@ -148,12 +183,12 @@ public class Empresa {
         this.emp_celular = emp_celular;
     }
 
-    public String getEmp_email() {
+    public String getEmp_emailEmpresa() {
         return emp_emailEmpresa;
     }
 
-    public void setEmp_email(String emp_email) {
-        this.emp_emailEmpresa = emp_email;
+    public void setEmp_emailEmpresa(String emp_emailEmpresa) {
+        this.emp_emailEmpresa = emp_emailEmpresa;
     }
 
     public String getEmp_urlWebsite() {
@@ -196,11 +231,11 @@ public class Empresa {
         this.emp_numRegistroMercantil = emp_numRegistroMercantil;
     }
 
-    public Date getEmp_renovacion_mercantil() {
+    public String getEmp_renovacion_mercantil() {
         return emp_renovacion_mercantil;
     }
 
-    public void setEmp_renovacion_mercantil(Date emp_renovacion_mercantil) {
+    public void setEmp_renovacion_mercantil(String emp_renovacion_mercantil) {
         this.emp_renovacion_mercantil = emp_renovacion_mercantil;
     }
 
@@ -259,4 +294,5 @@ public class Empresa {
     public void setEmp_observaciones(String emp_observaciones) {
         this.emp_observaciones = emp_observaciones;
     }
+
 }
