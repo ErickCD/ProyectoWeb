@@ -50,73 +50,71 @@ public class ContactoDAO {
         return rs;
     }
 
-    public void datosContactoEmpresa(int cto_id, int cto_antiguedad_cargo, String cto_lugar_nacimiento, java.util.Date cto_fecha_nacimiento,
-            String cto_nivel_estudio, String cto_discapacidad, String cto_cde, String cto_etnia,
-            String cto_condicion_desplazado) throws SQLException {
-
-        int rs = s.executeUpdate("UPDATE ` contacto` SET `cto_antiguedad_cargo`=\'" + cto_antiguedad_cargo + "\',"
-                + " `cto_lugar_nacimiento`=\'" + cto_fecha_nacimiento + "\', `cto_fecha_nacimiento`=\'" + cto_fecha_nacimiento + "\',"
-                + " `cto_nivel_estudio`=\'" + cto_nivel_estudio + "\', `cto_discapacidad`=\'" + cto_discapacidad + "\', `cto_cde`=\'"
-                + cto_cde + "\', `cto_etnia`=\'" + cto_etnia + "\', `cto_condicion_desplazado`=\'" + cto_condicion_desplazado
-                + "\' WHERE `cto_id`=\'" + cto_id + "\';");
-    }
-
     //
-    public List<Contacto> mostrarContacto(int cantidad) throws SQLException {
+    public List<Contacto> mostrarContacto(int cantidad) {
         int limite = cantidad + 10;
 
         List<Contacto> list = new ArrayList<>();
-        ResultSet rs = s.executeQuery("SELECT * FROM `contacto` order by cto_nombres asc limit " + cantidad + "," + limite + ";");
-
-        Contacto contacto = null;
-        while (rs.next()) {
-            contacto = new Contacto(
-                    rs.getString("consecutivo"),
-                    rs.getString("fecha"),
-                    rs.getString("asesor"),
-                    rs.getString("cto_nombres"),
-                    rs.getString("cto_apellidos"),
-                    rs.getString("cto_cc"),
-                    rs.getString("cto_cargo"),
-                    rs.getString("cto_direccion"),
-                    rs.getString("cto_ciudad"),
-                    rs.getString("cto_pais"),
-                    rs.getString("cto_fijo"),
-                    rs.getString("cto_cecular"),
-                    rs.getString("cto_email"),
-                    rs.getString("cto_email_masivo"),
-                    rs.getString("cto_genero"),
-                    rs.getString("cto_departamento"),
-                    rs.getString("cto_notas"));
-            list.add(contacto);
+        ResultSet rs;
+        try {
+            rs = s.executeQuery("SELECT * FROM `contacto` order by cto_nombres asc limit " + cantidad + "," + limite + ";");
+            Contacto contacto = null;
+            while (rs.next()) {
+                contacto = new Contacto(
+                        rs.getString("consecutivo"),
+                        rs.getString("fecha"),
+                        rs.getString("asesor"),
+                        rs.getString("cto_nombres"),
+                        rs.getString("cto_apellidos"),
+                        rs.getString("cto_cc"),
+                        rs.getString("cto_cargo"),
+                        rs.getString("cto_direccion"),
+                        rs.getString("cto_ciudad"),
+                        rs.getString("cto_pais"),
+                        rs.getString("cto_fijo"),
+                        rs.getString("cto_cecular"),
+                        rs.getString("cto_email"),
+                        rs.getString("cto_email_masivo"),
+                        rs.getString("cto_genero"),
+                        rs.getString("cto_departamento"),
+                        rs.getString("cto_notas"));
+                list.add(contacto);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return list;
     }
 
     //No tengo idea para que se creo esto...
-    public List<Contacto> mostrarContactos() throws SQLException {
+    public List<Contacto> mostrarContactos() {
         List<Contacto> list = new ArrayList<>();
-        ResultSet rs = s.executeQuery("SELECT `cto_nombres`,`cto_apellidos`,`cto_cc`,`cto_cargo`,`cto_direccion`,`cto_ciudad`, `cto_pais`,"
-                + " `cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,`cto_departamento` FROM `contacto`;");
+        ResultSet rs;
+        try {
+            rs = s.executeQuery("SELECT `cto_nombres`,`cto_apellidos`,`cto_cc`,`cto_cargo`,`cto_direccion`,`cto_ciudad`, `cto_pais`,"
+                    + " `cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,`cto_departamento` FROM `contacto`;");
 
-        while (rs.next()) {
-            Contacto cont = new Contacto(
-                    rs.getString("cto_nombres"),
-                    rs.getString("cto_apellidos"),
-                    rs.getString("cto_cc"),
-                    rs.getString("cto_cargo"),
-                    rs.getString("cto_direccion"),
-                    rs.getString("cto_ciudad"),
-                    rs.getString("cto_pais"),
-                    rs.getString("cto_cecular"),
-                    rs.getString("cto_fijo"),
-                    rs.getString("cto_email"),
-                    rs.getString("cto_email_masivo"),
-                    rs.getString("cto_genero"),
-                    rs.getString("cto_departamento"));
+            while (rs.next()) {
+                Contacto cont = new Contacto(
+                        rs.getString("cto_nombres"),
+                        rs.getString("cto_apellidos"),
+                        rs.getString("cto_cc"),
+                        rs.getString("cto_cargo"),
+                        rs.getString("cto_direccion"),
+                        rs.getString("cto_ciudad"),
+                        rs.getString("cto_pais"),
+                        rs.getString("cto_cecular"),
+                        rs.getString("cto_fijo"),
+                        rs.getString("cto_email"),
+                        rs.getString("cto_email_masivo"),
+                        rs.getString("cto_genero"),
+                        rs.getString("cto_departamento"));
 
-            list.add(cont);
+                list.add(cont);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return list;
@@ -143,9 +141,14 @@ public class ContactoDAO {
         return lista;
     }
 
-    public boolean borrarContacto(String cto_cc) throws SQLException {
+    public boolean borrarContacto(String cto_cc) {
         boolean respuesta = false;
-        respuesta = s.execute("DELETE FROM `contacto` WHERE `cto_cc` = \"" + cto_cc + "\";");
+
+        try {
+            respuesta = s.execute("DELETE FROM `contacto` WHERE `cto_cc` = \"" + cto_cc + "\";");
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         return respuesta;
     }
