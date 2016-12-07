@@ -292,7 +292,7 @@
 
                     <div class="input-field col m6 s12">
                         <div class="input-field">
-                            <input id="emp_urlWebsite" name="emp_urlWebsite" type="url" class="validate" placeholder="http://example.com" required="">
+                            <input id="emp_urlWebsite" name="emp_urlWebsite" type="url" class="validate" placeholder="http://example.com" required>
                             <label for="emp_urlWebsite">URL de la página de la empresa</label>
                         </div>
                     </div>
@@ -311,8 +311,6 @@
                             </p>
                         </div>
 
-
-
                         <div class="col m6 s12">
                             <label for="emp_tipoVenta">Tipo de venta</label>
                             <select id="emp_tipoVenta" name="emp_tipoVenta" class="browser-default">
@@ -323,64 +321,9 @@
                                 <option value="Otra">Otra</option>
                             </select>
                         </div>
-
-                    </div>
-
-                    <div class="input-field col m6 s12">
-                        <label for="emp_registroMercantil">Tiene registro mercantil</label>
-                        <br>
-                        <p>
-                            <input name="emp_registroMercantil" type="radio" id="emp_registroMercantil1" value="Si" />
-                            <label for="emp_registroMercantil1">Si</label>
-                        </p>
-                        <p>
-                            <input name="emp_registroMercantil" type="radio" id="emp_registroMercantil2" value="No" />
-                            <label for="emp_registroMercantil2">No</label>
-                        </p>
-                    </div>
-
-                    <div class="input-field col m6 s12">
-                        <div class="input-field">
-                            <input id="emp_numRegistroMercantil" name="emp_numRegistroMercantil" type="number" class="validate" required="">
-                            <label for="emp_numRegistroMercantil">Número de resgistro mercantil</label>
-                        </div>
-                    </div>
-
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">today</i>
-                        <label>Último año de renovación</label>
-                        <br>
-                        <input id="emp_ultimoAnioRenovacion" name="emp_ultimoAnioRenovacion" type="date" class="datepicker">
                     </div>
 
                     <div class="row">
-                        <div class="input-field col m6 s12">
-                            <div class="input-field">
-                                <input id="emp_codigoCIIU" name="emp_codigoCIIU" type="text" class="validate" required="">
-                                <label for="emp_codigoCIIU">Código CIIU</label>
-                            </div>
-                        </div>
-
-                        <div class="col m6 s12">
-                            <label for="emp_actividadInternacional">Actividad internacional</label>
-                            <select id="emp_actividadInternacional" name="emp_actividadInternacional" class="browser-default">
-                                <option value="Exportación">Exportación</option>
-                                <option value="Importacion">Importación</option>
-                                <option value="Ambas">Ambas</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="row col m6 s12">
-                            <label for="emp_paisesComercio">Mencione los paises con los cuales comercializa</label>
-                            <select id="emp_paisesComercio" name="emp_paisesComercio" class="browser-default">
-                                <option value="Mexico">México</option>
-                                <option value="Brasil">Brasil</option>
-                                <option value="Argentina">Argentina</option>
-                            </select>
-                        </div>
-
                         <div class="input-field col m6 s12">
                             <label for="emp_registroMercantil">Tiene registro mercantil</label>
                             <br>
@@ -393,7 +336,98 @@
                                 <label for="emp_registroMercantil2">No</label>
                             </p>
                         </div>
+
+                        <div class="input-field col m6 s12">
+                            <div class="input-field">
+                                <input id="emp_numRegistroMercantil" name="emp_numRegistroMercantil" type="number" class="validate" required="">
+                                <label for="emp_numRegistroMercantil">Número de resgistro mercantil</label>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">today</i>
+                            <label>Último año de renovación</label>
+                            <br>
+                            <input id="emp_ultimoAnioRenovacion" name="emp_ultimoAnioRenovacion" type="date" class="datepicker">
+                        </div>
+
+
+                        <div class="input-field col m6 s12">
+                            <div class="input-field">
+                                <input id="emp_codigoCIIU" name="emp_codigoCIIU" type="text" class="validate" required="">
+                                <label for="emp_codigoCIIU">Código CIIU</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <label for="emp_actividadInternacional">Actividad internacional</label>
+                            <select id="emp_actividadInternacional" name="emp_actividadInternacional" class="browser-default">
+                                <option value="Exportación">Exportación</option>
+                                <option value="Importacion">Importación</option>
+                                <option value="Ambas">Ambas</option>
+                            </select>
+                        </div>
+
+                        <div class="row col m6 s12">
+                            <label for="emp_paisesComercio">Mencione los paises con los cuales comercializa</label>
+                            <select id="emp_paisesComercio" name="emp_paisesComercio" class="browser-default">
+                                <option value="Mexico">México</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Argentina">Argentina</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <label for="emp_negocioWeb">Realiza negocios por internet</label>
+                            <br>
+                            <p>
+                                <input name="emp_negocioWeb" type="radio" id="emp_negocioWeb1" value="Si" />
+                                <label for="emp_negocioWeb1">Si</label>
+                            </p>
+                            <p>
+                                <input name="emp_negocioWeb" type="radio" id="emp_negocioWeb2" value="No" />
+                                <label for="emp_negocioWeb2">No</label>
+                            </p>
+                        </div>
+
+                        <div class="row col m6 s12">
+                            <label for="emp_paisesComercio">Producto o servicio que ofrece la empresa</label>
+                            <select id="emp_productoServicio" name="emp_productoServicio" class="browser-default">
+                                <option value="Valor1">Valor1</option>
+                                <option value="Valor2">Valor2</option>
+                                <option value="Valor3">Valor3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row col m6 s12">
+                            <label for="emp_medioCDE">Medio CDE</label>
+                            <select id="emp_medioCDE" name="emp_medioCDE" class="browser-default">
+                                <option value="Valor1">Valor1</option>
+                                <option value="Valor2">Valor2</option>
+                                <option value="Valor3">Valor3</option>
+                            </select>
+                        </div>
+
+                        <div class="col m6 s12 input-field">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">note_add</i>
+                                    <textarea id="emp_observaciones" name="emp_observaciones" class="materialize-textarea" maxlength="150"></textarea>
+                                    <label for="emp_observaciones">Notas:</label>
+                                </div>
+                            </div>
+                        </div
+                    </div>
+                </div>
+                <div class="row center">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar empresa</button>
                 </div>
             </form>
         </div>
