@@ -20,8 +20,7 @@
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="../index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="../jsp/dashboard.jsp" class="breadcrumb">Dashboard</a>
-                    <a href="../jsp/crearEmpresa.jsp" class="breadcrumb">Crear empresa</a>
+                    <a href="../jsp/registrarEmpresa.jsp" class="breadcrumb">Crear empresa</a>
                 </div>
             </div>
         </nav>
@@ -83,39 +82,53 @@
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix">Cargo</label>
                     </div>
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">business</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Antigüedad en el cargo</label>
+
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">business</i>
+                            <label for="cto_antiguedad_cargo">Antigüedad en el cargo</label>
+                            <br>
+                            <input id="cto_antiguedad_cargo" name="cto_antiguedad_cargo" type="date" class="validate">
+                        </div>
+
+                        <div class="input-field col m6 s12">
+                            <input id="cto_lugar_nacimiento" name="cto_lugar_nacimiento" type="text" class="validate">
+                            <label for="cto_lugar_nacimiento">Lugar de nacimiento</label>
+                        </div>
                     </div>
-                    <div class="input-field col m6 s12">
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Lugar de nacimiento</label>
+
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">today</i>
+                            <label>Fecha de nacimiento</label>
+                            <br>
+                            <input id="cto_fecha_nacimiento" name="cto_fecha_nacimiento" type="date" class="datepicker">
+                        </div>
+
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" type="number" class="validate">
+                            <label for="last_name">NRO. C.C:</label>
+                        </div>
                     </div>
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">today</i>
-                        <input type="date" class="datepicker" value="Fecha de nacimiento">
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input id="last_name" type="number" class="validate">
-                        <label for="last_name">NRO. C.C:</label>
-                    </div>
+
                     <div class="col m6 s12">
                         <label>Nivel de estudios</label>
-                        <select class="browser-default">
-                            <option value="1">Primaria</option>
-                            <option value="2">Bachiller</option>
-                            <option value="3">Técnica</option>
-                            <option value="3">Tecnológicas</option>
-                            <option value="3">Profesionales</option>
-                            <option value="3">Maestria</option>
-                            <option value="3">Doctorado</option>
+                        <select class="browser-default" id="cto_nivel_estudio" name="cto_nivel_estudio">
+                            <option value="Primaria">Primaria</option>
+                            <option value="Bachiller">Bachiller</option>
+                            <option value="Tecnica">Técnica</option>
+                            <option value="Tecnologicas">Tecnológicas</option>
+                            <option value="Profesionales">Profesionales</option>
+                            <option value="Maestria">Maestria</option>
+                            <option value="Doctorado">Doctorado</option>
                         </select>
                     </div>
+
                     <div class="input-field col m6 s12">
                         <input id="nro_cc" type="text" class="validate">
                         <label for="last_name">Dirección</label>
                     </div>
+
                     <div class="input-field col m6 s12">
                         <input id="nro_cc" type="text" class="validate">
                         <label for="last_name">Ciudad</label>
@@ -124,11 +137,13 @@
                         <input id="nro_cc" type="text" class="validate">
                         <label for="last_name">Departamento</label>
                     </div>
+
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">phone</i>
                         <input id="icon_telephone" type="tel" class="validate">
                         <label for="icon_telephone">Teléfono</label>
                     </div>
+
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">stay_current_portrait</i>
                         <input id="icon_prefix" type="text" class="validate">
@@ -164,37 +179,37 @@
                     <div class="row">
                         <div class="col m6 s12">
                             <label>Grupo ético</label>
-                            <select class="browser-default">
-                                <option value="1">Gitanos</option>
-                                <option value="2">Indígenas</option>
-                                <option value="3">Afrocolombianos</option>
-                                <option value="3">Raizales</option>
-                                <option value="3">Otros</option>
+                            <select id="cto_etnia" name="cto_etnia" class="browser-default">
+                                <option value="Gitanos">Gitanos</option>
+                                <option value="Indígenas">Indígenas</option>
+                                <option value="Afrocolombianos">Afrocolombianos</option>
+                                <option value="Raizales">Raizales</option>
+                                <option value="Otros">Otros</option>
                             </select>
                         </div>
 
                         <div class="col m6 s12">
-                            <label for="t1">Estas en condiciones de dezplazamiento</label>
+                            <label for="cto_condicion_desplazado">¿Estas en condiciones de dezplazamiento?</label>
                             <p>
-                                <input name="group1" type="radio" id="test1" />
-                                <label for="test1">Si</label>
+                                <input name="cto_condicion_desplazado" type="radio" id="cto_condicion_desplazado1" value="Si" required/>
+                                <label for="cto_condicion_desplazado1">Si</label>
                             </p>
                             <p>
-                                <input name="group1" type="radio" id="test2" />
-                                <label for="test2">No</label>
+                                <input name="cto_condicion_desplazado" type="radio" id="cto_condicion_desplazado2" value="No" required/>
+                                <label for="cto_condicion_desplazado">No</label>
                             </p>
                         </div>
                     </div>
 
                     <div class="col m6 s12">
-                        <label for="t1">Presenta alguna discapasidad</label>
+                        <label for="cto_discapacidad">Presenta alguna discapasidad</label>
                         <p>
-                            <input name="group1" type="radio" id="test1" />
+                            <input name="cto_discapacidad" type="radio" id="cto_discapacidad1" required/>
                             <label for="test1">Si</label>
                         </p>
                         <p>
-                            <input name="group1" type="radio" id="test2" />
-                            <label for="test2">No</label>
+                            <input name="cto_discapacidad" type="radio" id="cto_discapacidad2" required/>
+                            <label for="cto_discapacidad2">No</label>
                         </p>
                     </div>
                 </div>
@@ -423,14 +438,18 @@
                                     <label for="emp_observaciones">Notas:</label>
                                 </div>
                             </div>
-                        </div
+                        </div>
                     </div>
                 </div>
+
                 <div class="row center">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar empresa</button>
                 </div>
+
             </form>
+
         </div>
+
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
     </body>

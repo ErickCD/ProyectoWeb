@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% session.invalidate(); %>
+<% session.invalidate();%>
 <html>
     <head>
         <title>Home</title>
@@ -116,7 +116,7 @@
             </div>
             <div class="parallax"><img src="../img/background4.jpg" alt="Unsplashed background img 3"></div>
         </div>
-        
+
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
         <script src="../js/init.js"></script>
