@@ -33,79 +33,90 @@
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
 
                     <div class="col S12">
-                        <div class="col m4">
-                            <label for="cto_consecutivo">Concecutivo</label>
-                            <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="cto_consecutivo" type="text" disabled >
-                        </div>
+                        <div class="row">
+                            <div class="col m4 s12">
+                                <label for="cto_consecutivo">Concecutivo</label>
+                                <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="cto_consecutivo" type="text" disabled >
+                            </div>
 
-                        <div class="col m4 input-field">
-                            <i class="material-icons prefix">today</i>
-                            <%
-                                Date s = new Date();
-                                String fecha = s.getYear() + 1900 + "-" + (s.getMonth() + 1) + "-" + s.toGMTString().substring(0, 1);
-                            %>
-                            <input id="fecha" name="fecha" type="text" value="<%=fecha%>" disabled required="">
-                        </div>
+                            <div class="col m4 s12 input-field">
+                                <i class="material-icons prefix">today</i>
+                                <%
+                                    Date s = new Date();
+                                    String fecha = s.getYear() + 1900 + "-" + (s.getMonth() + 1) + "-" + s.toGMTString().substring(0, 1);
+                                %>
+                                <input id="fecha" name="fecha" type="text" value="<%=fecha%>" disabled required="">
+                            </div>
 
-                        <div class="col m4 s12 input-field">
-                            <label for="cto_asesor">Asesor</label>
-                            <input id="asesor" name="asesor" type="text" class="validate" required>
-                        </div>
-
-                        <div class="col s12 input-field">
-                            <label for="cto_nombres">Nombres</label>
-                            <input id="cto_nombres" name="cto_nombres" type="text" class="validate" required="">
-                        </div>
-
-                        <div class="col s12 m6 input-field">
-                            <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate" required="">
-                            <label for="cto_apellidos" >Apellidos</label>
-                        </div>
-
-                        <div class="col s12 m6 input-field">
-                            <input id="cto_cc" name="cto_cc" type="number" class="validate" required="">
-                            <label for="cto_cc">Nro CC.</label>
-                        </div>
-
-                        <div class="col s12 m6">
-                            <label>Género</label>
-                            <select id="cto_genero" name="cto_genero" class="browser-default" required="">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="LGBTI">LGBTI</option>
-                            </select>
-                        </div>
-
-                        <div class="col m6 s12 input-field">
-                            <i class="material-icons prefix" >email</i>
-                            <input id="cto_email" name="cto_email" type="email" class="validate" required="">
-                            <label for="cto_email">Email</label>
-                        </div>
-
-                        <div class="col m6 s12 input-field">
-                            <div id="cto_email_masivo">
-                                <label for="cto_email_masivo_t1">¿Desea resibir correo electronico maxivo?</label><br>
-                                <p>
-                                    <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t1" required="" />
-                                    <label for="cto_email_masivo_t1" >Si</label>
-                                </p>
-                                <p>
-                                    <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t2" required="" />
-                                    <label for="cto_email_masivo_t2">No</label>
-                                </p>
+                            <div class="col m4 s12 input-field">
+                                <label for="cto_asesor">Asesor</label>
+                                <input id="asesor" name="asesor" type="text" class="validate" required>
                             </div>
                         </div>
 
-                        <div class="col m6 s12 input-field">
-                            <i class="material-icons prefix">class</i>
-                            <input id="cto_cargo" name="cto_cargo" type="text" class="validate" required="">
-                            <label for="cto_cargo" >Cargo</label>
+                        <div class="row">
+                            <div class="col m6 s12 input-field">
+                                <label for="cto_nombres">Nombres</label>
+                                <input id="cto_nombres" name="cto_nombres" type="text" class="validate" required="">
+                            </div>
+
+                            <div class="col s12 m6 input-field">
+                                <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate" required="">
+                                <label for="cto_apellidos" >Apellidos</label>
+                            </div>
                         </div>
 
-                        <div class="col m6 s12 input-field">
-                            <i class="material-icons prefix">phone</i>
-                            <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
-                            <label for="cto_fijo">Teléfono</label>
+                        <div class="row">
+                            <div class="col s12 m6 input-field">
+                                <input id="cto_cc" name="cto_cc" type="number" class="validate" required="">
+                                <label for="cto_cc">Nro CC.</label>
+                            </div>
+
+                            <div class="col s12 m6">
+                                <label>Género</label>
+                                <select id="cto_genero" name="cto_genero" class="browser-default" required="">
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="LGBTI">LGBTI</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col m6 s12 input-field">
+                                <i class="material-icons prefix" >email</i>
+                                <input id="cto_email" name="cto_email" type="email" class="validate" required="">
+                                <label for="cto_email">Email</label>
+                            </div>
+
+                            <div class="col m6 s12 input-field">
+                                <div id="cto_email_masivo">
+                                    <label for="cto_email_masivo_t1">¿Desea resibir correo electronico maxivo?</label><br>
+                                    <p>
+                                        <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t1" required="" />
+                                        <label for="cto_email_masivo_t1" >Si</label>
+                                    </p>
+                                    <p>
+                                        <input name="cto_email_masivo" type="radio" id="cto_email_masivo_t2" required="" />
+                                        <label for="cto_email_masivo_t2">No</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col m6 s12 input-field">
+                                <i class="material-icons prefix">class</i>
+                                <input id="cto_cargo" name="cto_cargo" type="text" class="validate" required="">
+                                <label for="cto_cargo" >Cargo</label>
+                            </div>
+
+                            <div class="col m6 s12 input-field">
+                                <i class="material-icons prefix">phone</i>
+                                <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                                <label for="cto_fijo">Teléfono</label>
+                            </div>
                         </div>
 
                         <div class="col m6 s12 input-field">

@@ -34,14 +34,19 @@ public class EmpresaDAO {
         boolean respuesta = false;
 
         respuesta = s.execute("INSERT INTO `empresa`(`emp_consecutivo`, `emp_fecha`, `emp_asesor`, `emp_clasCliente`, `emp_cc`, "
-                + "`emp_nombre`, `emp_nit`, `emp_nombreRepLegal`, `emp_constitucionLegal`, `emp_fechaConstitucion`, `emp_noEmpleado`,"
-                + " `emp_direccion`, `emp_ciudad`, `emp_telefono`, `emp_celular`, `emp_emailEmpresa`, `emp_urlWebsite`, `emp_tipo`,"
+                + "`emp_nombre`, `emp_nit`, `emp_nombreRepLegal`, `emp_constitucionLegal`, `emp_otraConstitucion`, `emp_fechaConstitucion`,"
+                + " `emp_noEmpleadoTC`,"
+                + " `emp_noEmpleadoMT`,`emp_noEmpleadoDirectos`,`emp_noEmpleadoIndirectos`, `emp_direccion`, `emp_ciudad`, `emp_telefono`,"
+                + " `emp_celular`, `emp_emailEmpresa`, `emp_urlWebsite`, `emp_tipo`,"
                 + " `emp_tipoVenta`, `emp_registroMercantil`, `emp_numRegistroMercantil`, `emp_ultimoAnioRenovacion`, `emp_codigoCIIU`,"
                 + " `emp_actividadInternacional`, `emp_paisesComercio`, `emp_negocioWeb`, `emp_productoServicio`, `emp_medioCDE`,"
                 + " `emp_observaciones`) VALUES (\'" + empresa.getEmp_consecutivo() + "\', \'" + empresa.getEmp_fecha() + "\', \'"
                 + empresa.getEmp_asesor() + "\', \'" + empresa.getEmp_clasCliente() + "\', \'" + empresa.getEmp_cc() + "\', \'"
                 + empresa.getEmp_nombre() + "\', " + empresa.getEmp_nit() + ", \'" + empresa.getEmp_nombreRepLegal() + "\', \'"
-                + empresa.getEmp_constitucionLegal() + "\', \'" + empresa.getEmp_fechaConstitucion() + "\', \'" + empresa.getEmp_noEmpleado()
+                + empresa.getEmp_constitucionLegal() + "\', \'"
+                + empresa.getEmp_otraConstitucion() + "\', \'" + empresa.getEmp_fechaConstitucion() + "\', \'" + empresa.getEmp_noEmpleadoTC()
+                + "\', \'" + empresa.getEmp_noEmpleadoMT() + "\', \'" + empresa.getEmp_noEmpleadoDirectos() + "\', \'"
+                + empresa.getEmp_noEmpleadoIndirectos()
                 + "\', \'" + empresa.getEmp_direccion() + "\', \'" + empresa.getEmp_ciudad() + "\', \'" + empresa.getEmp_telefono() + "\', \'"
                 + empresa.getEmp_celular() + "\', \'" + empresa.getEmp_emailEmpresa() + "\', \'" + empresa.getEmp_urlWebsite() + "\', \'"
                 + empresa.getEmp_tipo() + "\', \'" + empresa.getEmp_tipoVenta() + "\', \'" + empresa.getEmp_registroMercantil() + "\', \'"
@@ -69,8 +74,11 @@ public class EmpresaDAO {
                         + empresa.getEmp_fecha() + "\',`emp_asesor`=\'" + empresa.getEmp_asesor() + "\',`emp_clasCliente`=\'"
                         + empresa.getEmp_clasCliente() + "\',`emp_cc`=\'" + empresa.getEmp_cc() + "\',`emp_nit`=\'" + empresa.getEmp_nit()
                         + "\',`emp_nombreRepLegal`=\'" + empresa.getEmp_nombreRepLegal() + "\',`emp_constitucionLegal`=\'"
-                        + empresa.getEmp_constitucionLegal() + "\',`emp_fechaConstitucion`=\'" + empresa.getEmp_fechaConstitucion()
-                        + "\',`emp_noEmpleado`= \'" + empresa.getEmp_noEmpleado() + "\',`emp_direccion`= \'" + empresa.getEmp_direccion()
+                        + empresa.getEmp_constitucionLegal() + "\',`emp_otraConstitucion`=\'"
+                        + empresa.getEmp_otraConstitucion() + "\',`emp_fechaConstitucion`=\'" + empresa.getEmp_fechaConstitucion()
+                        + "\',`emp_noEmpleadoTC`= \'" + empresa.getEmp_noEmpleadoTC() + "\',`emp_noEmpleadoMT`= \'" + empresa.getEmp_noEmpleadoMT()
+                        + "\',`emp_noEmpleadoDirectos`= \'" + empresa.getEmp_noEmpleadoDirectos() + "\',`emp_noEmpleadoIndirectos`= \'"
+                        + empresa.getEmp_noEmpleadoIndirectos() + "\',`emp_direccion`= \'" + empresa.getEmp_direccion()
                         + "\',`emp_ciudad`= \'" + empresa.getEmp_ciudad() + "\',`emp_telefono`= \'" + empresa.getEmp_telefono()
                         + "\',`emp_celular`= \'" + empresa.getEmp_celular() + "\',`emp_emailEmpresa`= \'" + empresa.getEmp_emailEmpresa()
                         + "\',`emp_urlWebsite`=\'" + empresa.getEmp_urlWebsite() + "\',`emp_tipo`=\'" + empresa.getEmp_tipo()
@@ -87,8 +95,11 @@ public class EmpresaDAO {
                         + empresa.getEmp_fecha() + "\',`emp_asesor`=\'" + empresa.getEmp_asesor() + "\',`emp_clasCliente`=\'"
                         + empresa.getEmp_clasCliente() + "\',`emp_cc`=\'" + empresa.getEmp_cc() + "\',`emp_nombre`=\'" + empresa.getEmp_nombre()
                         + "\',`emp_nombreRepLegal`=\'" + empresa.getEmp_nombreRepLegal() + "\',`emp_constitucionLegal`=\'"
-                        + empresa.getEmp_constitucionLegal() + "\',`emp_fechaConstitucion`=\'" + empresa.getEmp_fechaConstitucion()
-                        + "\',`emp_noEmpleado`= \'" + empresa.getEmp_noEmpleado() + "\',`emp_direccion`= \'" + empresa.getEmp_direccion()
+                        + empresa.getEmp_constitucionLegal() + "\',`emp_otraConstitucion`=\'"
+                        + empresa.getEmp_otraConstitucion() + "\',`emp_fechaConstitucion`=\'" + empresa.getEmp_fechaConstitucion()
+                        + "\',`emp_noEmpleadoTC`= \'" + empresa.getEmp_noEmpleadoTC() + "\',`emp_noEmpleadoMT`= \'" + empresa.getEmp_noEmpleadoMT()
+                        + "\',`emp_noEmpleadoDirectos`= \'" + empresa.getEmp_noEmpleadoDirectos() + "\',`emp_noEmpleadoIndirectos`= \'"
+                        + empresa.getEmp_noEmpleadoIndirectos() + "\',`emp_direccion`= \'" + empresa.getEmp_direccion()
                         + "\',`emp_ciudad`= \'" + empresa.getEmp_ciudad() + "\',`emp_telefono`= \'" + empresa.getEmp_telefono()
                         + "\',`emp_celular`= \'" + empresa.getEmp_celular() + "\',`emp_emailEmpresa`= \'" + empresa.getEmp_emailEmpresa()
                         + "\',`emp_urlWebsite`=\'" + empresa.getEmp_urlWebsite() + "\',`emp_tipo`=\'" + empresa.getEmp_tipo()
@@ -117,8 +128,10 @@ public class EmpresaDAO {
 
             rs.next();
             empresa = new Empresa(rs.getString("emp_consecutivo"), rs.getString("emp_fecha"), rs.getString("emp_asesor"),
-                    rs.getString("emp_clasCliente"), rs.getString("emp_cc"), rs.getString("emp_nombre"), rs.getInt("emp_nit"), rs.getString("emp_nombreRepLegal"),
-                    rs.getString("emp_constitucionLegal"), rs.getString("emp_fechaConstitucion"), rs.getString("emp_noEmpleado"),
+                    rs.getString("emp_clasCliente"), rs.getString("emp_cc"), rs.getString("emp_nombre"), rs.getInt("emp_nit"),
+                    rs.getString("emp_nombreRepLegal"), rs.getString("emp_constitucionLegal"), rs.getString("emp_otraConstitucion"),
+                    rs.getString("emp_fechaConstitucion"), rs.getString("emp_noEmpleadoTC"), rs.getString("emp_noEmpleadoMT"),
+                    rs.getString("emp_noEmpleadoDirectos"), rs.getString("emp_noEmpleadoIndirectos"),
                     rs.getString("emp_direccion"), rs.getString("emp_ciudad"), rs.getString("emp_telefono"), rs.getString("emp_celular"),
                     rs.getString("emp_emailEmpresa"), rs.getString("emp_urlWebsite"), rs.getString("emp_tipo"), rs.getString("emp_tipoVenta"),
                     rs.getString("emp_registroMercantil"), rs.getString("emp_numRegistroMercantil"), rs.getString("emp_ultimoAnioRenovacion"),
@@ -143,8 +156,10 @@ public class EmpresaDAO {
 
             while (rs.next()) {
                 empresa = new Empresa(rs.getString("emp_consecutivo"), rs.getString("emp_fecha"), rs.getString("emp_asesor"),
-                        rs.getString("emp_clasCliente"), rs.getString("emp_cc"), rs.getString("emp_nombre"), rs.getInt("emp_nit"), rs.getString("emp_nombreRepLegal"),
-                        rs.getString("emp_constitucionLegal"), rs.getString("emp_fechaConstitucion"), rs.getString("emp_noEmpleado"),
+                        rs.getString("emp_clasCliente"), rs.getString("emp_cc"), rs.getString("emp_nombre"), rs.getInt("emp_nit"),
+                        rs.getString("emp_nombreRepLegal"), rs.getString("emp_constitucionLegal"), rs.getString("emp_otraConstitucion"),
+                        rs.getString("emp_fechaConstitucion"), rs.getString("emp_noEmpleadoTC"), rs.getString("emp_noEmpleadoMT"),
+                        rs.getString("emp_noEmpleadoDirectos"), rs.getString("emp_noEmpleadoIndirectos"),
                         rs.getString("emp_direccion"), rs.getString("emp_ciudad"), rs.getString("emp_telefono"), rs.getString("emp_celular"),
                         rs.getString("emp_emailEmpresa"), rs.getString("emp_urlWebsite"), rs.getString("emp_tipo"), rs.getString("emp_tipoVenta"),
                         rs.getString("emp_registroMercantil"), rs.getString("emp_numRegistroMercantil"), rs.getString("emp_ultimoAnioRenovacion"),

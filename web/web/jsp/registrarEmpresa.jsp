@@ -36,12 +36,12 @@
                 <div class="row">
                     <div class="row">
                         <!-- Se necesita hacer el el metodo que devuelva el último valor de la fila -->
-                        <div class="col m4">
+                        <div class="col m4 s12">
                             <label for="emp_consecutivo">Concecutivo</label>
                             <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="emp_consecutivo" name="emp_consecutivo" type="text" disabled >
                         </div>
 
-                        <div class="col m4 input-field">
+                        <div class="col m4 s12 input-field">
                             <i class="material-icons prefix">today</i>
                             <%
                                 Date s = new Date();
@@ -69,18 +69,18 @@
 
 
                     <div class="input-field col m6 s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Nombre (s)</label>
+                        <input id="cto_nombres" name="cto_nombres" type="text" class="validate">
+                        <label for="cto_nombres">Nombre (s)</label>
                     </div>
 
                     <div class="input-field col m6 s12">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Apellidos</label>
+                        <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate">
+                        <label for="cto_apellidos">Apellidos</label>
                     </div>
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">class</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Cargo</label>
+                        <input id="cto_cargo" name="cto_cargo" type="text" class="validate">
+                        <label for="cto_cargo">Cargo</label>
                     </div>
 
                     <div class="row">
@@ -106,72 +106,79 @@
                         </div>
 
                         <div class="input-field col m6 s12">
-                            <input id="last_name" type="number" class="validate">
-                            <label for="last_name">NRO. C.C:</label>
+                            <input id="cto_cc" name="cto_cc" type="number" class="validate">
+                            <label for="cto_cc">Número de cedula</label>
                         </div>
                     </div>
 
-                    <div class="col m6 s12">
-                        <label>Nivel de estudios</label>
-                        <select class="browser-default" id="cto_nivel_estudio" name="cto_nivel_estudio">
-                            <option value="Primaria">Primaria</option>
-                            <option value="Bachiller">Bachiller</option>
-                            <option value="Tecnica">Técnica</option>
-                            <option value="Tecnologicas">Tecnológicas</option>
-                            <option value="Profesionales">Profesionales</option>
-                            <option value="Maestria">Maestria</option>
-                            <option value="Doctorado">Doctorado</option>
-                        </select>
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <label>Nivel de estudios</label>
+                            <select class="browser-default" id="cto_nivel_estudio" name="cto_nivel_estudio">
+                                <option value="Primaria">Primaria</option>
+                                <option value="Bachiller">Bachiller</option>
+                                <option value="Tecnica">Técnica</option>
+                                <option value="Tecnologicas">Tecnológicas</option>
+                                <option value="Profesionales">Profesionales</option>
+                                <option value="Maestria">Maestria</option>
+                                <option value="Doctorado">Doctorado</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col m6 s12">
+                            <input id="cto_direccion" name="cto_direccion" type="text" class="validate">
+                            <label for="cto_direccion">Dirección</label>
+                        </div>
                     </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="nro_cc" type="text" class="validate">
-                        <label for="last_name">Dirección</label>
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <input id="cto_ciudad" name="cto_ciudad" type="text" class="validate">
+                            <label for="cto_ciudad">Ciudad</label>
+                        </div>
+
+                        <div class="input-field col m6 s12">
+                            <input id="cto_departamento" name="cto_departamento" type="text" class="validate">
+                            <label for="cto_departamento">Departamento</label>
+                        </div>
                     </div>
 
-                    <div class="input-field col m6 s12">
-                        <input id="nro_cc" type="text" class="validate">
-                        <label for="last_name">Ciudad</label>
-                    </div>
-                    <div class="input-field col m6 s12">
-                        <input id="nro_cc" type="text" class="validate">
-                        <label for="last_name">Departamento</label>
-                    </div>
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                            <label for="cto_fijo">Teléfono</label>
+                        </div>
 
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">phone</i>
-                        <input id="icon_telephone" type="tel" class="validate">
-                        <label for="icon_telephone">Teléfono</label>
-                    </div>
-
-                    <div class="input-field col m6 s12">
-                        <i class="material-icons prefix">stay_current_portrait</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Celular</label>
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">stay_current_portrait</i>
+                            <input id="cto_celular" name="cto_celular" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                            <label for="cto_celular">Celular</label>
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col m6 s12">
                             <div class="input-field">
                                 <i class="material-icons prefix" >email</i>
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
+                                <input id="cto_email" name="cto_email" type="email" class="validate">
+                                <label for="cto_email">Email</label>
                             </div>
                         </div>
 
                         <div class="col m6 s12">
-                            <label for="t1">Genero</label>
+                            <label for="cto_genero">Genero</label>
                             <p>
-                                <input name="group1" type="radio" id="test1" />
-                                <label for="test1">Masculino</label>
+                                <input name="cto_genero" type="radio" id="cto_genero1" />
+                                <label for="cto_genero1">Masculino</label>
                             </p>
                             <p>
-                                <input name="group1" type="radio" id="test2" />
-                                <label for="test2">Femenino</label>
+                                <input name="cto_genero" type="radio" id="cto_genero2" />
+                                <label for="cto_genero2">Femenino</label>
                             </p>
                             <p>
-                                <input class="with-gap" name="group1" type="radio" id="test3"  />
-                                <label for="test3">LGBTI</label>
+                                <input name="cto_genero" type="radio" id="cto_genero3"  />
+                                <label for="cto_genero3">LGBTI</label>
                             </p>
                         </div>
                     </div>
@@ -196,7 +203,7 @@
                             </p>
                             <p>
                                 <input name="cto_condicion_desplazado" type="radio" id="cto_condicion_desplazado2" value="No" required/>
-                                <label for="cto_condicion_desplazado">No</label>
+                                <label for="cto_condicion_desplazado2">No</label>
                             </p>
                         </div>
                     </div>
@@ -205,7 +212,7 @@
                         <label for="cto_discapacidad">Presenta alguna discapasidad</label>
                         <p>
                             <input name="cto_discapacidad" type="radio" id="cto_discapacidad1" required/>
-                            <label for="test1">Si</label>
+                            <label for="cto_discapacidad1">Si</label>
                         </p>
                         <p>
                             <input name="cto_discapacidad" type="radio" id="cto_discapacidad2" required/>
@@ -247,12 +254,20 @@
                                 <option value="Limitada">Limitada</option>
                                 <option value="Anonima">Anónima</option>
                                 <option value="Persona_anonima">Persona anónima</option>
-                                <option value="Otros">Otra</option> <!-- Debe de validar la parte de otro tipo de constitucion legal -->
+                                <option value="Otra">Otra</option> <!-- Debe de validar la parte de otro tipo de constitucion legal -->
                             </select>
                         </div>
                     </div>
 
+
                     <div class="row">
+                        <div class="input-field col m6 s12">
+                            <div class="input-field">
+                                <input id="emp_otraConstitucion" name="emp_otraConstitucion" type="number" class="validate">
+                                <label for="emp_otraConstitucion">Otra constitucion</label>
+                            </div>
+                        </div>
+
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">today</i>
                             <label for="emp_fechaConstitucion">Inicio de labores</label>
@@ -260,12 +275,31 @@
                             <input id="emp_fechaConstitucion" name="emp_fechaConstitucion" type="date" class="datepicker">
 
                         </div>
+                    </div>
 
-                        <!--Falta numero de empleados aquí -->
-                        <div class="input-field col m6 s12">
+                    <div class="row">
+                        <div class="input-field col m3 s12">
                             <div class="input-field">
-                                <input id="emp_noEmpleado" name="emp_noEmpleado" type="number" class="validate">
-                                <label for="emp_noEmpleado">Número de empleados</label>
+                                <input id="emp_noEmpleadoTC" name="emp_noEmpleadoTC" type="number" class="validate" value="0">
+                                <label for="emp_noEmpleadoTC">No. de empleados T.C.</label>
+                            </div>
+                        </div>
+                        <div class="input-field col m3 s12">
+                            <div class="input-field">
+                                <input id="emp_noEmpleadoMT" name="emp_noEmpleadoMT" type="number" class="validate" value="0">
+                                <label for="emp_noEmpleadoMT">No. de empleados M.T.</label>
+                            </div>
+                        </div>
+                        <div class="input-field col m3 s12">
+                            <div class="input-field">
+                                <input id="emp_noEmpleadoDirectos" name="emp_noEmpleadoDirectos" type="number" class="validate" value="0">
+                                <label for="emp_noEmpleadoDirectos">No. de empleados directos</label>
+                            </div>
+                        </div>
+                        <div class="input-field col m3 s12">
+                            <div class="input-field">
+                                <input id="emp_noEmpleadoIndirectos" name="emp_noEmpleadoIndirectos" type="number" class="validate" value="0">
+                                <label for="emp_noEmpleadoIndirectos">No. de empleados indirectos</label>
                             </div>
                         </div>
                     </div>

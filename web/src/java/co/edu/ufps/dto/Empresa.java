@@ -17,8 +17,12 @@ public class Empresa {
     private int emp_nit;
     private String emp_nombreRepLegal,
             emp_constitucionLegal,
+            emp_otraConstitucion,
             emp_fechaConstitucion,
-            emp_noEmpleado, //Faltan los distintos tipos de empleados 
+            emp_noEmpleadoTC,
+            emp_noEmpleadoMT,
+            emp_noEmpleadoDirectos,
+            emp_noEmpleadoIndirectos,
             emp_direccion,
             emp_ciudad,
             emp_telefono,
@@ -41,7 +45,13 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Empresa(String emp_consecutivo, String emp_fecha, String emp_asesor, String emp_clasCliente, String emp_cc, String emp_nombre, int emp_nit, String emp_nombreRepLegal, String emp_constitucionLegal, String emp_fechaConstitucion, String emp_noEmpleado, String emp_direccion, String emp_ciudad, String emp_telefono, String emp_celular, String emp_emailEmpresa, String emp_urlWebsite, String emp_tipo, String emp_tipoVenta, String emp_registroMercantil, String emp_numRegistroMercantil, String emp_ultimoAnioRenovacion, String emp_codigoCIIU, String emp_actividadInternacional, String emp_paisesComercio, String emp_negocioWeb, String emp_productoServicio, String emp_medioCDE, String emp_observaciones) {
+    public Empresa(String emp_consecutivo, String emp_fecha, String emp_asesor, String emp_clasCliente, String emp_cc, String emp_nombre,
+            int emp_nit, String emp_nombreRepLegal, String emp_constitucionLegal, String emp_otraConstitucion, String emp_fechaConstitucion,
+            String emp_noEmpleadoTC, String emp_noEmpleadoMT, String emp_noEmpleadoDirectos, String emp_noEmpleadoIndirectos,
+            String emp_direccion, String emp_ciudad, String emp_telefono, String emp_celular, String emp_emailEmpresa, String emp_urlWebsite,
+            String emp_tipo, String emp_tipoVenta, String emp_registroMercantil, String emp_numRegistroMercantil, String emp_ultimoAnioRenovacion,
+            String emp_codigoCIIU, String emp_actividadInternacional, String emp_paisesComercio, String emp_negocioWeb,
+            String emp_productoServicio, String emp_medioCDE, String emp_observaciones) {
         this.emp_consecutivo = emp_consecutivo;
         this.emp_fecha = emp_fecha;
         this.emp_asesor = emp_asesor;
@@ -51,8 +61,12 @@ public class Empresa {
         this.emp_nit = emp_nit;
         this.emp_nombreRepLegal = emp_nombreRepLegal;
         this.emp_constitucionLegal = emp_constitucionLegal;
+        this.emp_otraConstitucion = emp_otraConstitucion;
         this.emp_fechaConstitucion = emp_fechaConstitucion;
-        this.emp_noEmpleado = emp_noEmpleado;
+        this.emp_noEmpleadoTC = emp_noEmpleadoTC;
+        this.emp_noEmpleadoMT = emp_noEmpleadoMT;
+        this.emp_noEmpleadoDirectos = emp_noEmpleadoDirectos;
+        this.emp_noEmpleadoIndirectos = emp_noEmpleadoIndirectos;
         this.emp_direccion = emp_direccion;
         this.emp_ciudad = emp_ciudad;
         this.emp_telefono = emp_telefono;
@@ -145,6 +159,14 @@ public class Empresa {
         this.emp_constitucionLegal = emp_constitucionLegal;
     }
 
+    public String getEmp_otraConstitucion() {
+        return emp_otraConstitucion;
+    }
+
+    public void setEmp_otraConstitucion(String emp_otraConstitucion) {
+        this.emp_otraConstitucion = emp_otraConstitucion;
+    }
+
     public String getEmp_fechaConstitucion() {
         return emp_fechaConstitucion;
     }
@@ -153,12 +175,36 @@ public class Empresa {
         this.emp_fechaConstitucion = emp_fechaConstitucion;
     }
 
-    public String getEmp_noEmpleado() {
-        return emp_noEmpleado;
+    public String getEmp_noEmpleadoTC() {
+        return emp_noEmpleadoTC;
     }
 
-    public void setEmp_noEmpleado(String emp_noEmpleado) {
-        this.emp_noEmpleado = emp_noEmpleado;
+    public void setEmp_noEmpleadoTC(String emp_noEmpleadoTC) {
+        this.emp_noEmpleadoTC = emp_noEmpleadoTC;
+    }
+
+    public String getEmp_noEmpleadoMT() {
+        return emp_noEmpleadoMT;
+    }
+
+    public void setEmp_noEmpleadoMT(String emp_noEmpleadoMT) {
+        this.emp_noEmpleadoMT = emp_noEmpleadoMT;
+    }
+
+    public String getEmp_noEmpleadoDirectos() {
+        return emp_noEmpleadoDirectos;
+    }
+
+    public void setEmp_noEmpleadoDirectos(String emp_noEmpleadoDirectos) {
+        this.emp_noEmpleadoDirectos = emp_noEmpleadoDirectos;
+    }
+
+    public String getEmp_noEmpleadoIndirectos() {
+        return emp_noEmpleadoIndirectos;
+    }
+
+    public void setEmp_noEmpleadoIndirectos(String emp_noEmpleadoIndirectos) {
+        this.emp_noEmpleadoIndirectos = emp_noEmpleadoIndirectos;
     }
 
     public String getEmp_direccion() {
