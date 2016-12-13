@@ -55,7 +55,7 @@ public class Business {
 
     public boolean registrarEmpresa(Empresa empresa, Contacto c) {
         EmpresaDAO myEmpresaDAO = new EmpresaDAO();
-        return myEmpresaDAO.registrarEmpresa(empresa);
+        return myEmpresaDAO.registrarEmpresa(empresa, c);
     }
 
 }
