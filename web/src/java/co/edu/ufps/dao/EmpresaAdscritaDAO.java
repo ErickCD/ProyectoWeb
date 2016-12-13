@@ -61,10 +61,24 @@ public class EmpresaAdscritaDAO {
     }
 
     //Busquedas.
-    public List<EmpresaAdscrita> buscarEmpresaAdscrita(String tipoBusqueda, String valorBuscado) {
+    public List<EmpresaAdscrita> buscarEmpresaAdscrita(String tipoBusqueda, String valorBuscado, int cantidad) {
         ArrayList lista = new ArrayList();
         try {
-            s.execute("");
+            ResultSet rs = null;
+            if (tipoBusqueda.equals("nombre_empresa")) {
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
+                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+            } else if (tipoBusqueda.equals("")) {
+
+            }
+            EmpresaAdscrita emp = null;
+
+            while (rs.next()) {
+                emp = new EmpresaAdscrita(rs.getString("ads_nombreEmpresa"), rs.getString("ads_nombreGerente"), rs.getString("ads_email"),
+                        rs.getString("ads_telefono"), rs.getString("ads_paginaWeb"));
+                lista.add(emp);
+            }
+
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
