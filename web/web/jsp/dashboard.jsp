@@ -188,7 +188,7 @@
             <!-- tabla de empresas adscritas -->
 
 
-            }%>
+            <%}%>
         </div>
 
         <%@include file="plantilla/footer.jsp" %>
