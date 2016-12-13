@@ -30,7 +30,7 @@ public class EmpresaDAO {
         }
     }
 
-    public boolean registrarEmpresa(Empresa empresa){
+    public boolean registrarEmpresa(Empresa empresa, ContactoDAO con) {
         boolean respuesta = false;
 
         try {
