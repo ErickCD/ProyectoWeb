@@ -35,6 +35,7 @@ public class EmpresaAdscritaDAO {
             respuesta = s.execute("INSERT INTO `Empresaads`( `ads_nombreEmpresa`, `ads_nombreGerente`, `ads_email`, `ads_paginaWeb`,"
                     + " `ads_telefono`) VALUES (\'" + emp.getNombre_empresa() + "\',\'" + emp.getNombre_gerente() + "\',\'" + emp.getEmail() + "\',"
                     + "\'" + emp.getSitio_web() + "\',\'" + emp.getTelefono() + "\');");
+            return true;
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -66,20 +67,15 @@ public class EmpresaAdscritaDAO {
         try {
             ResultSet rs = null;
             if (tipoBusqueda.equals("nombre_empresa")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
-                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("nombre_gerente")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreGerente` like \"e%\" order by `ads_nombreGerente`"
-                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreGerente` like \"e%\" order by `ads_nombreGerente` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("email")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
-                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_email` like \"e%\" order by `ads_email` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("telefono")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
-                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_telefono` like \"e%\" order by `ads_telefono` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("sitio_web")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
-                        + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_paginaWeb` like \"e%\" order by `ads_paginaWeb` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             }
             EmpresaAdscrita emp = null;
 
