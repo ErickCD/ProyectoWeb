@@ -1,8 +1,10 @@
 package co.edu.ufps.business;
 
 import co.edu.ufps.dao.ContactoDAO;
+import co.edu.ufps.dao.EmpresaDAO;
 import co.edu.ufps.dao.UsuarioDAO;
 import co.edu.ufps.dto.Contacto;
+import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -47,7 +49,13 @@ public class Business {
     }
 
     public boolean actualizarConcato(Contacto c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ContactoDAO myDAO = new ContactoDAO();
+        return myDAO.updateContacto(c);
+    }
+
+    public boolean registrarEmpresa(Empresa empresa, Contacto c) {
+        EmpresaDAO myEmpresaDAO = new EmpresaDAO();
+        return myEmpresaDAO.registrarEmpresa(empresa);
     }
 
 }

@@ -18,9 +18,20 @@
     c.setCto_etnia(request.getParameter("cto_etnia"));
     c.setCto_condicion_desplazado(request.getParameter("cto_condicion_desplazado"));
     c.setCto_discapacidad(request.getParameter("cto_discapacidad"));
-    
+    c.setCto_fecha_nacimiento(request.getParameter("cto_fecha_nacimiento"));
 
     //true bien
     boolean bien = controlador.actualizarConcato(c);
-   
+    
+    //si no se pudo actualizar
+    if(!bien){
+        response.sendRedirect("../paginaDeError.jsp");
+    }
+    
+    //si no se pudo registrar
+    bien = controlador.registrarEmpresa(empresa,c);
+    if(!bien){
+        out.print("Hola esto esta bien");
+    }
+
 %>

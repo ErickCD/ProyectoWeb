@@ -80,6 +80,7 @@
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">today</i>
                         <input type="date" class="datepicker" value="Fecha de nacimiento">
+                        <label for="icon_prefix">fecha de nacimiento</label>
                     </div>
                     <div class="input-field col m6 s12">
                         <input id="last_name" type="number" class="validate" value="<%=c.getCto_cc() %>" disabled="">

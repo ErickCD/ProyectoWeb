@@ -2,6 +2,7 @@ package co.edu.ufps.controlador;
 
 import co.edu.ufps.business.Business;
 import co.edu.ufps.dto.Contacto;
+import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -12,6 +13,10 @@ import java.util.List;
 public class Controlador {
     
     private final Business myBusiness = new Business();
+    
+    public boolean registrarEmpresa(Empresa empresa, Contacto c){
+        return myBusiness.registrarEmpresa(empresa, c);
+    }
     
     // actualiza datos del contacto
     public boolean actualizarConcato(Contacto c){
