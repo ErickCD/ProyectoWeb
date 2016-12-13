@@ -17,6 +17,11 @@ public class EmpresaAdscrita {
     private String telefono;
     private String sitio_web;
 
+    public EmpresaAdscrita() {
+    }
+
+    
+    
     public EmpresaAdscrita(String nombre_empresa, String nombre_gerente, String email, String telefono, String sitio_web) {
         this.nombre_empresa = nombre_empresa;
         this.nombre_gerente = nombre_gerente;

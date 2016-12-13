@@ -58,7 +58,7 @@
                     <div class="collapsible-header"><i class="material-icons">whatshot</i><%=tipoDeUsuario%></div>
                     <div class="collapsible-body">
                         <p>Operaciones sobre la empresa adscrita<br>
-                            <a href="#registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
+                            <a href="registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
                             <a href="#ConsultarEmpresaTuristica" class="btn green">Consultar Empresas Adscritas</a>
                             <button onclick="" class="btn green">Asignar Logros</button>
                         </p>
