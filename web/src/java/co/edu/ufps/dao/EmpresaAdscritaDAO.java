@@ -69,7 +69,7 @@ public class EmpresaAdscritaDAO {
                 rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
                         + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("nombre_gerente")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreGerente` like \"e%\" order by `ads_nombreGerente`"
                         + " asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("email")) {
                 rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa`"
