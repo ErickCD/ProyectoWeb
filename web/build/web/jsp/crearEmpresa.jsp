@@ -25,8 +25,8 @@
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="../index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="../jsp/dashboard.jsp" class="breadcrumb">Contactos</a>
-                    <a href="../jsp/crearEmpresa.jsp" class="breadcrumb">Crear empresa</a>
+                    <a href="dashboard.jsp" class="breadcrumb">Contactos</a>
+                    <a href="registrarEmpresa.jsp" class="breadcrumb">Crear empresa</a>
                 </div>
             </div>
         </nav>
@@ -45,6 +45,7 @@
                         <i class="material-icons prefix">today</i>
                         <input type="date" class="datepicker" value="Fecha">
                     </div>
+                    
                     <div class="col m6 s12">
                         <label>Clasificación</label>
                         <select class="browser-default">
@@ -77,10 +78,10 @@
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix">Lugar de nacimiento</label>
                     </div>
+                       
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">today</i>
                         <input type="date" class="datepicker" value="Fecha de nacimiento">
-                        <label for="icon_prefix">fecha de nacimiento</label>
                     </div>
                     <div class="input-field col m6 s12">
                         <input id="last_name" type="number" class="validate" value="<%=c.getCto_cc() %>" disabled="">

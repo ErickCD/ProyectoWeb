@@ -1,17 +1,22 @@
 <%-- 
     Document   : crearEmpresa
     Created on : 19/10/2016, 12:29:06 AM
-    Author     : Clair
+    Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.Contacto"%>
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador" scope="session"></jsp:useBean>
 <jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Registro de Empresa</title>
+<%
+    String emailContacto = request.getParameter("emailContacto");
+    Contacto c = controlador.buscarContacto("", emailContacto);
+%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de Empresa</title>
         <%@include file="plantilla/style.jsp" %>
     </head>
     <body>
@@ -20,13 +25,13 @@
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="../index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="../jsp/registrarEmpresa.jsp" class="breadcrumb">Crear empresa</a>
+                    <a href="registrarEmpresa.jsp" class="breadcrumb">Crear empresa</a>
                 </div>
             </div>
         </nav>
 
         <div class="container col s12">
-            <form class="" action="" method="post">
+            <form class="" action="proceso/registrarEmpresa.jsp" method="post">
 
                 <!-- Titulo del formulario -->
                 <div class="control-label">
@@ -52,7 +57,7 @@
 
                         <div class="col m4 s12 input-field">
                             <label for="emp_asesor">Asesor</label>
-                            <input id="emp_asesor" name="emp_asesor" type="text" class="validate" required>
+                            <input id="emp_asesor" name="emp_asesor" type="text" class="validate" disabled value="<%=usuario.getNombre()%>">
                         </div>
                     </div>
 
@@ -69,17 +74,17 @@
 
 
                     <div class="input-field col m6 s12">
-                        <input id="cto_nombres" name="cto_nombres" type="text" class="validate">
+                        <input id="cto_nombres" name="cto_nombres" type="text" class="validate" value="<%=c.getCto_nombres()%>">
                         <label for="cto_nombres">Nombre (s)</label>
                     </div>
 
                     <div class="input-field col m6 s12">
-                        <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate">
+                        <input id="cto_apellidos" name="cto_apellidos" type="text" class="validate" value="<%=c.getCto_apellidos()%>">
                         <label for="cto_apellidos">Apellidos</label>
                     </div>
                     <div class="input-field col m6 s12">
                         <i class="material-icons prefix">class</i>
-                        <input id="cto_cargo" name="cto_cargo" type="text" class="validate">
+                        <input id="cto_cargo" name="cto_cargo" type="text" class="validate" value="<%=c.getCto_cargo()%>">
                         <label for="cto_cargo">Cargo</label>
                     </div>
 
@@ -88,7 +93,7 @@
                             <i class="material-icons prefix">business</i>
                             <label for="cto_antiguedad_cargo">Antigüedad en el cargo</label>
                             <br>
-                            <input id="cto_antiguedad_cargo" name="cto_antiguedad_cargo" type="date" class="validate">
+                            <input placeholder="aaaa/mm/dd" id="cto_antiguedad_cargo" name="cto_antiguedad_cargo" type="text" class="validate">
                         </div>
 
                         <div class="input-field col m6 s12">
@@ -102,11 +107,11 @@
                             <i class="material-icons prefix">today</i>
                             <label>Fecha de nacimiento</label>
                             <br>
-                            <input id="cto_fecha_nacimiento" name="cto_fecha_nacimiento" type="date" class="datepicker">
+                            <input placeholder="aaaa/mm/dd" id="cto_fecha_nacimiento" name="cto_fecha_nacimiento" type="text" class="datepicker">
                         </div>
 
                         <div class="input-field col m6 s12">
-                            <input id="cto_cc" name="cto_cc" type="number" class="validate">
+                            <input id="cto_cc" name="cto_cc" type="number" class="validate" value="<%=c.getCto_cc()%>" disable>
                             <label for="cto_cc">Número de cedula</label>
                         </div>
                     </div>
@@ -126,19 +131,19 @@
                         </div>
 
                         <div class="input-field col m6 s12">
-                            <input id="cto_direccion" name="cto_direccion" type="text" class="validate">
+                            <input id="cto_direccion" name="cto_direccion" type="text" class="validate" value="<%=c.getCto_direccion()%>">
                             <label for="cto_direccion">Dirección</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col m6 s12">
-                            <input id="cto_ciudad" name="cto_ciudad" type="text" class="validate">
+                            <input id="cto_ciudad" name="cto_ciudad" type="text" class="validate" value="<%=c.getCto_ciudad()%>">
                             <label for="cto_ciudad">Ciudad</label>
                         </div>
 
                         <div class="input-field col m6 s12">
-                            <input id="cto_departamento" name="cto_departamento" type="text" class="validate">
+                            <input id="cto_departamento" name="cto_departamento" type="text" class="validate" value="<%=c.getCto_departamento()%>">
                             <label for="cto_departamento">Departamento</label>
                         </div>
                     </div>
@@ -146,13 +151,13 @@
                     <div class="row">
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">phone</i>
-                            <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                            <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" value="<%=c.getCto_fijo()%>">
                             <label for="cto_fijo">Teléfono</label>
                         </div>
 
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">stay_current_portrait</i>
-                            <input id="cto_celular" name="cto_celular" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                            <input value="<%=c.getCto_celular()%>" id="cto_celular" name="cto_celular" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
                             <label for="cto_celular">Celular</label>
                         </div>
                     </div>
@@ -161,25 +166,14 @@
                         <div class="input-field col m6 s12">
                             <div class="input-field">
                                 <i class="material-icons prefix" >email</i>
-                                <input id="cto_email" name="cto_email" type="email" class="validate">
+                                <input value="<%=c.getCto_email()%>" id="cto_email" name="cto_email" type="email" class="validate">
                                 <label for="cto_email">Email</label>
                             </div>
                         </div>
 
                         <div class="col m6 s12">
-                            <label for="cto_genero">Genero</label>
-                            <p>
-                                <input name="cto_genero" type="radio" id="cto_genero1" />
-                                <label for="cto_genero1">Masculino</label>
-                            </p>
-                            <p>
-                                <input name="cto_genero" type="radio" id="cto_genero2" />
-                                <label for="cto_genero2">Femenino</label>
-                            </p>
-                            <p>
-                                <input name="cto_genero" type="radio" id="cto_genero3"  />
-                                <label for="cto_genero3">LGBTI</label>
-                            </p>
+                            <label for="t1">Genero</label>
+                            <input name="genero" type="text" value="<%=c.getCto_genero()%>" disabled="">
                         </div>
                     </div>
 
@@ -423,11 +417,14 @@
 
                         <div class="row col m6 s12">
                             <label for="emp_paisesComercio">Mencione los paises con los cuales comercializa</label>
+                            <input type="text" class="validate" placeholder="México,Argentina,Brasil" >
+                            <%--
                             <select id="emp_paisesComercio" name="emp_paisesComercio" class="browser-default">
                                 <option value="Mexico">México</option>
                                 <option value="Brasil">Brasil</option>
                                 <option value="Argentina">Argentina</option>
                             </select>
+                            --%>
                         </div>
                     </div>
                     <div class="row">

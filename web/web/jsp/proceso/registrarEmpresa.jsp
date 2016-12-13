@@ -31,7 +31,7 @@
     //si no se pudo registrar
     bien = controlador.registrarEmpresa(empresa,c);
     if(!bien){
-        out.print("Hola esto esta bien");
+        response.sendRedirect("../paginaDeError.jsp");
     }
-
+    out.print("Hola esto esta bien");
 %>
