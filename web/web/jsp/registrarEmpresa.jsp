@@ -93,7 +93,7 @@
                             <i class="material-icons prefix">business</i>
                             <label for="cto_antiguedad_cargo">Antigüedad en el cargo</label>
                             <br>
-                            <input placeholder="aaaa/mm/dd" id="cto_antiguedad_cargo" name="cto_antiguedad_cargo" type="text" class="validate">
+                            <input placeholder="AAAA-MM-DD" id="cto_antiguedad_cargo" pattern="\d{4}[\-]\d{2}[\-]\d{2}" name="cto_antiguedad_cargo" type="text" class="validate">
                         </div>
 
                         <div class="input-field col m6 s12">
@@ -107,7 +107,7 @@
                             <i class="material-icons prefix">today</i>
                             <label>Fecha de nacimiento</label>
                             <br>
-                            <input placeholder="aaaa/mm/dd" id="cto_fecha_nacimiento" name="cto_fecha_nacimiento" type="text" class="datepicker">
+                            <input placeholder="AAAA-MM-DD" id="cto_fecha_nacimiento" pattern="\d{4}[\-]\d{2}[\-]\d{2}" name="cto_fecha_nacimiento" type="text" class="datepicker">
                         </div>
 
                         <div class="input-field col m6 s12">
@@ -392,8 +392,7 @@
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">today</i>
                             <label for="emp_ultimoAnioRenovacion">Último año de renovación</label>
-                            <br>
-                            <input id="emp_ultimoAnioRenovacion" name="emp_ultimoAnioRenovacion" type="date" class="datepicker">
+                            <input id="emp_ultimoAnioRenovacion" name="emp_ultimoAnioRenovacion" type="text" placeholder="AAAA-MM-DD" class="datepicker">
                         </div>
 
 
@@ -455,9 +454,13 @@
                         <div class="row col m6 s12">
                             <label for="emp_medioCDE">Medio CDE</label>
                             <select id="emp_medioCDE" name="emp_medioCDE" class="browser-default">
-                                <option value="Valor1">Valor1</option>
-                                <option value="Valor2">Valor2</option>
-                                <option value="Valor3">Valor3</option>
+                                <option value="Entidad gubernamental">Entidad gubernamental</option>
+                                <option value="Referido a empresarios">Referido a empresarios</option>
+                                <option value="Universidad">Universidad</option>
+                                <option value="Medios masivo">Medios masivo</option>
+                                <option value="Pagina Web">Página Web</option>
+                                <option value="Red social">Red social</option>
+                                
                             </select>
                         </div>
 
