@@ -1,7 +1,7 @@
 <%-- 
     Document   : registrarEmpresaAdscrita
     Created on : 23-oct-2016, 18:47:28
-    Author     : manue
+    Author     : Manuel Florez
 --%>
 <jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador" scope="session"></jsp:useBean>
 <jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Crear Contacto</title>
+        <title>Crear Empresa Adscrita</title>
         <%@include file="plantilla/style.jsp" %>
     </head>
     <body>

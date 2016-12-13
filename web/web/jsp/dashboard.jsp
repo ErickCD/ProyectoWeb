@@ -47,7 +47,7 @@
                     <div class="collapsible-header"><i class="material-icons">place</i><%=tipoDeUsuario%></div>
                     <div class="collapsible-body">
                         <p>Operaciones sobre el Cliente<br>
-                            <a href="#EditarDatos" class="btn green">Editar mis datos</a>
+                            <a href="editarDatosEntidadAdscrita.jsp" class="btn green">Editar mis datos</a>
                             <a href="registrarContacto.jsp" class="btn green">Registrar Contacto</a>
                             <br><br>
                         </p>
@@ -163,11 +163,10 @@
                 <thead>
                     <tr>
                         <th>Nombre Empresa</th>
-                        <th>email</th>
-                        <th>sitio web</th>
-                        <th>gerente</th>
-                        <th>Editar</th>
-                        <th>Registrar Servicio</th>
+                        <th>Email</th>
+                        <th>Sitio web</th>
+                        <th>Gerente</th>
+                        <th>Telefono</th>
                     </tr>
                 </thead>
 
@@ -178,8 +177,7 @@
                         <td><%=e.getEmail()%></td>
                         <td><%=e.getSitio_web()%></td>
                         <td><%=e.getNombre_gerente()%></td>
-                        <td><a href="#" class="btn">Editar</a></td>
-                        <td><a href="#" class="btn">Registrar</a></td>
+                        <td><%=e.getTelefono() %></td>
                     </tr>
                     <%}%>
                 </tbody>
@@ -196,10 +194,11 @@
                 <thead>
                     <tr>
                         <th>Nombre Empresa</th>
-                        <th>email</th>
-                        <th>sitio web</th>
+                        <th>Email</th>
+                        <th>Sitio web</th>
                         <th>gerente</th>
-                        <th>telefono</th>
+                        <th>Editar</th>
+                        <th>Registrar Servicio</th>
                     </tr>
                 </thead>
 
@@ -210,7 +209,8 @@
                         <td><%=e.getEmail()%></td>
                         <td><%=e.getSitio_web()%></td>
                         <td><%=e.getNombre_gerente()%></td>
-                        <td><%=e.getTelefono() %></td>
+                        <td><a href="#" class="btn red">Editar</a></td>
+                        <td><a href="#" class="btn">Registrar</a></td>
                     </tr>
                     <%}%>
                 </tbody>

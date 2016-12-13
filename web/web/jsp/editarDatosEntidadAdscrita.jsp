@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Crear Empresa Adscrita</title>
+        <title>Editar Entidad Ascrita</title>
         <%@include file="plantilla/style.jsp" %>
     </head>
     <body>
