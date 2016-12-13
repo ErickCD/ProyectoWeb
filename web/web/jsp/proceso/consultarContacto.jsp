@@ -17,6 +17,8 @@
         <tr>
             <th data-field="name">Nombre</th>
             <th data-field="price">E-mail</th>
+            <th data-field="price">Cedula</th>
+            <th data-field="price">Editar</th>
             <th data-field="price">Crear empresa</th>
         </tr>
     </thead>
