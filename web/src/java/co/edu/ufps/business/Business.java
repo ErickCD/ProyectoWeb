@@ -5,6 +5,7 @@ import co.edu.ufps.dao.EmpresaDAO;
 import co.edu.ufps.dao.UsuarioDAO;
 import co.edu.ufps.dto.Contacto;
 import co.edu.ufps.dto.Empresa;
+import co.edu.ufps.dto.EmpresaAdscrita;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -56,6 +57,10 @@ public class Business {
     public boolean registrarEmpresa(Empresa empresa, Contacto c) {
         EmpresaDAO myEmpresaDAO = new EmpresaDAO();
         return myEmpresaDAO.registrarEmpresa(empresa, c);
+    }
+
+    public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda, String valorBuscado) {
+        return null;
     }
 
 }

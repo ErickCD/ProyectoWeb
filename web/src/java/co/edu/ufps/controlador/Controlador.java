@@ -15,10 +15,12 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    //buscar empresaAds
     public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda,String  valorBuscado){
         return myBusiness.buscarEmpresaAds(tipoBusqueda,valorBuscado);
     }
     
+    //registrar Empresa
     public boolean registrarEmpresa(Empresa empresa, Contacto c){
         return myBusiness.registrarEmpresa(empresa, c);
     }
