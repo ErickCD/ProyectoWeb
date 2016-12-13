@@ -8,7 +8,7 @@
 <% session.invalidate();%>
 <html>
     <head>
-        <title>Home</title>
+        <title>MinTi</title>
         <%@include file="plantilla/style.jsp" %>
         <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>

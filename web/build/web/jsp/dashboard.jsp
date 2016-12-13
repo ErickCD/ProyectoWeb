@@ -114,7 +114,7 @@
                         <label>dato</label>
                     </div>
                     <div class="input-field container col l4">
-                        <button class="btn" onclick="buscar()">buscar</button>
+                        <button class="btn" onclick="buscarAds()">buscar</button>
                     </div>
                 </div>
 
