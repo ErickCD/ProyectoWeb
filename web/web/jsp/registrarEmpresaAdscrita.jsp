@@ -29,7 +29,7 @@
     </di>
 
     <div class="container">
-        <form class="" action="proceso/registrarEntidadAdscrita.jsp" method="post">
+        <form class="" action="proceso/control_EntidadAdscrita.jsp" method="post">
             <div class="row">
 
                 <h5 class="center">Programa de Fortalecimiento Empresarial</h5>

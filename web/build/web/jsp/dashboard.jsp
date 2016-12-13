@@ -47,10 +47,9 @@
                     <div class="collapsible-header"><i class="material-icons">place</i><%=tipoDeUsuario%></div>
                     <div class="collapsible-body">
                         <p>Operaciones sobre el Cliente<br>
-                            <a href="#ConsultarEmpresa" class="btn green">Consultar Empresa</a>
-                            <a href="#ConsultarEmpresaTuristica" class="btn green">Consultar Empresa Turistica</a>
+                            <a href="#EditarDatos" class="btn green">Editar mis datos</a>
+                            <a href="registrarContacto.jsp" class="btn green">Registrar Contacto</a>
                             <br><br>
-                            <a href="#registrarContacto.jsp" class="btn green">Crear Contacto</a>
                         </p>
                     </div>
                 </li>
@@ -150,14 +149,14 @@
                         <td><a href="#" class="btn red">Editar</a></td>
                         <td><a href="registrarEmpresa.jsp?emailContacto=<%=c.getCto_email()%>" class="btn">Crear</a></td>
                     </tr>
-                    <% }
-                    %>
+                    <% }%>
                 </tbody>
             </table>
             <!-- tabla de contactos -->    
             <%} else {
-
-                List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);%>
+                if (tipoDeUsuario.equals("Entidad")) {
+                    List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);
+            %>
             <div><h1>Empresas</h1></div>
             <!-- tabla de empresas adscritas -->
             <table class="striped">
@@ -187,8 +186,39 @@
             </table>
             <!-- tabla de empresas adscritas -->
 
+            <%} else {
+                 List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);
+            %>
 
-            <%}%>
+            <div><h1>Empresas</h1></div>
+            <!-- tabla de empresas adscritas -->
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Nombre Empresa</th>
+                        <th>email</th>
+                        <th>sitio web</th>
+                        <th>gerente</th>
+                        <th>telefono</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for (EmpresaAdscrita e : l) {%>
+                    <tr>
+                        <td><%=e.getNombre_empresa()%></td>
+                        <td><%=e.getEmail()%></td>
+                        <td><%=e.getSitio_web()%></td>
+                        <td><%=e.getNombre_gerente()%></td>
+                        <td><%=e.getTelefono() %></td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+            <!-- tabla de empresas adscritas -->
+
+            <%}
+                }%>
         </div>
 
         <%@include file="plantilla/footer.jsp" %>
