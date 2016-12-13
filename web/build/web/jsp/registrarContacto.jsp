@@ -169,6 +169,7 @@
                         </div>
 
                     </div>
+                </div>
             </form>
         </div>
         <%@include file="plantilla/footer.jsp" %>
