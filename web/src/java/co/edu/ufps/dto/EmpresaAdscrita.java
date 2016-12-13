@@ -10,7 +10,7 @@ package co.edu.ufps.dto;
  * @author Manuel Florez
  */
 public class EmpresaAdscrita {
-    
+
     private String nombre_empresa;
     private String nombre_gerente;
     private String email;
@@ -20,8 +20,6 @@ public class EmpresaAdscrita {
     public EmpresaAdscrita() {
     }
 
-    
-    
     public EmpresaAdscrita(String nombre_empresa, String nombre_gerente, String email, String telefono, String sitio_web) {
         this.nombre_empresa = nombre_empresa;
         this.nombre_gerente = nombre_gerente;
@@ -69,7 +67,4 @@ public class EmpresaAdscrita {
     public void setSitio_web(String sitio_web) {
         this.sitio_web = sitio_web;
     }
-    
-    
-    
 }
