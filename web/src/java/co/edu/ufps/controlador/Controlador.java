@@ -3,6 +3,7 @@ package co.edu.ufps.controlador;
 import co.edu.ufps.business.Business;
 import co.edu.ufps.dto.Contacto;
 import co.edu.ufps.dto.Empresa;
+import co.edu.ufps.dto.EmpresaAdscrita;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -13,6 +14,10 @@ import java.util.List;
 public class Controlador {
     
     private final Business myBusiness = new Business();
+    
+    public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda,String  valorBuscado){
+        return myBusiness.buscarEmpresaAds(tipoBusqueda,valorBuscado);
+    }
     
     public boolean registrarEmpresa(Empresa empresa, Contacto c){
         return myBusiness.registrarEmpresa(empresa, c);
