@@ -15,11 +15,11 @@ public class Contacto {
             cto_nombres,
             cto_apellidos,
             cto_cc,
-            cto_cargo;
-    private int cto_antiguedad_cargo;
-    private String cto_lugar_nacimiento;
-    private Date cto_fecha_nacimiento;
-    private String cto_nivel_estudio,
+            cto_cargo,
+            cto_antiguedad_cargo,
+            cto_lugar_nacimiento,
+            cto_fecha_nacimiento,
+            cto_nivel_estudio,
             cto_discapacidad,
             cto_direccion,
             cto_cde,
@@ -60,7 +60,7 @@ public class Contacto {
 
     //Datos de cualquier empresa
     public Contacto(int id, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
-            int cto_antiguedad_cargo, String cto_lugar_nacimiento, Date cto_fecha_nacimiento,
+            String cto_antiguedad_cargo, String cto_lugar_nacimiento, String cto_fecha_nacimiento,
             String cto_nivel_estudio, String cto_discapacidad, String cto_direccion, String cto_ciudad,
             String cto_celular, String cto_fijo, String cto_email, String cto_genero, String cto_etnia,
             String cto_condicion_desplazado, String cto_departamento) {
@@ -171,11 +171,11 @@ public class Contacto {
         this.cto_cargo = cto_cargo;
     }
 
-    public int getCto_antiguedad_cargo() {
+    public String getCto_antiguedad_cargo() {
         return cto_antiguedad_cargo;
     }
 
-    public void setCto_antiguedad_cargo(int cto_antiguedad_cargo) {
+    public void setCto_antiguedad_cargo(String cto_antiguedad_cargo) {
         this.cto_antiguedad_cargo = cto_antiguedad_cargo;
     }
 
@@ -187,11 +187,11 @@ public class Contacto {
         this.cto_lugar_nacimiento = cto_lugar_nacimiento;
     }
 
-    public Date getCto_fecha_nacimiento() {
+    public String getCto_fecha_nacimiento() {
         return cto_fecha_nacimiento;
     }
 
-    public void setCto_fecha_nacimiento(Date cto_fecha_nacimiento) {
+    public void setCto_fecha_nacimiento(String cto_fecha_nacimiento) {
         this.cto_fecha_nacimiento = cto_fecha_nacimiento;
     }
 

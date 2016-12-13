@@ -119,6 +119,7 @@
                         <td><%=c.getCto_email()%></td>
                         <td><a href="#" class="btn red">Editar</a></td>
                         <td><a href="crearEmpresa.jsp?emailContacto=<%=c.getCto_email()%>" class="btn">Crear</a></td>
+
                     </tr>
                     <% }
                     %>

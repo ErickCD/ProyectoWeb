@@ -3,8 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/manue/Desktop/Trabajos/ProyectoWeb/web/web/jsp/login.jsp</file>
             <file>file:/C:/Users/manue/Desktop/Trabajos/ProyectoWeb/web/web/jsp/crearEmpresaTuristica.jsp</file>
+=======
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/web/jsp/dashboard.jsp</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/web/jsp/registrarContacto.jsp</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/web/index.jsp</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dto/Empresa.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dao/EmpresaDAO.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/web/jsp/home.jsp</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/src/java/co/edu/ufps/dto/Contacto.java</file>
+            <file>file:/F:/Documentos/ITSTA/7.-septimo_semestre/UFPS-Programación_web/Proyecto/Proyecto1-master/web/web/jsp/registrarEmpresa.jsp</file>
+>>>>>>> 73ed091724a8a4406f0ce8d6795f0ae343c2e45a
         </group>
     </open-files>
 </project-private>
