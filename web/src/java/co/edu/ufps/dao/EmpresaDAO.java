@@ -30,30 +30,34 @@ public class EmpresaDAO {
         }
     }
 
-    public boolean registrarEmpresa(Empresa empresa) throws SQLException {
+    public boolean registrarEmpresa(Empresa empresa){
         boolean respuesta = false;
 
-        respuesta = s.execute("INSERT INTO `empresa`(`emp_consecutivo`, `emp_fecha`, `emp_asesor`, `emp_clasCliente`, `emp_cc`, "
-                + "`emp_nombre`, `emp_nit`, `emp_nombreRepLegal`, `emp_constitucionLegal`, `emp_otraConstitucion`, `emp_fechaConstitucion`,"
-                + " `emp_noEmpleadoTC`,"
-                + " `emp_noEmpleadoMT`,`emp_noEmpleadoDirectos`,`emp_noEmpleadoIndirectos`, `emp_direccion`, `emp_ciudad`, `emp_telefono`,"
-                + " `emp_celular`, `emp_emailEmpresa`, `emp_urlWebsite`, `emp_tipo`,"
-                + " `emp_tipoVenta`, `emp_registroMercantil`, `emp_numRegistroMercantil`, `emp_ultimoAnioRenovacion`, `emp_codigoCIIU`,"
-                + " `emp_actividadInternacional`, `emp_paisesComercio`, `emp_negocioWeb`, `emp_productoServicio`, `emp_medioCDE`,"
-                + " `emp_observaciones`) VALUES (\'" + empresa.getEmp_consecutivo() + "\', \'" + empresa.getEmp_fecha() + "\', \'"
-                + empresa.getEmp_asesor() + "\', \'" + empresa.getEmp_clasCliente() + "\', \'" + empresa.getEmp_cc() + "\', \'"
-                + empresa.getEmp_nombre() + "\', " + empresa.getEmp_nit() + ", \'" + empresa.getEmp_nombreRepLegal() + "\', \'"
-                + empresa.getEmp_constitucionLegal() + "\', \'"
-                + empresa.getEmp_otraConstitucion() + "\', \'" + empresa.getEmp_fechaConstitucion() + "\', \'" + empresa.getEmp_noEmpleadoTC()
-                + "\', \'" + empresa.getEmp_noEmpleadoMT() + "\', \'" + empresa.getEmp_noEmpleadoDirectos() + "\', \'"
-                + empresa.getEmp_noEmpleadoIndirectos()
-                + "\', \'" + empresa.getEmp_direccion() + "\', \'" + empresa.getEmp_ciudad() + "\', \'" + empresa.getEmp_telefono() + "\', \'"
-                + empresa.getEmp_celular() + "\', \'" + empresa.getEmp_emailEmpresa() + "\', \'" + empresa.getEmp_urlWebsite() + "\', \'"
-                + empresa.getEmp_tipo() + "\', \'" + empresa.getEmp_tipoVenta() + "\', \'" + empresa.getEmp_registroMercantil() + "\', \'"
-                + empresa.getEmp_numRegistroMercantil() + "\', \'" + empresa.getEmp_ultimoAnioRenovacion() + "\', \'"
-                + empresa.getEmp_codigoCIIU() + "\', \'" + empresa.getEmp_actividadInternacional() + "\', \'" + empresa.getEmp_paisesComercio()
-                + "\', \'" + empresa.getEmp_negocioWeb() + "\', \'" + empresa.getEmp_productoServicio() + "\', \'" + empresa.getEmp_medioCDE()
-                + "\', \'" + empresa.getEmp_observaciones() + "\');");
+        try {
+            respuesta = s.execute("INSERT INTO `empresa`(`emp_consecutivo`, `emp_fecha`, `emp_asesor`, `emp_clasCliente`, `emp_cc`, "
+                    + "`emp_nombre`, `emp_nit`, `emp_nombreRepLegal`, `emp_constitucionLegal`, `emp_otraConstitucion`, `emp_fechaConstitucion`,"
+                    + " `emp_noEmpleadoTC`,"
+                    + " `emp_noEmpleadoMT`,`emp_noEmpleadoDirectos`,`emp_noEmpleadoIndirectos`, `emp_direccion`, `emp_ciudad`, `emp_telefono`,"
+                    + " `emp_celular`, `emp_emailEmpresa`, `emp_urlWebsite`, `emp_tipo`,"
+                    + " `emp_tipoVenta`, `emp_registroMercantil`, `emp_numRegistroMercantil`, `emp_ultimoAnioRenovacion`, `emp_codigoCIIU`,"
+                    + " `emp_actividadInternacional`, `emp_paisesComercio`, `emp_negocioWeb`, `emp_productoServicio`, `emp_medioCDE`,"
+                    + " `emp_observaciones`) VALUES (\'" + empresa.getEmp_consecutivo() + "\', \'" + empresa.getEmp_fecha() + "\', \'"
+                    + empresa.getEmp_asesor() + "\', \'" + empresa.getEmp_clasCliente() + "\', \'" + empresa.getEmp_cc() + "\', \'"
+                    + empresa.getEmp_nombre() + "\', " + empresa.getEmp_nit() + ", \'" + empresa.getEmp_nombreRepLegal() + "\', \'"
+                    + empresa.getEmp_constitucionLegal() + "\', \'"
+                    + empresa.getEmp_otraConstitucion() + "\', \'" + empresa.getEmp_fechaConstitucion() + "\', \'" + empresa.getEmp_noEmpleadoTC()
+                    + "\', \'" + empresa.getEmp_noEmpleadoMT() + "\', \'" + empresa.getEmp_noEmpleadoDirectos() + "\', \'"
+                    + empresa.getEmp_noEmpleadoIndirectos()
+                    + "\', \'" + empresa.getEmp_direccion() + "\', \'" + empresa.getEmp_ciudad() + "\', \'" + empresa.getEmp_telefono() + "\', \'"
+                    + empresa.getEmp_celular() + "\', \'" + empresa.getEmp_emailEmpresa() + "\', \'" + empresa.getEmp_urlWebsite() + "\', \'"
+                    + empresa.getEmp_tipo() + "\', \'" + empresa.getEmp_tipoVenta() + "\', \'" + empresa.getEmp_registroMercantil() + "\', \'"
+                    + empresa.getEmp_numRegistroMercantil() + "\', \'" + empresa.getEmp_ultimoAnioRenovacion() + "\', \'"
+                    + empresa.getEmp_codigoCIIU() + "\', \'" + empresa.getEmp_actividadInternacional() + "\', \'" + empresa.getEmp_paisesComercio()
+                    + "\', \'" + empresa.getEmp_negocioWeb() + "\', \'" + empresa.getEmp_productoServicio() + "\', \'" + empresa.getEmp_medioCDE()
+                    + "\', \'" + empresa.getEmp_observaciones() + "\');");
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         return respuesta;
     }
