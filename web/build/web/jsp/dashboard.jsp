@@ -59,7 +59,7 @@
                     <div class="collapsible-body">
                         <p>Operaciones sobre la empresa adscrita<br>
                             <a href="registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
-                            <a href="#ConsultarEmpresaTuristica" class="btn green">Consultar Empresas Adscritas</a>
+                            <button onclick="verPanelDeBusquedaAds()" class="btn green">Buscar Empresas Adscritas</button>
                             <button onclick="" class="btn green">Asignar Logros</button>
                         </p>
                     </div>
@@ -94,6 +94,33 @@
                 <button onclick="ocultarPanelDeBusqueda()" class="btn blue-grey">Ocultar</button><hr>
             </div>
 
+            <div id="respuesta2"></div><br><br>
+
+            <!-- panel de opciones que se carga con Ajax -->
+            <div id="opc2" class="hide">
+                <div class="row">
+                    <div class="input-field container col l4">
+                        <select name="busqueda" id="busqueda">
+                            <option value="nombre_empresa" selected="">Nombre Empresa</option>
+                            <option value="nombre_gerente">Nombre Gerente</option>
+                            <option value="email">Email</option>
+                            <option value="sitio_web">Sitio Web</option>
+                            <option value="telefono">telefono</option>
+                        </select>
+                        <label>Tipo De busqueda</label>
+                    </div>
+                    <div class="input-field container col l4">
+                        <input type="text" name="parametro" id="parametro">
+                        <label>dato</label>
+                    </div>
+                    <div class="input-field container col l4">
+                        <button class="btn" onclick="buscar()">buscar</button>
+                    </div>
+                </div>
+
+                <button onclick="ocultarPanelDeBusquedaAds()" class="btn blue-grey">Ocultar</button><hr>
+            </div>
+
 
             <!-- tabla para el asesor -->
             <%
@@ -118,7 +145,7 @@
                     <tr>
                         <td><%=c.getCto_nombres()%></td>
                         <td><%=c.getCto_email()%></td>
-                        <td><%=c.getCto_cc() %></td>
+                        <td><%=c.getCto_cc()%></td>
                         <td><a href="#" class="btn red">Editar</a></td>
                         <td><a href="registrarEmpresa.jsp?emailContacto=<%=c.getCto_email()%>" class="btn">Crear</a></td>
                     </tr>
@@ -174,6 +201,7 @@
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
         <script src="../js/Asesor/buscarContacto.js"></script>
+        <script src="../js/Administrador/buscarEmpresaAdscrita.js"></script>
         <script>
                     $(document).ready(function () {
                         $('select').material_select();
