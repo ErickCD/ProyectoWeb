@@ -13,6 +13,11 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    // actualiza datos del contacto
+    public boolean actualizarConcato(Contacto c){
+        return myBusiness.actualizarConcato(c);
+    }
+    
     //buscar un contacto en la base de datos
     public Contacto buscarContacto(String tipoBusqueda,String valorBuscado){
         return myBusiness.buscarContacto(tipoBusqueda,valorBuscado);

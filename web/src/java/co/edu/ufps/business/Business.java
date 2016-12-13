@@ -46,4 +46,8 @@ public class Business {
         return myDAO.buscarContacto(tipoBusqueda, valorBuscado);
     }
 
+    public boolean actualizarConcato(Contacto c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
