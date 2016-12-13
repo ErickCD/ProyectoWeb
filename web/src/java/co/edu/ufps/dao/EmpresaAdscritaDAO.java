@@ -84,7 +84,7 @@ public class EmpresaAdscritaDAO {
                         rs.getString("ads_telefono"), rs.getString("ads_paginaWeb"));
                 lista.add(emp);
             }
-
+            return lista;
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
