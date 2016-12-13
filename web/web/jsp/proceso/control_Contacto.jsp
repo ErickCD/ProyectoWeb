@@ -18,10 +18,6 @@
     if (resultado == true) {
         response.sendRedirect("../registrarContacto.jsp");
     } else {
-        response.sendRedirect("../registrarContacto.jsp");
+        response.sendRedirect("../paginaDeError.jsp");
     }
-    /*else{
-        session.setAttribute("error", res);
-        response.sendRedirect("../login.jsp");
-     */
 %>
