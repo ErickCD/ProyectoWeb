@@ -397,7 +397,7 @@
                     <div class="row">
                         <div class="input-field col m6 s12">
                             <i class="material-icons prefix">today</i>
-                            <label>Último año de renovación</label>
+                            <label for="emp_ultimoAnioRenovacion">Último año de renovación</label>
                             <br>
                             <input id="emp_ultimoAnioRenovacion" name="emp_ultimoAnioRenovacion" type="date" class="datepicker">
                         </div>
