@@ -79,4 +79,9 @@ public class Business {
         return myEmpresaAdscritaDAO.buscaEmpresaAdscrita(nombre_empresa);
     }
 
+    public boolean actualizarEmpresaAdscrita(EmpresaAdscrita ads) {
+        EmpresaAdscritaDAO myEmpresaAdscritaDAO = new EmpresaAdscritaDAO();
+        return myEmpresaAdscritaDAO.actualizarEmpresaAdscrita(ads);
+    }
+
 }
