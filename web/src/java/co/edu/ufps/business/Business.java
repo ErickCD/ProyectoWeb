@@ -69,4 +69,9 @@ public class Business {
         return myEmpresaAdscrita.RegistrarEmpresaAdscrtita(ads);
     }
 
+    public List<EmpresaAdscrita> mostrarEmpresasAdscritas(int cantidad) {
+         EmpresaAdscritaDAO myEmpresaAdscrita = new EmpresaAdscritaDAO();
+        return myEmpresaAdscrita.mostrarEmpresasAdscritas(cantidad);
+    }
+
 }
