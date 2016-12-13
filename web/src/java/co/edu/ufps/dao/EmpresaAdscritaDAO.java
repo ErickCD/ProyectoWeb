@@ -67,15 +67,15 @@ public class EmpresaAdscritaDAO {
         try {
             ResultSet rs = null;
             if (tipoBusqueda.equals("nombre_empresa")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"e%\" order by `ads_nombreEmpresa` asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` like \"" + valorBuscado + "%\" order by `ads_nombreEmpresa` asc limit " + cantidad + " , " + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("nombre_gerente")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreGerente` like \"e%\" order by `ads_nombreGerente` asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreGerente` like \"" + valorBuscado + "%\" order by `ads_nombreGerente` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("email")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_email` like \"e%\" order by `ads_email` asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_email` like \"" + valorBuscado + "%\" order by `ads_email` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("telefono")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_telefono` like \"e%\" order by `ads_telefono` asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_telefono` like \"" + valorBuscado + "%\" order by `ads_telefono` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             } else if (tipoBusqueda.equals("sitio_web")) {
-                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_paginaWeb` like \"e%\" order by `ads_paginaWeb` asc limit " + cantidad + "," + (cantidad + 10) + ";");
+                rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_paginaWeb` like \"" + valorBuscado + "%\" order by `ads_paginaWeb` asc limit " + cantidad + "," + (cantidad + 10) + ";");
             }
             EmpresaAdscrita emp = null;
 

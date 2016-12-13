@@ -8,7 +8,7 @@ function ocultarPanelDeBusquedaAds() {
     $("#respuesta2").addClass("hide");
 
 }
-function buscar() {
+function buscarAds() {
 
     $.ajax({
         // La URL de la petición
