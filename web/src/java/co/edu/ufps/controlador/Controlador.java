@@ -15,6 +15,14 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    public List<EmpresaAdscrita> mostrarEmpresasAdscritas(int cantidad){
+        return myBusiness.mostrarEmpresasAdscritas(cantidad);
+    }
+    
+    public boolean registrarEmpresaAdscrita(EmpresaAdscrita ads){
+        return myBusiness.registrarEmpresaAdscrita(ads);
+    }
+    
     //buscar empresaAds
     public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda,String  valorBuscado){
         return myBusiness.buscarEmpresaAds(tipoBusqueda,valorBuscado);

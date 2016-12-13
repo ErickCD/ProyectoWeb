@@ -1,6 +1,7 @@
 package co.edu.ufps.business;
 
 import co.edu.ufps.dao.ContactoDAO;
+import co.edu.ufps.dao.EmpresaAdscritaDAO;
 import co.edu.ufps.dao.EmpresaDAO;
 import co.edu.ufps.dao.UsuarioDAO;
 import co.edu.ufps.dto.Contacto;
@@ -61,6 +62,16 @@ public class Business {
 
     public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda, String valorBuscado) {
         return null;
+    }
+
+    public boolean registrarEmpresaAdscrita(EmpresaAdscrita ads) {
+        EmpresaAdscritaDAO myEmpresaAdscrita = new EmpresaAdscritaDAO();
+        return myEmpresaAdscrita.RegistrarEmpresaAdscrtita(ads);
+    }
+
+    public List<EmpresaAdscrita> mostrarEmpresasAdscritas(int cantidad) {
+         EmpresaAdscritaDAO myEmpresaAdscrita = new EmpresaAdscritaDAO();
+        return myEmpresaAdscrita.mostrarEmpresasAdscritas(cantidad);
     }
 
 }

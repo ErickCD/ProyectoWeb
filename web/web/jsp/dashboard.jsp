@@ -4,6 +4,7 @@
     Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.EmpresaAdscrita"%>
 <%@page import="co.edu.ufps.dto.Contacto"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -155,47 +156,39 @@
             </table>
             <!-- tabla de contactos -->    
             <%} else {
-                if (tipoDeUsuario.equals("Entidad")) {%>
+
+                List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);%>
             <div><h1>Empresas</h1></div>
             <!-- tabla de empresas adscritas -->
             <table class="striped">
                 <thead>
                     <tr>
-                        <th data-field="id">id</th>
-                        <th data-field="name">Nombre Empresa</th>
-                        <th data-field="price"></th>
-                        <th data-field="price">Crear empresa</th>
+                        <th>Nombre Empresa</th>
+                        <th>email</th>
+                        <th>sitio web</th>
+                        <th>gerente</th>
+                        <th>Editar</th>
+                        <th>Registrar Servicio</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                    <% for (EmpresaAdscrita e : l) {%>
                     <tr>
-                        <td>1</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
+                        <td><%=e.getNombre_empresa()%></td>
+                        <td><%=e.getEmail()%></td>
+                        <td><%=e.getSitio_web()%></td>
+                        <td><%=e.getNombre_gerente()%></td>
+                        <td><a href="#" class="btn">Editar</a></td>
                         <td><a href="#" class="btn">Registrar</a></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                        <td><a href="#" class="btn">Registrar</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                        <td><a href="#" class="btn">Registrar</a></td>
-                    </tr>
+                    <%}%>
                 </tbody>
             </table>
             <!-- tabla de empresas adscritas -->
-            <%  } else { %>
-            <div><h1>Empresas Adscritas</h1></div>
 
-            <% }
 
-                }%>
+            }%>
         </div>
 
         <%@include file="plantilla/footer.jsp" %>
