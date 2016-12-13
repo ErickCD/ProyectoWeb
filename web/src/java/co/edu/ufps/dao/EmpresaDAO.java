@@ -2,6 +2,7 @@ package co.edu.ufps.dao;
 
 import co.edu.ufps.connection.conexion;
 import co.edu.ufps.dto.Empresa;
+import co.edu.ufps.dto.Contacto;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -30,7 +31,7 @@ public class EmpresaDAO {
         }
     }
 
-    public boolean registrarEmpresa(Empresa empresa, ContactoDAO con) {
+    public boolean registrarEmpresa(Empresa empresa, Contacto con) {
         boolean respuesta = false;
 
         try {
@@ -42,7 +43,7 @@ public class EmpresaDAO {
                     + " `emp_tipoVenta`, `emp_registroMercantil`, `emp_numRegistroMercantil`, `emp_ultimoAnioRenovacion`, `emp_codigoCIIU`,"
                     + " `emp_actividadInternacional`, `emp_paisesComercio`, `emp_negocioWeb`, `emp_productoServicio`, `emp_medioCDE`,"
                     + " `emp_observaciones`) VALUES (\'" + empresa.getEmp_consecutivo() + "\', \'" + empresa.getEmp_fecha() + "\', \'"
-                    + empresa.getEmp_asesor() + "\', \'" + empresa.getEmp_clasCliente() + "\', \'" + empresa.getEmp_cc() + "\', \'"
+                    + empresa.getEmp_asesor() + "\', \'" + empresa.getEmp_clasCliente() + "\', \'" + con.getCto_cc() + "\', \'"
                     + empresa.getEmp_nombre() + "\', " + empresa.getEmp_nit() + ", \'" + empresa.getEmp_nombreRepLegal() + "\', \'"
                     + empresa.getEmp_constitucionLegal() + "\', \'"
                     + empresa.getEmp_otraConstitucion() + "\', \'" + empresa.getEmp_fechaConstitucion() + "\', \'" + empresa.getEmp_noEmpleadoTC()
