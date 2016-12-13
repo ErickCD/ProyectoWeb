@@ -107,7 +107,7 @@
                             <i class="material-icons prefix">today</i>
                             <label>Fecha de nacimiento</label>
                             <br>
-                            <input placeholder="AAAA-MM-DD" id="cto_fecha_nacimiento" pattern="\d{4}[\-]\d{2}[\-]\d{2}" name="cto_fecha_nacimiento" type="text" class="datepicker">
+                            <input  id="cto_fecha_nacimiento" pattern="\d{4}[\-]\d{2}[\-]\d{2}" placeholder="AAAA-MM-DD" name="cto_fecha_nacimiento" type="text" class="datepicker">
                         </div>
 
                         <div class="input-field col m6 s12">
@@ -185,6 +185,7 @@
                                 <option value="Indígenas">Indígenas</option>
                                 <option value="Afrocolombianos">Afrocolombianos</option>
                                 <option value="Raizales">Raizales</option>
+                                <option value="No aplica">No aplica</option>
                                 <option value="Otros">Otros</option>
                             </select>
                         </div>
@@ -266,7 +267,7 @@
                             <i class="material-icons prefix">today</i>
                             <label for="emp_fechaConstitucion">Inicio de labores</label>
                             <br>
-                            <input id="emp_fechaConstitucion" name="emp_fechaConstitucion" type="date" class="datepicker">
+                            <input id="emp_fechaConstitucion" name="emp_fechaConstitucion" pattern="\d{4}[\-]\d{2}[\-]\d{2}" placeholder="AAAA-MM-DD" type="text" class="datepicker">
 
                         </div>
                     </div>
@@ -382,7 +383,7 @@
 
                         <div class="input-field col m6 s12">
                             <div class="input-field">
-                                <input id="emp_numRegistroMercantil" name="emp_numRegistroMercantil" type="number" class="validate" required="">
+                                <input id="emp_numRegistroMercantil" name="emp_numRegistroMercantil" type="number" class="validate">
                                 <label for="emp_numRegistroMercantil">Número de resgistro mercantil</label>
                             </div>
                         </div>
