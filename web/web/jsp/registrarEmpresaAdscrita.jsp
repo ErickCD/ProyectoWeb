@@ -4,6 +4,7 @@
     Author     : manue
 --%>
 <jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador" scope="session"></jsp:useBean>
+<jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,7 @@
             <div class="nav-wrapper container">
                 <div class="col s12">
                     <a href="../index.jsp" class="breadcrumb">MinCIT</a>
-                    <a href="dashboard.jsp" class="breadcrumb">Contactos</a>
+                    <a href="dashboard.jsp" class="breadcrumb">Administrador</a>
                     <a href="registrarEmpresaAdscrita.jsp" class="breadcrumb">Registro de Empresa Adscrita</a>
                 </div>
             </div>

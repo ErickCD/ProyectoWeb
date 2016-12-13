@@ -16,7 +16,7 @@
 
 //si es valido el usuario
     if (resultado == true) {
-        response.sendRedirect("../registrarContacto.jsp");
+        response.sendRedirect("../dashboard.jsp");
     } else {
         response.sendRedirect("../paginaDeError.jsp");
     }
