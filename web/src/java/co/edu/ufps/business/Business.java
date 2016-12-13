@@ -12,12 +12,16 @@ import java.util.List;
  */
 public class Business {
 
+    
+    private Usuario myUsuario;
+    
     /**
      *
      * @param password password con el que se piensa validar
      * @return devuelve null si es valido
      */
     public String validarUsuario(Usuario u) {
+        this.myUsuario = u;
         UsuarioDAO myusuarioDAO = new UsuarioDAO();
         return myusuarioDAO.validarUsuario(u);
     }

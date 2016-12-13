@@ -27,7 +27,7 @@
         </nav>
 
         <div class="container">
-            <form class="" action="proceso/control_Contacto.jsp" method="POST">
+            <form id="contacto" action="proceso/control_Contacto.jsp" method="POST">
                 <div class="row">
 
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
@@ -49,7 +49,7 @@
 
                         <div class="col m4 s12 input-field">
                             <label for="cto_asesor">Asesor</label>
-                            <input id="asesor" name="asesor" type="text" class="validate" required>
+                            <input id="asesor" name="asesor" type="text" class="validate" value="<%=usuario.getNombre()%>" disabled>
                         </div>
 
                         <div class="col s12 input-field">
@@ -158,8 +158,8 @@
                 </div>
             </form>
         </div>
-
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
+        <script src="../js/registrarContacto.js"></script>
     </body>
 </html>
