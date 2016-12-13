@@ -50,6 +50,23 @@ public class ContactoDAO {
         return rs;
     }
 
+    public boolean updateContacto(Contacto cont) {
+        boolean respuesta = false;
+
+        try {
+            respuesta = s.execute("UPDATE `contacto` SET `cto_antiguedad_cargo`=\'" + cont.getCto_antiguedad_cargo() + "\',"
+                    + "`cto_lugar_nacimiento`=\'" + cont.getCto_lugar_nacimiento() + "\',`"
+                    + "cto_fecha_nacimiento`=\'" + cont.getCto_fecha_nacimiento() + "\',`cto_nivel_estudio`=\'" + cont.getCto_nivel_estudio()
+                    + "\',`cto_discapacidad`=\'" + cont.getCto_discapacidad() + "\', "
+                    + "`cto_etnia`=\'" + cont.getCto_etnia() + "\',`cto_condicion_desplazado`=\'" + cont.getCto_condicion_desplazado()
+                    + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return respuesta;
+    }
+
     //
     public List<Contacto> mostrarContacto(int cantidad) {
         int limite = cantidad + 10;
