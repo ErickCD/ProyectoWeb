@@ -156,8 +156,8 @@
             </table>
             <!-- tabla de contactos -->    
             <%} else {
-                if (tipoDeUsuario.equals("Entidad")) {
-                    List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);%>
+
+                List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);%>
             <div><h1>Empresas</h1></div>
             <!-- tabla de empresas adscritas -->
             <table class="striped">
@@ -175,24 +175,20 @@
                 <tbody>
                     <% for (EmpresaAdscrita e : l) {%>
                     <tr>
-                        <td><%=e.getNombre_empresa() %></td>
-                        <td><%=e.getEmail() %></td>
-                        <td><%=e.getSitio_web() %></td>
-                        <td><%=e.getNombre_gerente() %></td>
+                        <td><%=e.getNombre_empresa()%></td>
+                        <td><%=e.getEmail()%></td>
+                        <td><%=e.getSitio_web()%></td>
+                        <td><%=e.getNombre_gerente()%></td>
                         <td><a href="#" class="btn">Editar</a></td>
                         <td><a href="#" class="btn">Registrar</a></td>
                     </tr>
-                    <%} %>
+                    <%}%>
                 </tbody>
             </table>
             <!-- tabla de empresas adscritas -->
 
-            <%  } else { %>
-            <div><h1>Empresas Adscritas</h1></div>
 
-            <% }
-
-                }%>
+            }%>
         </div>
 
         <%@include file="plantilla/footer.jsp" %>
