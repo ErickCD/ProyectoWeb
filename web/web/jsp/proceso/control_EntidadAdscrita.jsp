@@ -10,9 +10,6 @@
 <jsp:useBean class="co.edu.ufps.dto.EmpresaAdscrita" id="ads"></jsp:useBean>
 <jsp:setProperty property="*" name="ads"/>
 <%
-    out.print(ads.getEmail()+" ---- "+ads.getNombre_empresa());
-%>
-<%
     boolean resultado = controlador.registrarEmpresaAdscrita(ads);
 
 //si es valido el usuario
