@@ -100,7 +100,7 @@
             <div id="opc2" class="hide">
                 <div class="row">
                     <div class="input-field container col l4">
-                        <select name="busqueda" id="busqueda">
+                        <select name="busqueda" id="busqueda2">
                             <option value="nombre_empresa" selected="">Nombre Empresa</option>
                             <option value="nombre_gerente">Nombre Gerente</option>
                             <option value="email">Email</option>
@@ -110,11 +110,11 @@
                         <label>Tipo De busqueda</label>
                     </div>
                     <div class="input-field container col l4">
-                        <input type="text" name="parametro" id="parametro">
+                        <input type="text" name="parametro" id="parametro2">
                         <label>dato</label>
                     </div>
                     <div class="input-field container col l4">
-                        <button class="btn" onclick="buscarAds()()">buscar</button>
+                        <button class="btn" onclick="buscarAds()">buscar</button>
                     </div>
                 </div>
 

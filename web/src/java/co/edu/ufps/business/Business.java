@@ -61,7 +61,8 @@ public class Business {
     }
 
     public List<EmpresaAdscrita> buscarEmpresaAds(String tipoBusqueda, String valorBuscado) {
-        return null;
+        EmpresaAdscritaDAO myAdscritaDAO = new EmpresaAdscritaDAO();
+        return myAdscritaDAO.buscarEmpresaAdscrita(tipoBusqueda, valorBuscado, 0);
     }
 
     public boolean registrarEmpresaAdscrita(EmpresaAdscrita ads) {
