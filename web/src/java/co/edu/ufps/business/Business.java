@@ -16,9 +16,8 @@ import java.util.List;
  */
 public class Business {
 
-    
     private Usuario myUsuario;
-    
+
     /**
      *
      * @param password password con el que se piensa validar
@@ -71,7 +70,7 @@ public class Business {
     }
 
     public List<EmpresaAdscrita> mostrarEmpresasAdscritas(int cantidad) {
-         EmpresaAdscritaDAO myEmpresaAdscrita = new EmpresaAdscritaDAO();
+        EmpresaAdscritaDAO myEmpresaAdscrita = new EmpresaAdscritaDAO();
         return myEmpresaAdscrita.mostrarEmpresasAdscritas(cantidad);
     }
 

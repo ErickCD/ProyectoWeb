@@ -30,56 +30,56 @@
             </div>
         </nav>
 
-    <di>
-        <p><br><br></p>
-    </di>
+        <div>
+            <p><br><br></p>
+        </di>
 
-    <div class="container">
-        <form class="" action="proceso/actualizarEmpresaAdscrita.jsp" method="post">
-            <div class="row">
-                
-                <h3>Editar Entidad Adscrita</h3>
+        <div class="container">
+            <form class="" action="proceso/actualizarEmpresaAdscrita.jsp" method="post">
+                <div class="row">
 
-                <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
+                    <h3>Editar Entidad Adscrita</h3>
 
-                <div class="input-field col m6 s12">
-                    <input name="nombre_empresa" value="<%=e.getNombre_empresa() %>" type="text" class="validate" disabled>
-                    <label for="first_name">Nombre Empresa</label>
+                    <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
+
+                    <div class="input-field col m6 s12">
+                        <input name="nombre_empresa" value="<%=e.getNombre_empresa()%>" type="text" class="validate" disabled>
+                        <label for="first_name">Nombre Empresa</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <input name="nombre_gerente" value="<%=e.getNombre_gerente()%>" id="last_name" type="text" class="validate">
+                        <label for="last_name">Nombre Gerente</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix" >email</i>
+                        <input name="email" id="email" type="email" class="validate" value="<%=e.getEmail()%>">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">class</i>
+                        <input value="<%=e.getSitio_web()%>" name="sitio_web" id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Página web</label>
+                    </div>
+
+                    <div class="input-field col m6 s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input name="telefono" value="<%=e.getTelefono()%>" id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone">Teléfono</label>
+                    </div>
+
+                    <div class="row center">
+                        <input class="btn green" type="submit" value="Guardar">
+                    </div>
+
                 </div>
+            </form>
+        </div>
 
-                <div class="input-field col m6 s12">
-                    <input name="nombre_gerente" value="<%=e.getNombre_gerente() %>" id="last_name" type="text" class="validate">
-                    <label for="last_name">Nombre Gerente</label>
-                </div>
-
-                <div class="input-field col m6 s12">
-                    <i class="material-icons prefix" >email</i>
-                    <input name="email" id="email" type="email" class="validate" value="<%=e.getEmail() %>">
-                    <label for="email">Email</label>
-                </div>
-
-                <div class="input-field col m6 s12">
-                    <i class="material-icons prefix">class</i>
-                    <input value="<%=e.getSitio_web() %>" name="sitio_web" id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Página web</label>
-                </div>
-
-                <div class="input-field col m6 s12">
-                    <i class="material-icons prefix">phone</i>
-                    <input name="telefono" value="<%=e.getTelefono() %>" id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Teléfono</label>
-                </div>
-
-                <div class="row center">
-                    <input class="btn green" type="submit" value="Guardar">
-                </div>
-
-            </div>
-        </form>
-    </div>
-
-    <%@include file="plantilla/footer.jsp" %>
-    <!--  Scripts-->
-    <%@include file="plantilla/scritp.jsp" %>
+        <%@include file="plantilla/footer.jsp" %>
+        <!--  Scripts-->
+        <%@include file="plantilla/scritp.jsp" %>
 </body>
 </html>
