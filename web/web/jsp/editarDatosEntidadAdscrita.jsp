@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="row center">
-                    <input class="btn green" type="submit" value="Registrar">
+                    <input class="btn green" type="submit" value="Guardar">
                 </div>
 
             </div>
