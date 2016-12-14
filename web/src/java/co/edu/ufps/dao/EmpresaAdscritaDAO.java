@@ -91,4 +91,22 @@ public class EmpresaAdscritaDAO {
 
         return lista;
     }
+
+    public EmpresaAdscrita buscaEmpresaAdscrita(String valorBuscado) {
+        EmpresaAdscrita aux;
+        aux = null;
+
+        ResultSet rs = null;
+
+        try {
+            rs = s.executeQuery("SELECT * FROM `Empresaads` where `ads_nombreEmpresa` = \'" + valorBuscado + "\';");
+            rs.next();
+            aux = new EmpresaAdscrita(rs.getString("ads_nombreEmpresa"), rs.getString("ads_nombreGerente"), rs.getString("ads_email"),
+                    rs.getString("ads_telefono"), rs.getString("ads_paginaWeb"));
+            return aux;
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return aux;
+    }
 }
