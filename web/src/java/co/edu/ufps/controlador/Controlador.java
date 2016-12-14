@@ -71,6 +71,6 @@ public class Controlador {
     }
     
     public int numeroConsecutivoEmpresa(){
-        return myBusiness.numeroConsecutivoContacto();
+        return myBusiness.numeroConsecutivoEmpresa();
     }
 }

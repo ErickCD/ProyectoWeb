@@ -39,6 +39,11 @@ public class Business {
         return myContactoDAO.numeroConsecutivoContacto();
     }
 
+    public int numeroConsecutivoEmpresa() {
+        EmpresaDAO myEmpresaDAO = new EmpresaDAO();
+        return myEmpresaDAO.numeroConsecutivoEmpresa();
+    }
+    
     public boolean guardarContacto(Contacto contacto) {
         ContactoDAO myDAO = new ContactoDAO();
         return myDAO.registrarContacto(contacto);
