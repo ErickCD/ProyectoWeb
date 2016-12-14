@@ -6,7 +6,6 @@ import co.edu.ufps.dto.Contacto;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -191,7 +190,6 @@ public class EmpresaDAO {
             rs.next();
             return rs.getInt("emp_id");
         } catch (SQLException e) {
-
         }
         return 0;
     }
