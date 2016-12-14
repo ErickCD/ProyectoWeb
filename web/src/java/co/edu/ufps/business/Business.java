@@ -77,7 +77,12 @@ public class Business {
 
     public EmpresaAdscrita buscarEmpresaAds(String nombre_empresa) {
         EmpresaAdscritaDAO myEmpresaAdscritaDAO = new EmpresaAdscritaDAO();
-        return myEmpresaAdscritaDAO.buscarEmpresaAds(nombre_empresa);
+        return myEmpresaAdscritaDAO.buscaEmpresaAdscrita(nombre_empresa);
+    }
+
+    public boolean actualizarEmpresaAdscrita(EmpresaAdscrita ads) {
+        EmpresaAdscritaDAO myEmpresaAdscritaDAO = new EmpresaAdscritaDAO();
+        return myEmpresaAdscritaDAO.actualizarEmpresaAdscrita(ads);
     }
 
 }

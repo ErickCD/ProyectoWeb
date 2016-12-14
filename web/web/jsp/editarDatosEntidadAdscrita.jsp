@@ -35,7 +35,7 @@
     </di>
 
     <div class="container">
-        <form class="" action="proceso/control_EntidadAdscrita.jsp" method="post">
+        <form class="" action="proceso/actualizarEmpresaAdscrita.jsp" method="post">
             <div class="row">
                 
                 <h3>Editar Entidad Adscrita</h3>
@@ -43,30 +43,30 @@
                 <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
 
                 <div class="input-field col m6 s12">
-                    <input name="nombre_empresa" value="<%="" %>" type="text" class="validate" disabled>
+                    <input name="nombre_empresa" value="<%=e.getNombre_empresa() %>" type="text" class="validate" disabled>
                     <label for="first_name">Nombre Empresa</label>
                 </div>
 
                 <div class="input-field col m6 s12">
-                    <input name="nombre_gerente" id="last_name" type="text" class="validate">
+                    <input name="nombre_gerente" value="<%=e.getNombre_gerente() %>" id="last_name" type="text" class="validate">
                     <label for="last_name">Nombre Gerente</label>
                 </div>
 
                 <div class="input-field col m6 s12">
                     <i class="material-icons prefix" >email</i>
-                    <input name="email" id="email" type="email" class="validate">
+                    <input name="email" id="email" type="email" class="validate" value="<%=e.getEmail() %>">
                     <label for="email">Email</label>
                 </div>
 
                 <div class="input-field col m6 s12">
                     <i class="material-icons prefix">class</i>
-                    <input name="sitio_web" id="icon_prefix" type="text" class="validate">
+                    <input value="<%=e.getSitio_web() %>" name="sitio_web" id="icon_prefix" type="text" class="validate">
                     <label for="icon_prefix">Página web</label>
                 </div>
 
                 <div class="input-field col m6 s12">
                     <i class="material-icons prefix">phone</i>
-                    <input name="telefono" id="icon_telephone" type="tel" class="validate">
+                    <input name="telefono" value="<%=e.getTelefono() %>" id="icon_telephone" type="tel" class="validate">
                     <label for="icon_telephone">Teléfono</label>
                 </div>
 
