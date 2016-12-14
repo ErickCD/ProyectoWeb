@@ -188,7 +188,7 @@
                  List<EmpresaAdscrita> l = controlador.mostrarEmpresasAdscritas(0);
             %>
 
-            <div><h1>Empresas</h1></div>
+            <div><h1>Empresas Adscritas</h1></div>
             <!-- tabla de empresas adscritas -->
             <table class="striped">
                 <thead>
