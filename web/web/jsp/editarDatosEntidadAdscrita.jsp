@@ -10,7 +10,6 @@
 <%
     String nombre_empresa = request.getParameter("nombre_empresa");
     EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
-
 %>
 <!DOCTYPE html>
 <html>
@@ -38,15 +37,11 @@
             <form class="" action="proceso/actualizarEmpresaAdscrita.jsp" method="post">
                 <div class="row">
 
-                    <h3>Editar Entidad Adscrita</h3>
-
+                    <h3>Editar Entidad Adscrita <strong>'<%=e.getNombre_empresa()%>'</h3>
+                    <br><br>
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
-
-                    <div class="input-field col m6 s12">
-                        <input value="<%=e.getNombre_empresa()%>" type="text" class="validate" disable>
-                        <label for="first_name">Nombre Empresa</label>
-                        <input value="<%=e.getNombre_empresa()%>" name="nombre_empresa" type="hidden">
-                    </div>
+                    <br><br>
+                    
 
                     <div class="input-field col m6 s12">
                         <input name="nombre_gerente" value="<%=e.getNombre_gerente()%>" id="nombre_gerente" type="text" class="validate">
@@ -70,7 +65,7 @@
                         <input name="telefono" value="<%=e.getTelefono()%>" id="icon_telephone" type="tel" class="validate">
                         <label for="icon_telephone">Teléfono</label>
                     </div>
-
+                        <br><br><br>
                     <div class="row center">
                         <input class="btn green" type="submit" value="Guardar">
                     </div>
