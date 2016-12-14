@@ -27,6 +27,7 @@ public class ContactoDAO {
             System.out.println(e);
         }
     }
+    //solo un 
 
     public boolean registrarContacto(Contacto contacto) {
         boolean rs = false;

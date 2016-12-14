@@ -32,9 +32,8 @@ public class EmpresaAdscritaDAO {
     public boolean RegistrarEmpresaAdscrtita(EmpresaAdscrita emp) {
         boolean respuesta = false;
         try {
-            respuesta = s.execute("INSERT INTO `Empresaads`( `ads_nombreEmpresa`, `ads_nombreGerente`, `ads_email`, `ads_paginaWeb`,"
-                    + " `ads_telefono`) VALUES (\'" + emp.getNombre_empresa() + "\',\'" + emp.getNombre_gerente() + "\',\'" + emp.getEmail() + "\',"
-                    + "\'" + emp.getSitio_web() + "\',\'" + emp.getTelefono() + "\');");
+            respuesta = s.execute("INSERT INTO `Empresaads`( `ads_nombreEmpresa`, `ads_nombreGerente`, `ads_email`, `ads_paginaWeb`, `ads_telefono`) VALUES (\'" + emp.getNombre_empresa() + "\', \'" + emp.getNombre_gerente() + "\', \'" + emp.getEmail() + "\', \'" + emp.getSitio_web() + "\', \'" + emp.getTelefono() + "\');");
+            System.out.println("Esta insertando el trabajo de algun modo y no updateando");
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -116,9 +115,23 @@ public class EmpresaAdscritaDAO {
         boolean respuesta = false;
 
         try {
-            respuesta = s.execute("UPDATE `Empresaads` SET `ads_nombreGerente`=\'" + empresaAds.getNombre_gerente()
-                    + "\',`ads_email`=\'" + empresaAds.getEmail() + "\',`ads_paginaWeb`=\'" + empresaAds.getSitio_web() + "\',`ads_telefono`=\'"
-                    + empresaAds.getTelefono() + "\' WHERE `ads_nombreEmpresa`=\'" + empresaAds.getNombre_empresa() + "\';");
+            respuesta = s.execute("UPDATE `Empresaads` SET `ads_nombreGerente` = \'" + empresaAds.getNombre_gerente() + "\', `ads_email` = \'" + empresaAds.getEmail() + "\', `ads_paginaWeb` = \'" + empresaAds.getSitio_web() + "\', `ads_telefono`= \'" + empresaAds.getTelefono() + "\' WHERE `ads_nombreEmpresa` = \'" + empresaAds.getNombre_empresa() + "\';");
+            System.out.println("UPDATE `Empresaads` SET `ads_nombreGerente` = \'" + empresaAds.getNombre_gerente() + "\', `ads_email` = \'" + empresaAds.getEmail() + "\', `ads_paginaWeb` = \'" + empresaAds.getSitio_web() + "\', `ads_telefono`= \'" + empresaAds.getTelefono() + "\' WHERE `ads_nombreEmpresa` = \'" + empresaAds.getNombre_empresa() + "\';");
+            System.out.println("Si entro a la parte de actualizar");
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return respuesta;
+    }
+    //Fin actualizar
+
+    //Borrar empresa adscrita
+    public boolean borrarEmpresaAdscrita(String nombreEmpresa) {
+        boolean respuesta = false;
+
+        try {
+            respuesta = s.execute("DELETE FROM `Empresaads` WHERE `ads_nombreEmpresa`= \'" + nombreEmpresa + "\';");
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -126,5 +139,5 @@ public class EmpresaAdscritaDAO {
 
         return respuesta;
     }
-    //Fin actualizar
+    //Fin de borrar
 }

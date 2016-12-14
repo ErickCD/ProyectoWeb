@@ -184,4 +184,15 @@ public class EmpresaDAO {
 
         return null;
     }
+
+    public int numeroConsecutivoEmpresa() {
+        try {
+            ResultSet rs = s.executeQuery("SELECT  MAX(`emp_id`) AS `emp_id` FROM `empresa` ;");
+            rs.next();
+            return rs.getInt("emp_id");
+        } catch (SQLException e) {
+
+        }
+        return 0;
+    }
 }
