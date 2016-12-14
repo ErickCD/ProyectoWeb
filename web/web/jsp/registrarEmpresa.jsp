@@ -43,7 +43,7 @@
                         <!-- Se necesita hacer el el metodo que devuelva el último valor de la fila -->
                         <div class="col m4 s12">
                             <label for="emp_consecutivo">Concecutivo</label>
-                            <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="emp_consecutivo" name="emp_consecutivo" type="text" disabled >
+                            <input value="01-000<%=controlador.numeroConsecutivoEmpresa()%>" id="emp_consecutivo" name="emp_consecutivo" type="text" disabled >
                         </div>
 
                         <div class="col m4 s12 input-field">
