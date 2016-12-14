@@ -109,4 +109,22 @@ public class EmpresaAdscritaDAO {
         }
         return aux;
     }
+    //Final de busqueda
+
+    //Actualizar
+    public boolean actualizarEmpresaAdscrita(EmpresaAdscrita empresaAds) {
+        boolean respuesta = false;
+
+        try {
+            respuesta = s.execute("UPDATE `Empresaads` SET `ads_nombreGerente`=\'" + empresaAds.getNombre_gerente()
+                    + "\',`ads_email`=\'" + empresaAds.getEmail() + "\',`ads_paginaWeb`=\'" + empresaAds.getSitio_web() + "\',`ads_telefono`=\'"
+                    + empresaAds.getTelefono() + "\' WHERE `ads_nombreEmpresa`=\'" + empresaAds.getNombre_empresa() + "\';");
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return respuesta;
+    }
+    //Fin actualizar
 }
