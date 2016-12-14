@@ -10,7 +10,6 @@
 <%
     String nombre_empresa = request.getParameter("nombre_empresa");
     EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
-
 %>
 <!DOCTYPE html>
 <html>
