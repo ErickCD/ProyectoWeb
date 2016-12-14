@@ -43,8 +43,9 @@
                     <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
 
                     <div class="input-field col m6 s12">
-                        <input name="nombre_empresa" value="<%=e.getNombre_empresa()%>" type="text" class="validate" disabled>
+                        <input value="<%=e.getNombre_empresa()%>" type="text" class="validate" disable>
                         <label for="first_name">Nombre Empresa</label>
+                        <input value="<%=e.getNombre_empresa()%>" name="nombre_empresa" type="hidden">
                     </div>
 
                     <div class="input-field col m6 s12">
