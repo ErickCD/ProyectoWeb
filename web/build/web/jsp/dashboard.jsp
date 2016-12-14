@@ -146,7 +146,7 @@
                         <td><%=c.getCto_nombres()%></td>
                         <td><%=c.getCto_email()%></td>
                         <td><%=c.getCto_cc()%></td>
-                        <td><a href="#" class="btn red">Editar</a></td>
+                        <td><a href="editarContacto.jsp?cedula=<%=c.getCto_cc() %>" class="btn red">Editar</a></td>
                         <td><a href="registrarEmpresa.jsp?emailContacto=<%=c.getCto_email()%>" class="btn">Crear</a></td>
                     </tr>
                     <% }%>
