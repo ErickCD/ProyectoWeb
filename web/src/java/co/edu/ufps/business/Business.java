@@ -75,4 +75,9 @@ public class Business {
         return myEmpresaAdscrita.mostrarEmpresasAdscritas(cantidad);
     }
 
+    public EmpresaAdscrita buscarEmpresaAds(String nombre_empresa) {
+        EmpresaAdscritaDAO myEmpresaAdscritaDAO = new EmpresaAdscritaDAO();
+        return myEmpresaAdscritaDAO.buscarEmpresaAds(nombre_empresa);
+    }
+
 }

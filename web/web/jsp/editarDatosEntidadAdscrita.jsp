@@ -3,9 +3,15 @@
     Created on : 23-oct-2016, 18:47:28
     Author     : Manuel Florez
 --%>
+<%@page import="co.edu.ufps.dto.EmpresaAdscrita"%>
 <jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador" scope="session"></jsp:useBean>
 <jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    String nombre_empresa = request.getParameter("nombre_empresa");
+    EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
+
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,11 +37,13 @@
     <div class="container">
         <form class="" action="proceso/control_EntidadAdscrita.jsp" method="post">
             <div class="row">
+                
+                <h3>Editar Entidad Adscrita</h3>
 
                 <h5 class="center">Programa de Fortalecimiento Empresarial</h5>
 
                 <div class="input-field col m6 s12">
-                    <input name="nombre_empresa" id="first_name" type="text" class="validate">
+                    <input name="nombre_empresa" value="<%="" %>" type="text" class="validate" disabled>
                     <label for="first_name">Nombre Empresa</label>
                 </div>
 
