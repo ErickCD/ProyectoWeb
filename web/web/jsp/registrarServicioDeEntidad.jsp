@@ -4,6 +4,7 @@
     Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.Logro"%>
 <%@page import="co.edu.ufps.dto.Servicio"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,6 +17,8 @@
 
     // cargar los servicios de la base de datos en el combo 
     List<Servicio>servicios = controlador.listarServicios();
+    // carga los logros de la base de datos en el combo
+    List<Logro>logros = controlador.listarLogros();
     
 
 %>
@@ -36,13 +39,43 @@
         </nav>
 
         <div class="container">
+            <h5>Actuales Servicios de<%=e.getNombre_empresa()%> </h5>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th data-field="name">Servicio</th>
+                        <th data-field="price">Logros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Servicio 1</td>
+                        <td>
+                            <ul>
+                                <li>logro 1</li>
+                                <li>logro 2</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Servicio 2</td>
+                        <td>
+                            <ul>
+                                <li>logro 1</li>
+                                <li>logro 2</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table><hr><br><br><br><br>
+            
             <h5 class="center">Asiganar Servicio a la empresa <%=e.getNombre_empresa()%>!</h5>
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>
                     <select name="busqueda" id="busqueda">
-                        <% for (int i = 1; i < 6; i++) {%>
-                        <option value="cedula">servivio <%=i%> </option>
+                        <% for (Servicio s:servicios) {%>
+                        <option value="cedula">servivio <%=s.getNombre() %> </option>
                         <%}%>
                     </select>
                     <label>Tipo De busqueda</label>
@@ -50,8 +83,8 @@
                 <div class="col m6 s12">
                     <label>Lgro</label>
                     <select name="busqueda" id="busqueda">
-                        <% for (int i = 1; i < 6; i++) {%>
-                        <option value="cedula">Logro <%=i%> </option>
+                        <% for (Logro l:logros) {%>
+                        <option value="cedula"><%=l.getNombre() %> </option>
                         <%}%>
                     </select>
                     <label>Tipo De busqueda</label>
