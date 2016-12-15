@@ -4,6 +4,7 @@
     Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.Servicio_Logro"%>
 <%@page import="co.edu.ufps.dto.Logro"%>
 <%@page import="co.edu.ufps.dto.Servicio"%>
 <%@page import="java.util.List"%>
@@ -21,6 +22,9 @@
     List<Logro>logros = controlador.listarLogros();
     
 
+    // carga los Servicio_Logros de la empresaAdscrita
+    List<Servicio_Logro>s_l = controlador.servicio_logro(e);
+    
 %>
 <!DOCTYPE html>
 <html>

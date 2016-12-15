@@ -6,6 +6,7 @@ import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.EmpresaAdscrita;
 import co.edu.ufps.dto.Logro;
 import co.edu.ufps.dto.Servicio;
+import co.edu.ufps.dto.Servicio_Logro;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -19,6 +20,9 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    public  List<Servicio_Logro>servicio_logro(EmpresaAdscrita e){
+        return myBusiness.servicio_logro(e);
+    }
     
     public List<Logro>listarLogros(){
         return myBusiness.listarLogros();

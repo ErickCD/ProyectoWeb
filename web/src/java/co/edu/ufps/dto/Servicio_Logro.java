@@ -5,39 +5,39 @@
  */
 package co.edu.ufps.dto;
 
+import java.util.List;
+
 /**
  *
  * @author Manuel Florez
  */
 public class Servicio_Logro {
     
-    private int id_servicio;
-    private int id_logro;
+    private Servicio myServicio;
+    private List<Logro> myLogros;
 
-    public Servicio_Logro(int id_servicio, int id_logro) {
-        this.id_servicio = id_servicio;
-        this.id_logro = id_logro;
+    public Servicio_Logro(Servicio myServicio, List<Logro> myLogros) {
+        this.myServicio = myServicio;
+        this.myLogros = myLogros;
     }
 
     public Servicio_Logro() {
     }
 
-    public int getId_servicio() {
-        return id_servicio;
+    public Servicio getMyServicio() {
+        return myServicio;
     }
 
-    public void setId_servicio(int id_servicio) {
-        this.id_servicio = id_servicio;
+    public void setMyServicio(Servicio myServicio) {
+        this.myServicio = myServicio;
     }
 
-    public int getId_logro() {
-        return id_logro;
+    public List<Logro> getMyLogros() {
+        return myLogros;
     }
 
-    public void setId_logro(int id_logro) {
-        this.id_logro = id_logro;
+    public void setMyLogros(List<Logro> myLogros) {
+        this.myLogros = myLogros;
     }
-    
-    
     
 }

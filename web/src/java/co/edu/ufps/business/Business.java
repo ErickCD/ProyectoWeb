@@ -11,6 +11,8 @@ import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.EmpresaAdscrita;
 import co.edu.ufps.dto.Logro;
 import co.edu.ufps.dto.Servicio;
+import co.edu.ufps.dto.Servicio_Logro;
+import co.edu.ufps.dto.Servicio_LogroDAO;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -101,6 +103,11 @@ public class Business {
     public List<Logro> listarLogros() {
         LogroDAO myLogroDAO = new LogroDAO();
         return myLogroDAO.listarLogros();
+    }
+
+    public List<Servicio_Logro> servicio_logro(EmpresaAdscrita e) {
+        Servicio_LogroDAO s_l = new Servicio_LogroDAO();
+        return s_l.consulta(e);
     }
 
 }
