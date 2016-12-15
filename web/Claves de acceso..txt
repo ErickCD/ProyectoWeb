@@ -1,0 +1,11 @@
+Usuario		Password	TipoUsuario
+
+Erick		234		Administrador
+Manuel		123		Administrador
+Aldana		123		Entidad
+Juan		123		Asesor	
+
+
+Link de la página.
+
+http://sandbox1.ufps.edu.co:8080/ufps_10-web/jsp/home.jsp
