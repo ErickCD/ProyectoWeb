@@ -43,6 +43,10 @@
                     <br><br>
                     
 
+                    <div>
+                        <input name="nombre_empresa" id="nombre_empresa" type="hidden"  value="<%=e.getNombre_empresa() %>">
+                    </div>
+                    
                     <div class="input-field col m6 s12">
                         <input name="nombre_gerente" value="<%=e.getNombre_gerente()%>" id="nombre_gerente" type="text" class="validate">
                         <label for="nombre_gerente">Nombre Gerente</label>
