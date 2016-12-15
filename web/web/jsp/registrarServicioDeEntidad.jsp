@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>
-                    <select name="servicio" id="servicio">
+                    <select id="id_servicio">
                         <% for (Servicio s : servicios) {%>
                         <option value="<%=s.getId()%>">servivio <%=s.getNombre()%> </option>
                         <%}%>
@@ -85,13 +85,13 @@
                     <label>Lgro</label>
                     <select name="logro" id="logro">
                         <% for (Logro l : logros) {%>
-                        <option value="<%=l.getId()%>"><%=l.getNombre()%> </option>
+                        <option id="id_logro" value="<%=l.getId()%>"><%=l.getNombre()%> </option>
                         <%}%>
                     </select>
                 </div>
                 <br><br><br>
                 <div class="row center">
-                    <input class="btn green" type="submit" value="Agregar">
+                    <button onclick="asignar_Logro_Servicio()" class="btn green">Agregar</button>
                 </div>
             </div>
             <hr>

@@ -2,6 +2,10 @@ function agregarLogro() {
     addLogro();
 }
 
+function asignar_Logro_Servicio(){
+    alert($("#id_servicio").val()+" "+$("#id_logro").val());
+}
+
 function agregarServicio(){
     $.ajax({
         // La URL de la petición
@@ -16,7 +20,7 @@ function agregarServicio(){
         // la respuesta es pasada como argumento a la función
         success: function (respuesta) {
             //recargar pagina
-            alert("Se agrego el Servicio con exito");
+            alert("Se agrego este Servicio con exito");
             location.reload();
         },
         // código a ejecutar si la petición falla;
@@ -48,7 +52,7 @@ function addLogro() {
         // la respuesta es pasada como argumento a la función
         success: function (respuesta) {
             //recargar pagina
-            alert("Se agrego el Exito con exito");
+            alert("Se agrego este Logro con exito");
             location.reload();
         },
         // código a ejecutar si la petición falla;
