@@ -20,6 +20,10 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    public void addLogro(String logro){
+        myBusiness.addLogro(logro);
+    }
+    
     public  List<Servicio_Logro>servicio_logro(EmpresaAdscrita e){
         return myBusiness.servicio_logro(e);
     }

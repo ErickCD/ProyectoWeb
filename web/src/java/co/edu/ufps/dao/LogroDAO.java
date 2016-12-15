@@ -26,4 +26,9 @@ public class LogroDAO {
         return l;
     }
     
+    //añadir el logro a la base de datos
+    public void addLogro(String logro) {
+        System.out.println("----------------------------------------------- "+logro);
+    }
+    
 }

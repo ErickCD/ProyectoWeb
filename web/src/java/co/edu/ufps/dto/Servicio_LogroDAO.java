@@ -19,9 +19,18 @@ public class Servicio_LogroDAO {
 
     //carga el Servicio_Logro asignado al ide de la empresa adscrita
     public List<Servicio_Logro> consulta(EmpresaAdscrita e) {
-        List<Servicio_Logro>s_l = new ArrayList<>();
+        List<Servicio_Logro>l = new ArrayList<>();
         
-        return s_l;
+        
+        
+        
+        List<Logro>logros = new ArrayList();
+        Servicio s = new Servicio(1, "Importación");
+        logros.add(new Logro(1, "Logro Bronce"));
+        logros.add(new Logro(2, "Logro Plata"));
+        //carga un servicio y la lista con los logros que estan asignados
+        l.add(new Servicio_Logro(s, logros));
+        return l;
     }
     
     

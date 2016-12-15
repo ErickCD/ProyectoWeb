@@ -110,4 +110,9 @@ public class Business {
         return s_l.consulta(e);
     }
 
+    public void addLogro(String logro) {
+        LogroDAO l = new LogroDAO();
+        l.addLogro(logro);
+    }
+
 }

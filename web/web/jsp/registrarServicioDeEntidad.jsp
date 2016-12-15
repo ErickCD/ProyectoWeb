@@ -17,14 +17,13 @@
     EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
 
     // cargar los servicios de la base de datos en el combo 
-    List<Servicio>servicios = controlador.listarServicios();
+    List<Servicio> servicios = controlador.listarServicios();
     // carga los logros de la base de datos en el combo
-    List<Logro>logros = controlador.listarLogros();
-    
+    List<Logro> logros = controlador.listarLogros();
 
     // carga los Servicio_Logros de la empresaAdscrita
-    List<Servicio_Logro>s_l = controlador.servicio_logro(e);
-    
+    List<Servicio_Logro> s_l = controlador.servicio_logro(e);
+
 %>
 <!DOCTYPE html>
 <html>
@@ -52,42 +51,41 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <%
+                        // se repite la cantidad de servicios
+                        for (Servicio_Logro ss_ll : s_l) {
+                    %>
                     <tr>
-                        <td>Servicio 1</td>
+                        <td><%=ss_ll.getMyServicio().getNombre()%></td>
                         <td>
                             <ul>
-                                <li>logro 1</li>
-                                <li>logro 2</li>
+                                <%
+                                //se repite la cantidad de logros que tenga
+                                for (Logro lo : ss_ll.getMyLogros()) { %>
+                                <li><%=lo.getNombre() %></li>
+                                <%}%>
                             </ul>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Servicio 2</td>
-                        <td>
-                            <ul>
-                                <li>logro 1</li>
-                                <li>logro 2</li>
-                            </ul>
-                        </td>
-                    </tr>
+                    <%}%>
                 </tbody>
             </table><hr><br><br><br><br>
-            
+
             <h5 class="center">Asiganar Servicio a la empresa <%=e.getNombre_empresa()%>!</h5>
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>
                     <select name="servicio" id="servicio">
-                        <% for (Servicio s:servicios) {%>
-                        <option value="<%=s.getId() %>">servivio <%=s.getNombre() %> </option>
+                        <% for (Servicio s : servicios) {%>
+                        <option value="<%=s.getId()%>">servivio <%=s.getNombre()%> </option>
                         <%}%>
                     </select>
                 </div>
                 <div class="col m6 s12">
                     <label>Lgro</label>
                     <select name="logro" id="logro">
-                        <% for (Logro l:logros) {%>
-                        <option value="<%=l.getId() %>"><%=l.getNombre() %> </option>
+                        <% for (Logro l : logros) {%>
+                        <option value="<%=l.getId()%>"><%=l.getNombre()%> </option>
                         <%}%>
                     </select>
                 </div>
@@ -116,7 +114,7 @@
 
 
             <hr>
-            
+
             <%-- nuevo Logro --%>
             <div>
                 <div class="row">
@@ -124,19 +122,20 @@
                     <div class="col m6 s12 center">
 
                         <label>Agregar nuevo Logro</label>
-                        <input type="text" placeholder="servicio" />
+                        <input id="l1" type="text" placeholder="Logro" />
                     </div>
                     <div class="col m6 s12 center">
                         <label>guardar</label><br>
-                        <input type="submit" value="agregar servicio" class="btn green" />
+                        <button onclick="agregarLogro()" class="btn green">Agregar Logro</button>
                     </div>
                 </div>
             </div>
 
         </div>
-
+            
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
+        <script src="../js/Administrador/agregarLogro.js"></script>
         <script>
             $(document).ready(function () {
                 $('select').material_select();
