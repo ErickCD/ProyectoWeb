@@ -4,6 +4,7 @@
     Author     : Manuel Florez
 --%>
 
+<%@page import="co.edu.ufps.dto.Servicio"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="co.edu.ufps.dto.EmpresaAdscrita"%>
@@ -14,7 +15,7 @@
     EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
 
     // cargar los servicios de la base de datos en el combo 
-    // 
+    List<Servicio>servicios = controlador.listarServicios();
     
 
 %>

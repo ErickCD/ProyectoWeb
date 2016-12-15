@@ -13,7 +13,13 @@ import java.util.List;
  */
 public class Controlador {
     
+    
+    
     private final Business myBusiness = new Business();
+    
+    private List listarServicios(){
+        return myBusiness.listarServicios();
+    }
     
     public boolean actualizarEmpresaAdscrita(EmpresaAdscrita ads){
         return myBusiness.actualizarEmpresaAdscrita(ads);
