@@ -3,10 +3,12 @@ package co.edu.ufps.business;
 import co.edu.ufps.dao.ContactoDAO;
 import co.edu.ufps.dao.EmpresaAdscritaDAO;
 import co.edu.ufps.dao.EmpresaDAO;
+import co.edu.ufps.dao.ServicioDAO;
 import co.edu.ufps.dao.UsuarioDAO;
 import co.edu.ufps.dto.Contacto;
 import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.EmpresaAdscrita;
+import co.edu.ufps.dto.Servicio;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -87,6 +89,11 @@ public class Business {
     public boolean actualizarEmpresaAdscrita(EmpresaAdscrita ads) {
         EmpresaAdscritaDAO myEmpresaAdscritaDAO = new EmpresaAdscritaDAO();
         return myEmpresaAdscritaDAO.actualizarEmpresaAdscrita(ads);
+    }
+
+    public List<Servicio> listarServicios() {
+        ServicioDAO myServicioDAO = new ServicioDAO();
+        return myServicioDAO.listarServicios();
     }
 
 }
