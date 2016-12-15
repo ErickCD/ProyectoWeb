@@ -73,21 +73,19 @@
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>
-                    <select name="busqueda" id="busqueda">
+                    <select name="servicio" id="servicio">
                         <% for (Servicio s:servicios) {%>
-                        <option value="cedula">servivio <%=s.getNombre() %> </option>
+                        <option value="<%=s.getId() %>">servivio <%=s.getNombre() %> </option>
                         <%}%>
                     </select>
-                    <label>Tipo De busqueda</label>
                 </div>
                 <div class="col m6 s12">
                     <label>Lgro</label>
-                    <select name="busqueda" id="busqueda">
+                    <select name="logro" id="logro">
                         <% for (Logro l:logros) {%>
-                        <option value="cedula"><%=l.getNombre() %> </option>
+                        <option value="<%=l.getId() %>"><%=l.getNombre() %> </option>
                         <%}%>
                     </select>
-                    <label>Tipo De busqueda</label>
                 </div>
                 <br><br><br>
                 <div class="row center">
