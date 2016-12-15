@@ -26,6 +26,11 @@ public class ServicioDAO {
         //cualquier problema devuelve la vista vacia
         return l;
     }
+
+    // guardar el servicio en la base de datos
+    public void addServicio(String servicio) {
+        System.out.println("------------------------- "+servicio);
+    }
     
     
     

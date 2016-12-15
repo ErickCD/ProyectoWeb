@@ -28,6 +28,7 @@ public class LogroDAO {
     
     //añadir el logro a la base de datos
     public void addLogro(String logro) {
+        //Erick  puedes quitar esto print
         System.out.println("----------------------------------------------- "+logro);
     }
     

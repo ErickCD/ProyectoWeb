@@ -20,6 +20,10 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    public void addServicio(String servicio){
+        myBusiness.addServicio(servicio);
+    }
+    
     public void addLogro(String logro){
         myBusiness.addLogro(logro);
     }

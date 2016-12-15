@@ -103,11 +103,11 @@
                     <div class="col m6 s12 center">
 
                         <label>agregar nuevo servicio</label>
-                        <input type="text" placeholder="servicio" />
+                        <input id="s1" type="text" placeholder="servicio" />
                     </div>
                     <div class="col m6 s12 center">
                         <label>guardar</label><br>
-                        <input type="submit" value="agregar servicio" class="btn green" />
+                        <button onclick="agregarServicio()" class="btn green">Agregar Logro</button>
                     </div>
                 </div>
             </div>
