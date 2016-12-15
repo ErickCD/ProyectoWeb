@@ -6,6 +6,7 @@
 package co.edu.ufps.dao;
 
 import co.edu.ufps.dto.Servicio;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,7 +17,16 @@ public class ServicioDAO {
 
     // para listar todos los servicios que estan en la base de datos
     public List<Servicio> listarServicios() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Servicio>l = new ArrayList<>();
+        
+        //devuelve servicios de prueva
+        l.add(new Servicio(1, "Educacion"));
+        l.add(new Servicio(2, "exportacion"));
+        
+        //cualquier problema devuelve la vista vacia
+        return l;
     }
+    
+    
     
 }

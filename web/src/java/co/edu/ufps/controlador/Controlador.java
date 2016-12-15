@@ -4,6 +4,7 @@ import co.edu.ufps.business.Business;
 import co.edu.ufps.dto.Contacto;
 import co.edu.ufps.dto.Empresa;
 import co.edu.ufps.dto.EmpresaAdscrita;
+import co.edu.ufps.dto.Servicio;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
-    private List listarServicios(){
+    private List<Servicio> listarServicios(){
         return myBusiness.listarServicios();
     }
     
