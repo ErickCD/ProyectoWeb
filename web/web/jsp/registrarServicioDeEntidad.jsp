@@ -12,7 +12,7 @@
 <%
     String nombre_empresa = request.getParameter("nombre_empresa");
     EmpresaAdscrita e = controlador.buscarEmpresaAds(nombre_empresa);
-    
+
 %>
 <!DOCTYPE html>
 <html>
@@ -29,14 +29,14 @@
                 </div>
             </div>
         </nav>
-        
+
         <div class="container">
             <h1>Asiganar Servicio a la empresa <%=e.getNombre_empresa()%>!</h1>
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>
                     <select name="busqueda" id="busqueda">
-                        <% for(int i = 1;i<6;i++){%>
+                        <% for (int i = 1; i < 6; i++) {%>
                         <option value="cedula">servivio <%=i%> </option>
                         <%}%>
                     </select>
@@ -45,11 +45,15 @@
                 <div class="col m6 s12">
                     <label>Lgro</label>
                     <select name="busqueda" id="busqueda">
-                        <% for(int i = 1;i<6;i++){%>
+                        <% for (int i = 1; i < 6; i++) {%>
                         <option value="cedula">Logro <%=i%> </option>
                         <%}%>
                     </select>
                     <label>Tipo De busqueda</label>
+                </div>
+                <br><br><br>
+                <div class="row center">
+                    <input class="btn green" type="submit" value="Guardar">
                 </div>
             </div>
         </div>
