@@ -10,6 +10,7 @@
 <%
     String tipoBusqueda = request.getParameter("busqueda");
     String valorBuscado = request.getParameter("parametro");
+    System.out.println("---------------------------- busqueda:"+tipoBusqueda+" parametro: "+valorBuscado);
     Contacto c = controlador.buscarContacto(tipoBusqueda, valorBuscado);
 %>
 <table>
