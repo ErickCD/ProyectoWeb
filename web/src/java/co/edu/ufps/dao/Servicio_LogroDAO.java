@@ -23,7 +23,7 @@ public class Servicio_LogroDAO {
 
     //carga el Servicio_Logro asignado al ide de la empresa adscrita
     public List<Servicio_Logro> consulta(EmpresaAdscrita e) {
-        List<Servicio_Logro>l = new ArrayList<>();
+        List<Servicio_Logro> l = new ArrayList<>();
         
         
         

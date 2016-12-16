@@ -181,9 +181,9 @@ public class ContactoDAO {
         try {
             ResultSet rs = null;
             if (tipoBusqueda.equals("cedula")) {
-                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_cc` = \'" + valorBuscado + "\';");
+                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_cc` like \"" + valorBuscado + "%\" order by `cto_cc`;");
             } else {
-                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_email` = \'" + valorBuscado + "\';");
+                rs = s.executeQuery("SELECT * FROM `contacto` WHERE `cto_email` like \"" + valorBuscado + "%\" order by `cto_email`;");
             }
 
             rs.next();
