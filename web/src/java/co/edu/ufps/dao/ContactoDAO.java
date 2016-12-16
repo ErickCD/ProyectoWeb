@@ -70,9 +70,10 @@ public class ContactoDAO {
         return respuesta;
     }
 
-    public void EditarContacto(Contacto con) {
+    public boolean EditarContacto(Contacto con) {
+        boolean respuesta = false;
         try {
-            boolean respuesta = s.execute("UPDATE `contacto` SET `consecutivo`=\'" + con.getConsecutivo() + "\',`fecha`=\'" + con.getFecha()
+            respuesta = s.execute("UPDATE `contacto` SET `consecutivo`=\'" + con.getConsecutivo() + "\',`fecha`=\'" + con.getFecha()
                     + "\',`asesor`=\'" + con.getAsesor() + "\',`cto_nombres`=\'" + con.getCto_nombres() + "\',`cto_apellidos`=\'" + con.getCto_apellidos()
                     + "\',`cto_cc`=\'" + con.getCto_apellidos() + "\',`cto_cargo`=\'" + con.getCto_cargo() + "\',`cto_cde`=\'" + con.getCto_cde()
                     + "\',`cto_direccion`=\'" + con.getCto_direccion() + "\',`cto_ciudad`=\'" + con.getCto_ciudad()
@@ -83,6 +84,7 @@ public class ContactoDAO {
         } catch (SQLException ex) {
             Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return respuesta;
     }
 
     //
