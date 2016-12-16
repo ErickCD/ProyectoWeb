@@ -54,6 +54,12 @@ public class ContactoDAO {
 
     public boolean updateContacto(Contacto cont) {
         boolean respuesta = false;
+        System.out.println("UPDATE `contacto` SET `cto_antiguedad_cargo`=\'" + cont.getCto_antiguedad_cargo() + "\',"
+                + "`cto_lugar_nacimiento`=\'" + cont.getCto_lugar_nacimiento() + "\',"
+                + "`cto_fecha_nacimiento`=\'" + cont.getCto_fecha_nacimiento() + "\',`cto_nivel_estudio`=\'" + cont.getCto_nivel_estudio()
+                + "\',`cto_discapacidad`=\'" + cont.getCto_discapacidad() + "\', "
+                + "`cto_etnia`=\'" + cont.getCto_etnia() + "\',`cto_condicion_desplazado`=\'" + cont.getCto_condicion_desplazado()
+                + "\', `cto_notas` = \'" + cont.getCto_notas() + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
 
         try {
             respuesta = s.execute("UPDATE `contacto` SET `cto_antiguedad_cargo`=\'" + cont.getCto_antiguedad_cargo() + "\',"
@@ -61,7 +67,7 @@ public class ContactoDAO {
                     + "`cto_fecha_nacimiento`=\'" + cont.getCto_fecha_nacimiento() + "\',`cto_nivel_estudio`=\'" + cont.getCto_nivel_estudio()
                     + "\',`cto_discapacidad`=\'" + cont.getCto_discapacidad() + "\', "
                     + "`cto_etnia`=\'" + cont.getCto_etnia() + "\',`cto_condicion_desplazado`=\'" + cont.getCto_condicion_desplazado()
-                    + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
+                    + "\', `cto_notas` = \'" + cont.getCto_notas() + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
             return true;
 
         } catch (SQLException ex) {
