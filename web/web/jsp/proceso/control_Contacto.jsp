@@ -15,7 +15,7 @@
     boolean resultado = controlador.guardarContacto(contacto);
 
 //si es valido el usuario
-    if (resultado == true) {
+    if (resultado) {
         response.sendRedirect("../dashboard.jsp");
     } else {
         response.sendRedirect("../paginaDeError.jsp");
