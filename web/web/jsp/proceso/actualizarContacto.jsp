@@ -11,6 +11,8 @@
 <%
     boolean resultado = controlador.actualizarContacto(contacto);
 
+    System.out.println(contacto.getAsesor());
+    
 //si es valido el usuario
     if (resultado) {
         response.sendRedirect("../dashboard.jsp");
