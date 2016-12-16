@@ -54,7 +54,7 @@ public class ContactoDAO {
 
     public boolean updateContacto(Contacto cont) {
         boolean respuesta = false;
-        
+
         try {
             respuesta = s.execute("UPDATE `contacto` SET `cto_antiguedad_cargo`=\'" + cont.getCto_antiguedad_cargo() + "\',"
                     + "`cto_lugar_nacimiento`=\'" + cont.getCto_lugar_nacimiento() + "\',"
