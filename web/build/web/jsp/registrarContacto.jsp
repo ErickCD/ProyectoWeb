@@ -37,8 +37,8 @@
                             <div class="row">
                                 <div class="col m4 s12">
                                     <label for="cto_consecutivo">Concecutivo</label>
-                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" type="text" disabled >
-                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="cto_consecutivo" type="hidden" disabled >
+                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" type="text" >
+                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="cto_consecutivo" type="hidden">
                                 </div>
 
                                 <div class="col m4 s12 input-field">
@@ -47,13 +47,14 @@
                                         Date s = new Date();
                                         String fecha = s.getYear() + 1900 + "-" + (s.getMonth() + 1) + "-" + s.toGMTString().substring(0, 1);
                                     %>
-                                    <input id="fecha" name="fecha" type="text" value="<%=fecha%>" disabled required="">
+                                    <input id="fecha" name="fecha" type="hidden" value="<%=fecha%>">
+                                    <input type="text" value="<%=fecha%>" disabled>
                                 </div>
 
                                 <div class="col m4 s12 input-field">
                                     <label for="cto_asesor">Asesor</label>
-                                    <input id="asesor" name="asesor" type="text" class="validate" value="<%=usuario.getNombre()%>" disabled>
-
+                                    <input id="asesor" name="asesor" type="hidden" class="validate" value="<%=usuario.getNombre()%>">
+                                    <input type="text" value="<%=usuario.getNombre()%>" disabled>
                                 </div>
                             </div>
 
