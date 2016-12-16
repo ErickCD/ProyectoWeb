@@ -36,7 +36,7 @@ public class Contacto {
     //Datos de cualquier contacto
     public Contacto(String consecutivo, String fecha, String asesor, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
             String cto_direccion, String cto_ciudad, String cto_pais, String cto_fijo, String cto_celular, String cto_email,
-            String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas) {
+            String cto_email_masivo, String cto_genero, String cto_departamento, String cto_notas, String cde) {
         this.consecutivo = consecutivo;
         this.fecha = fecha;
         this.asesor = asesor;
@@ -54,6 +54,7 @@ public class Contacto {
         this.cto_genero = cto_genero;
         this.cto_departamento = cto_departamento;
         this.cto_notas = cto_notas;
+        this.cto_cde = cde;
     }
 
     //Datos de cualquier empresa
