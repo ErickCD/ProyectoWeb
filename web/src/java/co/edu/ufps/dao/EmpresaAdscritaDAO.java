@@ -32,8 +32,8 @@ public class EmpresaAdscritaDAO {
     public boolean RegistrarEmpresaAdscrtita(EmpresaAdscrita emp) {
         boolean respuesta = false;
         try {
+            respuesta = s.execute("insert into usuario (`nombre`, `password`, `user`) values (\"" + emp.getNombre_empresa() + "\", \"123\", \"Entidad\");");
             respuesta = s.execute("INSERT INTO `Empresaads`( `ads_nombreEmpresa`, `ads_nombreGerente`, `ads_email`, `ads_paginaWeb`, `ads_telefono`) VALUES (\'" + emp.getNombre_empresa() + "\', \'" + emp.getNombre_gerente() + "\', \'" + emp.getEmail() + "\', \'" + emp.getSitio_web() + "\', \'" + emp.getTelefono() + "\');");
-            System.out.println("Esta insertando el trabajo de algun modo y no updateando");
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(EmpresaAdscritaDAO.class.getName()).log(Level.SEVERE, null, ex);

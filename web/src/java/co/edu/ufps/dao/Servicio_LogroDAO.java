@@ -37,8 +37,7 @@ public class Servicio_LogroDAO {
     public List<Servicio_Logro> consulta(EmpresaAdscrita e) {
         List<Servicio_Logro> l = new ArrayList<>();
         List<Logro> logros = new ArrayList();
-        
-        
+
         Servicio ser = new Servicio(1, "Importación");
         logros.add(new Logro(1, "Logro Bronce"));
         logros.add(new Logro(2, "Logro Plata"));
@@ -55,7 +54,12 @@ public class Servicio_LogroDAO {
      * @param e Empresa Adscrita que se le asignara el servicio y el logro
      */
     public void addServicio_Logro(String id_servicio, String id_logro, EmpresaAdscrita e) {
-
+        /**
+         * if exists (select * from `Servicio_Logro` where `emp_id` = 1;) then
+         * INSERT INTO `Servicio_Logro`(`emp_id`, `ser_id`, `log_id`) VALUES
+         * (2,3,4); end;
+         *
+         */
     }
 
 }
