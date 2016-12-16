@@ -125,4 +125,11 @@ public class Business {
         s_l.addServicio_Logro(id_servicio, id_logro, e);
     }
 
+    public boolean actualizarContacto(Contacto contacto) {
+        ContactoDAO c = new ContactoDAO();
+        return c.updateContacto(contacto);
+    }
+
+   
+
 }

@@ -5,4 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean class="co.edu.ufps.controlador.Controlador" id="controlador" scope="session"></jsp:useBean>
+<jsp:useBean class="co.edu.ufps.dto.Contacto" id="contacto"></jsp:useBean>
+<jsp:setProperty property="*" name="contacto"/>
+<%
+    boolean resultado = controlador.actualizarContacto(contacto);
 
+//si es valido el usuario
+    if (resultado) {
+        response.sendRedirect("../dashboard.jsp");
+    } else {
+        response.sendRedirect("../paginaDeError.jsp");
+    }
+%>

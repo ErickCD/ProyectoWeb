@@ -40,18 +40,20 @@
                             <div class="row">
                                 <div class="col m4 s12">
                                     <label for="cto_consecutivo">Concecutivo</label>
-                                    <input value="<%=c.getConsecutivo() %>" id="cto_consecutivo" name="cto_consecutivo" type="text" disabled >
+                                    <input value="<%=c.getConsecutivo() %>" id="cto_consecutivo" name="cto_consecutivo" type="hidden"/>
+                                    <input value="<%=c.getConsecutivo() %>" type="text" disabled >
                                 </div>
 
                                 <div class="col m4 s12 input-field">
                                     <i class="material-icons prefix">today</i>
-                                    <input id="fecha" name="fecha" type="text" value="<%=c.getFecha() %>" disabled required="">
+                                    <input id="fecha" name="fecha" type="hidden" value="<%=c.getFecha() %>">
+                                    <input value="<%=c.getFecha() %>" type="text" disabled>
                                 </div>
 
                                 <div class="col m4 s12 input-field">
                                     <label for="cto_asesor">Asesor</label>
-                                    <input id="asesor" name="asesor" type="text" class="validate" value="<%=c.getAsesor() %>" disabled>
-
+                                    <input id="asesor" name="asesor" type="hidden" value="<%=c.getAsesor() %>" >
+                                    <input type="text" class="validate" value="<%=c.getAsesor() %>" disabled>
                                 </div>
                             </div>
 
@@ -97,46 +99,46 @@
                             <div class="row">
                                 <div class="col m6 s12 input-field">
                                     <i class="material-icons prefix">class</i>
-                                    <input id="cto_cargo" name="cto_cargo" type="text" class="validate" required="">
+                                    <input id="cto_cargo" name="cto_cargo" type="text" class="validate" required="" value="<%=c.getCto_cargo() %>">
                                     <label for="cto_cargo" >Cargo</label>
                                 </div>
 
                                 <div class="col m6 s12 input-field">
                                     <i class="material-icons prefix">phone</i>
-                                    <input id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                                    <input value="<%=c.getCto_fijo() %>" id="cto_fijo" name="cto_fijo" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
                                     <label for="cto_fijo">Teléfono</label>
                                 </div>
                             </div>
 
                             <div class="col m6 s12 input-field">
                                 <i class="material-icons prefix">stay_current_portrait</i>
-                                <input id="cto_celular" name="cto_celular" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
+                                <input value="<%=c.getCto_celular() %>" id="cto_celular" name="cto_celular" type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" class="validate" required="">
                                 <label for="cto_celular">Celular</label>
                             </div>
 
                             <div class="col m6 s12 input-field">
                                 <i class="material-icons prefix">payment</i>
-                                <input id="cto_cde" name="cto_cde" type="text" class="validate" required="">
+                                <input value="<%=c.getCto_cde() %>" id="cto_cde" name="cto_cde" type="text" class="validate" required="">
                                 <label for="cto_cde">CDE</label>
                             </div>
 
                             <div class="col m6 s12 input-field">
-                                <input id="cto_direccion" name="cto_direccion" type="text" class="validate" required="">
+                                <input value="<%=c.getCto_direccion() %>" id="cto_direccion" name="cto_direccion" type="text" class="validate" required="">
                                 <label for="cto_direccion">Dirección</label>
                             </div>
 
                             <div class="col m6 s12 input-field">
-                                <input id="cto_ciudad" name="cto_ciudad" type="text" class="validate" required="">
+                                <input value="<%=c.getCto_ciudad() %>" id="cto_ciudad" name="cto_ciudad" type="text" class="validate" required="">
                                 <label for="cto_ciudad">Ciudad</label>
                             </div>
 
                             <div class="col m6 s12 input-field">
-                                <input id="cto_departamento" name="cto_departamento" type="text" class="validate" required="">
+                                <input value="<%=c.getCto_departamento() %>" id="cto_departamento" name="cto_departamento" type="text" class="validate" required="">
                                 <label for="cto_departamento">Deparamento</label>
                             </div>
 
                             <div class="col m6 s12 input-field">
-                                <input id="cto_pais" name="cto_pais" type="text" class="validate" required="">
+                                <input value="<%=c.getCto_pais() %>" id="cto_pais" name="cto_pais" type="text" class="validate" required="">
                                 <label for="cto_pais">País</label>
                             </div>
 
@@ -144,7 +146,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">note_add</i>
-                                        <textarea id="cto_notas" name="cto_notas" class="materialize-textarea" maxlength="150"></textarea>
+                                        <textarea id="cto_notas" name="cto_notas" class="materialize-textarea" maxlength="150"><%=c.getCto_notas() %></textarea>
                                         <label for="cto_notas">Notas:</label>
                                     </div>
                                 </div>
