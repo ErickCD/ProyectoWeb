@@ -70,6 +70,21 @@ public class ContactoDAO {
         return respuesta;
     }
 
+    public void EditarContacto(Contacto con) {
+        try {
+            boolean respuesta = s.execute("UPDATE `contacto` SET `consecutivo`=\'" + con.getConsecutivo() + "\',`fecha`=\'" + con.getFecha()
+                    + "\',`asesor`=\'" + con.getAsesor() + "\',`cto_nombres`=\'" + con.getCto_nombres() + "\',`cto_apellidos`=\'" + con.getCto_apellidos()
+                    + "\',`cto_cc`=\'" + con.getCto_apellidos() + "\',`cto_cargo`=\'" + con.getCto_cargo() + "\',`cto_cde`=\'" + con.getCto_cde()
+                    + "\',`cto_direccion`=\'" + con.getCto_direccion() + "\',`cto_ciudad`=\'" + con.getCto_ciudad()
+                    + "\',`cto_pais`=\'" + con.getCto_pais() + "\',`cto_cecular`=\'" + con.getCto_celular() + "\',`cto_fijo`=\'" + con.getCto_fijo()
+                    + "\',`cto_genero`=\'" + con.getCto_genero() + "\',`cto_departamento`=\'" + con.getCto_departamento()
+                    + "\',`cto_notas`=\'" + con.getCto_notas() + "\' WHERE `cto_email`=\'" + con.getCto_email() + "\';");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     //
     public List<Contacto> mostrarContacto(int cantidad) {
         int limite = cantidad + 10;
