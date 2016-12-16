@@ -44,6 +44,7 @@ public class ContactoDAO {
                     + contacto.getCto_ciudad() + "\'," + " \'" + contacto.getCto_pais() + "\', \'" + contacto.getCto_celular() + "\', \'"
                     + contacto.getCto_fijo() + "\', \'" + contacto.getCto_email() + "\', \'" + contacto.getCto_email_masivo() + "\', \'"
                     + contacto.getCto_genero() + "\', \'" + contacto.getCto_departamento() + "\', \'" + contacto.getCto_notas() + "\'); ");
+            return true;
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -61,6 +62,7 @@ public class ContactoDAO {
                     + "\',`cto_discapacidad`=\'" + cont.getCto_discapacidad() + "\', "
                     + "`cto_etnia`=\'" + cont.getCto_etnia() + "\',`cto_condicion_desplazado`=\'" + cont.getCto_condicion_desplazado()
                     + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
+            return true;
 
         } catch (SQLException ex) {
             Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -164,6 +166,7 @@ public class ContactoDAO {
 
         try {
             respuesta = s.execute("DELETE FROM `contacto` WHERE `cto_cc` = \"" + cto_cc + "\";");
+            return true;
         } catch (SQLException ex) {
             Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
