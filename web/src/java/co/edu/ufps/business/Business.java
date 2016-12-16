@@ -12,7 +12,7 @@ import co.edu.ufps.dto.EmpresaAdscrita;
 import co.edu.ufps.dto.Logro;
 import co.edu.ufps.dto.Servicio;
 import co.edu.ufps.dto.Servicio_Logro;
-import co.edu.ufps.dto.Servicio_LogroDAO;
+import co.edu.ufps.dao.Servicio_LogroDAO;
 import co.edu.ufps.dto.Usuario;
 import java.util.List;
 

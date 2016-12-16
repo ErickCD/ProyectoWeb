@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.ufps.dto;
+package co.edu.ufps.dao;
 
+import co.edu.ufps.dto.EmpresaAdscrita;
+import co.edu.ufps.dto.Logro;
+import co.edu.ufps.dto.Servicio;
+import co.edu.ufps.dto.Servicio_Logro;
 import java.util.ArrayList;
 import java.util.List;
 

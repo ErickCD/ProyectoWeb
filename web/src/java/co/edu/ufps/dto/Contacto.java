@@ -1,7 +1,5 @@
 package co.edu.ufps.dto;
 
-import java.util.Date;
-
 /**
  *
  * @author Clair
