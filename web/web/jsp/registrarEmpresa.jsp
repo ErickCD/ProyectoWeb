@@ -11,7 +11,7 @@
 <jsp:useBean class="co.edu.ufps.dto.Usuario" id="usuario" scope="session"></jsp:useBean>
 <%
     String emailContacto = request.getParameter("emailContacto");
-    Contacto c = controlador.buscarContacto("", emailContacto);
+    Contacto c = controlador.buscarContacto("email", emailContacto);
 %>
 <!DOCTYPE html>
 <html>
@@ -43,7 +43,8 @@
                         <!-- Se necesita hacer el el metodo que devuelva el último valor de la fila -->
                         <div class="col m4 s12">
                             <label for="emp_consecutivo">Concecutivo</label>
-                            <input value="01-000<%=controlador.numeroConsecutivoEmpresa()%>" id="emp_consecutivo" name="emp_consecutivo" type="text" disabled >
+                            <input value="01-000<%=controlador.numeroConsecutivoEmpresa()%>" id="emp_consecutivo" name="emp_consecutivo" type="hidden">
+                            <input value="01-000<%=controlador.numeroConsecutivoEmpresa()%>" type="text" disabled >
                         </div>
 
                         <div class="col m4 s12 input-field">
@@ -52,12 +53,14 @@
                                 Date s = new Date();
                                 String fecha = s.getYear() + 1900 + "-" + (s.getMonth() + 1) + "-" + s.toGMTString().substring(0, 1);
                             %>
-                            <input id="emp_fecha" name="emp_fecha" type="text" value="<%=fecha%>" disabled required="">
+                            <input id="emp_fecha" name="emp_fecha" type="hidden" value="<%=fecha%>" disabled>
+                            <input type="text" value="<%=fecha%>" disabled>
                         </div>
 
                         <div class="col m4 s12 input-field">
                             <label for="emp_asesor">Asesor</label>
-                            <input id="emp_asesor" name="emp_asesor" type="text" class="validate" disabled value="<%=usuario.getNombre()%>">
+                            <input id="emp_asesor" name="emp_asesor" type="hidden" value="<%=usuario.getNombre()%>">
+                            <input type="text" class="validate" disabled value="<%=usuario.getNombre()%>">
                         </div>
                     </div>
 
