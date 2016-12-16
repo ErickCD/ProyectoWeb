@@ -12,6 +12,7 @@
 <jsp:setProperty property="*" name="empresa"/>
 <%
     Contacto c = controlador.buscarContacto("",request.getParameter("email"));
+    
     c.setCto_lugar_nacimiento(request.getParameter("cto_lugar_nacimiento"));
     c.setCto_antiguedad_cargo(request.getParameter("cto_antiguedad_cargo"));
     c.setCto_nivel_estudio(request.getParameter("cto_nivel_estudio"));
@@ -20,6 +21,17 @@
     c.setCto_discapacidad(request.getParameter("cto_discapacidad"));
     c.setCto_fecha_nacimiento(request.getParameter("cto_fecha_nacimiento"));
 
+    System.out.println("-------------------------------------");
+    System.out.println(request.getParameter("cto_lugar_nacimiento"));
+    System.out.println(request.getParameter("cto_antiguedad_cargo"));
+    System.out.println(request.getParameter("cto_nivel_estudio"));
+    System.out.println(request.getParameter("cto_etnia"));
+    System.out.println(request.getParameter("cto_condicion_desplazado"));
+    System.out.println(request.getParameter("cto_discapacidad"));
+    System.out.println(request.getParameter("cto_fecha_nacimiento"));
+    System.out.println("-------------------------------------");
+    
+    
     //true bien
     boolean bien = controlador.actualizarConcato(c);
     
@@ -33,5 +45,4 @@
     if(!bien){
         response.sendRedirect("../paginaDeError.jsp");
     }
-    out.print("Hola esto esta bien");
 %>
