@@ -17,6 +17,7 @@ public class LogroDAO {
 
     //lista todos los logros de la base de datos
     public List<Logro> listarLogros() {
+        
         List<Logro>l = new ArrayList<>();
         
         //logros de prueba
