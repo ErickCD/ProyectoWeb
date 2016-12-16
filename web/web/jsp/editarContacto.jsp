@@ -146,7 +146,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">note_add</i>
-                                        <textarea value="<%=c.getCto_notas() %>" id="cto_notas" name="cto_notas" class="materialize-textarea" maxlength="150"></textarea>
+                                        <textarea id="cto_notas" name="cto_notas" class="materialize-textarea" maxlength="150"><%=c.getCto_notas() %></textarea>
                                         <label for="cto_notas">Notas:</label>
                                     </div>
                                 </div>
