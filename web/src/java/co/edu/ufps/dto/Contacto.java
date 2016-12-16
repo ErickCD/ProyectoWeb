@@ -7,31 +7,31 @@ package co.edu.ufps.dto;
 public class Contacto {
 
     private int id;
-    private String consecutivo,
-            fecha,
-            asesor,
-            cto_nombres,
-            cto_apellidos,
-            cto_cc,
-            cto_cargo,
-            cto_antiguedad_cargo,
-            cto_lugar_nacimiento,
-            cto_fecha_nacimiento,
-            cto_nivel_estudio,
-            cto_discapacidad,
-            cto_direccion,
-            cto_cde,
-            cto_ciudad,
-            cto_pais,
-            cto_celular,
-            cto_fijo,
-            cto_email,
-            cto_email_masivo,
-            cto_genero,
-            cto_etnia,
-            cto_condicion_desplazado,
-            cto_departamento,
-            cto_notas;
+    private String consecutivo;
+    private String fecha;
+    private String asesor;
+    private String cto_nombres;
+    private String cto_apellidos;
+    private String cto_cc;
+    private String cto_cargo;
+    private String cto_antiguedad_cargo;
+    private String cto_lugar_nacimiento;
+    private String cto_fecha_nacimiento;
+    private String cto_nivel_estudio;
+    private String cto_discapacidad;
+    private String cto_direccion;
+    private String cto_cde;
+    private String cto_ciudad;
+    private String cto_pais;
+    private String cto_celular;
+    private String cto_fijo;
+    private String cto_email;
+    private String cto_email_masivo;
+    private String cto_genero;
+    private String cto_etnia;
+    private String cto_condicion_desplazado;
+    private String cto_departamento;
+    private String cto_notas;
 
     //Datos de cualquier contacto
     public Contacto(String consecutivo, String fecha, String asesor, String cto_nombres, String cto_apellidos, String cto_cc, String cto_cargo,
