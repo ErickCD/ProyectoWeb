@@ -10,7 +10,7 @@
 <jsp:setProperty property="*" name="contacto"/>
 <%
     boolean resultado = controlador.actualizarContacto(contacto);
-
+    
 //si es valido el usuario
     if (resultado) {
         response.sendRedirect("../dashboard.jsp");
