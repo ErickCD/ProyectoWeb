@@ -72,6 +72,7 @@
             </table><hr><br><br><br><br>
 
             <h5 class="center">Asiganar Servicio a la empresa <%=e.getNombre_empresa()%>!</h5>
+            <input type="hidden" value="<%=e.getNombre_empresa()%>" id="nombre_empresa" />
             <div class="row">
                 <div class="col m6 s12">
                     <label>servicio</label>

@@ -32,6 +32,17 @@ public class Servicio_LogroDAO {
         l.add(new Servicio_Logro(s, logros));
         return l;
     }
+
+    //asignar en la tabla servicio_logro
+    /**
+     * 
+     * @param id_servicio id del servicio
+     * @param id_logro id del logro
+     * @param e Empresa Adscrita que se le asignara el servicio y el logro
+     */
+    public void addServicio_Logro(String id_servicio, String id_logro, EmpresaAdscrita e) {
+        
+    }
     
     
     

@@ -20,6 +20,10 @@ public class Controlador {
     
     private final Business myBusiness = new Business();
     
+    public void addServicio_Logro(String id_servicio, String id_logro,EmpresaAdscrita e){
+        myBusiness.addServicio_Logro(id_servicio, id_logro, e);
+    }
+    
     public void addServicio(String servicio){
         myBusiness.addServicio(servicio);
     }

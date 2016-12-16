@@ -120,4 +120,9 @@ public class Business {
         s.addServicio(servicio);
     }
 
+    public void addServicio_Logro(String id_servicio, String id_logro, EmpresaAdscrita e) {
+        Servicio_LogroDAO s_l = new Servicio_LogroDAO();
+        s_l.addServicio_Logro(id_servicio, id_logro, e);
+    }
+
 }
