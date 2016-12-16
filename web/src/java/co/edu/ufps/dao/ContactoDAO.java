@@ -97,7 +97,8 @@ public class ContactoDAO {
                         rs.getString("cto_email_masivo"),
                         rs.getString("cto_genero"),
                         rs.getString("cto_departamento"),
-                        rs.getString("cto_notas"));
+                        rs.getString("cto_notas"),
+                        rs.getString("cto_cde"));
                 list.add(contacto);
             }
         } catch (SQLException ex) {
@@ -152,7 +153,7 @@ public class ContactoDAO {
                         rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
                         rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
                         rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
-                        rs.getString("cto_notas"));
+                        rs.getString("cto_notas"), rs.getString("cto_cde"));
                 lista.add(contacto);
             }
         } catch (Exception e) {
