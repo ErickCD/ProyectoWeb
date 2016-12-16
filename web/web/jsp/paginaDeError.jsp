@@ -1,7 +1,7 @@
 <%-- 
     Document   : paginaDeError
     Created on : 13-dic-2016, 10:40:40
-    Author     : manue
+    Author     : Manuel Florez
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

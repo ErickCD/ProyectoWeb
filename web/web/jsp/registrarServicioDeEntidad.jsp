@@ -56,7 +56,7 @@
                         for (Servicio_Logro ss_ll : s_l) {
                     %>
                     <tr>
-                        <td><%=ss_ll.getMyServicio().getNombre()%></td>
+                        <td class="blue-text"><%=ss_ll.getMyServicio().getNombre()%></td>
                         <td>
                             <ul>
                                 <%

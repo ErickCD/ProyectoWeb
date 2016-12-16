@@ -1,7 +1,7 @@
 <%-- 
     Document   : crearEmpresaTuristica
     Created on : 19/10/2016, 12:29:43 AM
-    Author     : Clair
+    Author     : Manuel Florez
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : registrarContacto
     Created on : 20-oct-2016, 19:30:44
-    Author     : Erick Clair
+    Author     : Manuel Florez
 --%>
 
 <%@page import="java.util.Date"%>
