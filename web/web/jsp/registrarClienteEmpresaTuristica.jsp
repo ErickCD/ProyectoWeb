@@ -196,7 +196,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    Realizado por <a class="brown-text text-lighten-3" href="http://materializecss.com">Manuel Florez y Erick Clair</a>
+                    Realizado por <a class="waves-effect waves-light brown-text text-lighten-3" href="http://materializecss.com">Manuel Florez y Erick Clair</a>
                 </div>
             </div>
         </footer>

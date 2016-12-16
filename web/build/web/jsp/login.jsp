@@ -20,8 +20,10 @@
                 </div>
             </div>
         </nav>
-        <% String error =(String) session.getAttribute("error");
-            if(error==null) error = "";
+        <% String error = (String) session.getAttribute("error");
+            if (error == null) {
+                error = "";
+            }
         %>
         <div class="container center-align"><%=error%></div>
 
@@ -51,7 +53,7 @@
                             <label>Tipo De Usuario</label>
                         </div>
                         --%>
-                        <input class="btn" type="submit" value="Ingresar"><br><br>
+                        <input class=" btn" type="submit" value="Ingresar"><br><br>
                     </form>
 
 
@@ -61,9 +63,9 @@
             <%-- cuadro simple de login --%>
         </div>
 
-            <%--
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+        <%--
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
@@ -77,7 +79,7 @@
         </div>
         
         --%>
-        
+
         <%@include file="plantilla/footer.jsp" %>
         <%@include file="plantilla/scritp.jsp" %>
         <%-- código para activar el select del formulario --%>
@@ -86,43 +88,6 @@
                 $('select').material_select();
                 $('.modal').modal();
             });
-
-            function validarUsuario() {
-                // llamada al metodo de Ajax
-                $.ajax({
-                    // La URL de la petición
-                    url: "proceso/validarUsuario.jsp",
-                    // la información a enviar
-                    data: {
-                        email: $("#email").val(),
-                        password: $("#password").val(),
-                        user: $("#user").val()
-                    },
-                    // especifica si será una petición POST o GET
-                    type: 'POST',
-                    // el tipo de información que se espera de respuesta
-                    dataType: 'html',
-                    // código a ejecutar si la petición es satisfactoria;
-                    // la respuesta es pasada como argumento a la función
-                    success: function (respuesta) {
-                        $("#mensaje").html(respuesta);
-                        $('.modal').modal('open');
-                        //dashboard();
-                    },
-                    // código a ejecutar si la petición falla;
-                    // son pasados como argumentos a la función
-                    // el objeto de la petición en crudo y código de estatus de la petición
-                    error: function (xhr, status) {
-                        alert('Disculpe, existió un problema');
-                    },
-
-                    // código a ejecutar sin importar si la petición falló o no
-                    complete: function (xhr, status) {
-                        //alert('Petición realizada');
-                    }
-                });
-
-            }
         </script>
     </body>
 </html>

@@ -167,7 +167,7 @@
                         </div>
 
                         <div class="row center">
-                            <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar contacto</button>
+                            <button class="waves-effect waves-light btn btn-lg btn-primary btn-block" type="submit">Guardar contacto</button>
                         </div>
 
                     </div>

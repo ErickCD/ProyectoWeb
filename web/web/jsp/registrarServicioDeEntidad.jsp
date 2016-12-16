@@ -92,7 +92,7 @@
                 </div>
                 <br><br><br>
                 <div class="row center">
-                    <button onclick="asignar_Logro_Servicio()" class="btn green">Agregar</button>
+                    <button onclick="asignar_Logro_Servicio()" class="waves-effect waves-light btn green">Agregar</button>
                 </div>
             </div>
             <hr>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="col m6 s12 center">
                         <label>guardar</label><br>
-                        <button onclick="agregarServicio()" class="btn green">Agregar Logro</button>
+                        <button onclick="agregarServicio()" class="waves-effect waves-light btn green">Agregar Servicio</button>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="col m6 s12 center">
                         <label>guardar</label><br>
-                        <button onclick="agregarLogro()" class="btn green">Agregar Logro</button>
+                        <button onclick="agregarLogro()" class="waves-effect waves-light btn green">Agregar Logro</button>
                     </div>
                 </div>
             </div>

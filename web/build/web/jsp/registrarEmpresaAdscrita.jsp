@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="row center">
-                    <input class="btn green" type="submit" value="Registrar">
+                    <input class="waves-effect waves-light btn green" type="submit" value="Registrar">
                 </div>
 
             </div>

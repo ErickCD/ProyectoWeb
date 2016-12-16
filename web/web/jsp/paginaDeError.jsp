@@ -30,7 +30,7 @@
         </div>
         
         <div class="center-align">
-            <a class="btn" href="login.jsp">Intentar</a><br>
+            <a class="waves-effect waves-light btn" href="login.jsp">Intentar</a><br>
         </div>
         <br><br><br>
         
