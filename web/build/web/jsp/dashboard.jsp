@@ -47,7 +47,7 @@
                     <div class="collapsible-header"><i class="material-icons">place</i><%=tipoDeUsuario%></div>
                     <div class="collapsible-body">
                         <p>Operaciones sobre el Cliente<br>
-                            <a href="editarDatosEntidadAdscrita.jsp" class="btn green">Editar mis datos</a>
+                            <a href="editarDatosEntidadAdscrita.jsp?nombre_empresa=<%=usuario.getNombre() %>" class="btn green">Editar mis datos</a>
                             <a href="registrarContacto.jsp" class="btn green">Registrar Contacto</a>
                             <br><br>
                         </p>
