@@ -37,8 +37,8 @@
                             <div class="row">
                                 <div class="col m4 s12">
                                     <label for="cto_consecutivo">Concecutivo</label>
-                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" type="text" >
-                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="cto_consecutivo" type="hidden">
+                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" type="text" disabled>
+                                    <input value="01-000<%=controlador.numeroConsecutivoContacto()%>" id="cto_consecutivo" name="consecutivo" type="hidden">
                                 </div>
 
                                 <div class="col m4 s12 input-field">
@@ -52,8 +52,8 @@
                                 </div>
 
                                 <div class="col m4 s12 input-field">
-                                    <label for="cto_asesor">Asesor</label>
-                                    <input id="asesor" name="asesor" type="hidden" class="validate" value="<%=usuario.getNombre()%>">
+                                    <label for="asesor">Asesor</label>
+                                    <input id="asesor" name="asesor" type="hidden" value="<%=usuario.getNombre()%>">
                                     <input type="text" value="<%=usuario.getNombre()%>" disabled>
                                 </div>
                             </div>
