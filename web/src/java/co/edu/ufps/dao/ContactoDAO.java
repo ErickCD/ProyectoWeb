@@ -61,7 +61,7 @@ public class ContactoDAO {
                     + "`cto_fecha_nacimiento`=\'" + cont.getCto_fecha_nacimiento() + "\',`cto_nivel_estudio`=\'" + cont.getCto_nivel_estudio()
                     + "\',`cto_discapacidad`=\'" + cont.getCto_discapacidad() + "\', "
                     + "`cto_etnia`=\'" + cont.getCto_etnia() + "\',`cto_condicion_desplazado`=\'" + cont.getCto_condicion_desplazado()
-                    + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
+                    + "\', `cto_notas` = \'" + cont.getCto_notas() + "\' WHERE `cto_email` = \'" + cont.getCto_email() + "\';");
             return true;
 
         } catch (SQLException ex) {
@@ -97,7 +97,8 @@ public class ContactoDAO {
                         rs.getString("cto_email_masivo"),
                         rs.getString("cto_genero"),
                         rs.getString("cto_departamento"),
-                        rs.getString("cto_notas"));
+                        rs.getString("cto_notas"),
+                        rs.getString("cto_cde"));
                 list.add(contacto);
             }
         } catch (SQLException ex) {
@@ -112,8 +113,7 @@ public class ContactoDAO {
         List<Contacto> list = new ArrayList<>();
         ResultSet rs;
         try {
-            rs = s.executeQuery("SELECT `cto_nombres`,`cto_apellidos`,`cto_cc`,`cto_cargo`,`cto_direccion`,`cto_ciudad`, `cto_pais`,"
-                    + " `cto_cecular`, `cto_fijo`, `cto_email`, `cto_email_masivo`, `cto_genero`,`cto_departamento` FROM `contacto`;");
+            rs = s.executeQuery("SELECT * FROM `contacto`;");
 
             while (rs.next()) {
                 Contacto cont = new Contacto(
@@ -152,7 +152,7 @@ public class ContactoDAO {
                         rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
                         rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
                         rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
-                        rs.getString("cto_notas"));
+                        rs.getString("cto_notas"), rs.getString("cto_cde"));
                 lista.add(contacto);
             }
         } catch (Exception e) {
@@ -191,7 +191,7 @@ public class ContactoDAO {
                     rs.getString("cto_apellidos"), rs.getString("cto_cc"), rs.getString("cto_cargo"), rs.getString("cto_direccion"),
                     rs.getString("cto_ciudad"), rs.getString("cto_pais"), rs.getString("cto_fijo"), rs.getString("cto_cecular"),
                     rs.getString("cto_email"), rs.getString("cto_email_masivo"), rs.getString("cto_genero"), rs.getString("cto_departamento"),
-                    rs.getString("cto_notas"));
+                    rs.getString("cto_notas"), rs.getString("cto_cde"));
             return aux;
         } catch (SQLException ex) {
             Logger.getLogger(ContactoDAO.class.getName()).log(Level.SEVERE, null, ex);
