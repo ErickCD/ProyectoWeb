@@ -10,8 +10,6 @@
 <jsp:setProperty property="*" name="contacto"/>
 <%
     boolean resultado = controlador.actualizarContacto(contacto);
-
-    System.out.println(contacto.getAsesor());
     
 //si es valido el usuario
     if (resultado) {
