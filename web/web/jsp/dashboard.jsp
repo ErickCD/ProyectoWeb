@@ -60,7 +60,6 @@
                         <p>Operaciones sobre la empresa adscrita<br>
                             <a href="registrarEmpresaAdscrita.jsp" class="btn green">Registrar Empresas Adscritas</a>
                             <button onclick="verPanelDeBusquedaAds()" class="btn green">Buscar Empresas Adscritas</button>
-                            <button onclick="" class="btn green">Asignar Logros</button>
                         </p>
                     </div>
                 </li>

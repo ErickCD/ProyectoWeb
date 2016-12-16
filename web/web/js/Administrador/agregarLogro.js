@@ -20,7 +20,7 @@ function asignar_Logro_Servicio(){
         // la respuesta es pasada como argumento a la función
         success: function (respuesta) {
             //recargar pagina
-            alert("Se agrego este Servicio con exito");
+            alert("Se a asignado con exito");
             location.reload();
         },
         // código a ejecutar si la petición falla;
