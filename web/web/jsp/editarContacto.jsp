@@ -40,7 +40,7 @@
                             <div class="row">
                                 <div class="col m4 s12">
                                     <label for="cto_consecutivo">Concecutivo</label>
-                                    <input value="<%=c.getConsecutivo() %>" id="cto_consecutivo" name="cto_consecutivo" type="hidden"/>
+                                    <input value="<%=c.getConsecutivo() %>" id="consecutivo" name="cto_consecutivo" type="hidden"/>
                                     <input value="<%=c.getConsecutivo() %>" type="text" disabled >
                                 </div>
 
